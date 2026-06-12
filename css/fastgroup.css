@@ -96,12 +96,12 @@ header.site { position: sticky; top: 0; z-index: 100; background: #fff; border-b
 
 /* ---------- BRAND PORTALS ---------- */
 .portal-grid { grid-template-columns: repeat(3, 1fr); }
-.portal { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; display: flex; flex-direction: column; transition: .22s; position: relative; overflow: hidden; }
+.portal { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: .22s; position: relative; overflow: hidden; }
 .portal::after { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 0; background: var(--accent); transition: .3s; }
 .portal:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
 .portal:hover::after { width: 100%; }
-.portal-logo { height: 52px; display: flex; align-items: center; margin-bottom: 16px; }
-.portal-logo img { max-height: 46px; width: auto; object-fit: contain; }
+.portal-logo { height: 78px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.portal-logo img { max-height: 70px; max-width: 220px; width: auto; object-fit: contain; }
 .portal-wordmark { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 26px; color: var(--navy); letter-spacing: -.01em; }
 .portal h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
 .portal p { color: var(--muted); font-size: 14.5px; flex-grow: 1; }
@@ -278,6 +278,8 @@ footer.site a:hover { color: var(--accent-2); }
 .dd-menu a:hover { background: var(--bg); color: var(--accent); }
 @media (max-width: 992px) {
 	.has-dd { width: 100%; }
-	.dd-menu { position: static; display: flex; box-shadow: none; border: none; padding: 4px 0 4px 14px; min-width: auto; }
-	.dd-toggle .car { display: none; }
-}
+	.dd-menu { position: static; display: flex; box-shadow: none; border: none
+/* ---------- BRAND PROFILE FACTS ---------- */
+.brand-facts { display: flex; flex-wrap: wrap; gap: 44px; padding: 22px 0; margin-bottom: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.brand-fact .bf-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; font-family: 'Manrope', sans-serif; margin-bottom: 5px; }
+.brand-fact .bf-value { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); }
