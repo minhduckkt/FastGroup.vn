@@ -273,6 +273,10 @@ footer.site a:hover { color: var(--accent-2); }
 	.section { padding: 64px 0; }
 	.cap-grid, .portal-grid, .ind-grid, .why-grid, .gallery-grid { grid-template-columns: 1fr; }
 	.rfq-form .row { grid-template-columns: 1fr; }
+	.topbar .container { height: 40px; padding: 0 16px; justify-content: flex-end; }
+	.topbar .container > span:first-child { display: none; }
+	.topbar .tb-right { width: 100%; gap: 12px; justify-content: space-between; }
+	.topbar .tb-right > a[href^="tel"], .lang-switch { white-space: nowrap; }
 	.topbar .tb-right .tb-hide { display: none; }
 	.trust .container { flex-direction: column; align-items: flex-start; }
 	.cta-band { padding: 34px 24px; }
@@ -293,7 +297,8 @@ footer.site a:hover { color: var(--accent-2); }
 .dd-menu a:hover { background: var(--bg); color: var(--accent); }
 @media (max-width: 992px) {
 	.has-dd { width: 100%; }
-	.dd-toggle { width: 100%; justify-content: space-between; }
+	.dd-toggle { position: relative; width: 100%; justify-content: center; }
+	.dd-toggle .car { position: absolute; right: 0; }
 	.has-dd:hover .dd-menu { display: none; }
 	.has-dd.open .dd-menu,
 	.has-dd:focus-within .dd-menu { display: flex; }
@@ -303,6 +308,10 @@ footer.site a:hover { color: var(--accent-2); }
 	.dd-menu a { padding: 8px 0 8px 12px; }
 }
 /* ---------- BRAND PROFILE FACTS ---------- */
+.brand-websites { margin: 14px 0 20px; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--bg); }
+.brand-websites p { margin: 0; font-size: 14px; color: var(--muted); }
+.brand-websites p + p { margin-top: 8px; }
+.brand-websites a { color: var(--blue); font-weight: 700; }
 .brand-facts { display: flex; flex-wrap: wrap; gap: 44px; padding: 22px 0; margin-bottom: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .brand-fact .bf-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; font-family: 'Manrope', sans-serif; margin-bottom: 5px; }
 .brand-fact .bf-value { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); }
