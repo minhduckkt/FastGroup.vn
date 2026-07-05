@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fastgroup.vn/sitemap.xml
+Sitemap: https://fastgroup.vn/wika-viet-nam/sitemap_index.xml
