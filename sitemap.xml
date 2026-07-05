@@ -51,6 +51,26 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://fastgroup.vn/brands/wika.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/hydac.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/eaton.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/endress-hauser.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
     <loc>https://fastgroup.vn/brands/plastigauge.html</loc>
     <lastmod>2026-06-12</lastmod>
     <priority>0.64</priority>
@@ -314,4 +334,23 @@
     <lastmod>2026-06-13</lastmod>
     <priority>0.60</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://fastgroup.vn/en/brands/wika.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/en/brands/hydac.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/en/brands/eaton.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/en/brands/endress-hauser.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <priority>0.60</priority>
+  </url></urlset>
