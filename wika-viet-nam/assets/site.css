@@ -1718,3 +1718,5 @@ h1 {
 .cat-fam{margin:6px 0 26px;color:#5a6a78}.cat-fam strong{color:#12324f}
 .center{text-align:center}
 @media(max-width:820px){.product-hero-grid{grid-template-columns:1fr}.quick-facts{grid-template-columns:1fr 1fr}}
+/* fix 2026-08-30: .check-list li dung display:grid nen khi li chua <strong> + text thi phan text bi day sang o luoi thu 2 (rong 28px) => moi tu mot dong. .lead trong base CSS la mau trang (danh cho hero toi) nen vo hinh tren .product-hero nen sang. */
+.check-list li{display:block;position:relative;padding-left:30px;grid-template-columns:none}.check-list li:before{position:absolute;left:0;top:4px;margin-top:0}.product-hero .lead,.product-hero-copy .lead{color:var(--muted)}

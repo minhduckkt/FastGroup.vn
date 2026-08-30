@@ -1,0 +1,330 @@
+[
+ {
+  "model": "FMR20B",
+  "slug": "cam-bien-radar-micropilot-fmr20b",
+  "kw": "cam bien radar do muc FMR20B",
+  "links": "FMR51; FMR43; FMU30",
+  "nganh": "Nuoc & nuoc thai, HVAC, phu tro, kho chua",
+  "goc": "Chon radar 80GHz gia tot cho be chua: nguyen ly, uu the bup song hep, lap dat & cau hinh qua Bluetooth/app"
+ },
+ {
+  "model": "FMR43",
+  "slug": "cam-bien-radar-micropilot-fmr43",
+  "kw": "radar do muc thuc pham FMR43",
+  "links": "FMR20B; FTL51; TM411",
+  "nganh": "Thuc pham & do uong, che bien, nuoc",
+  "goc": "Radar 80GHz cho bon ve sinh F&B: ket noi hygienic, ve sinh CIP/SIP, chon anten phu hop"
+ },
+ {
+  "model": "FMR51",
+  "slug": "cam-bien-radar-micropilot-fmr51",
+  "kw": "radar do muc FMR51",
+  "links": "FMR54; FMR20B; FMP51",
+  "nganh": "Hoa chat, dau khi, nuoc, nang luong",
+  "goc": "Radar process FMR51: chon anten & window, xu ly nhieu bon co canh khuay/vat can, SIL & Ex"
+ },
+ {
+  "model": "FMR54",
+  "slug": "cam-bien-radar-micropilot-fmr54",
+  "kw": "radar do muc nhiet do cao FMR54",
+  "links": "FMR51; FMP54; PMP75",
+  "nganh": "Loc dau, hoa dau, hoi nuoc, EPC",
+  "goc": "Radar cho dieu kien khac nghiet: gioi han T/P, window ceramic, ung dung loc dau/hoi"
+ },
+ {
+  "model": "FMR62B",
+  "slug": "cam-bien-radar-micropilot-fmr62b",
+  "kw": "radar do muc silo chat ran FMR62B",
+  "links": "FMR62B->FMU30; FMP56; FTM51",
+  "nganh": "Xi mang, khai khoang, nong san, silo",
+  "goc": "Do muc silo chat ran bang radar: xu ly bui, goc nghi vat lieu, huong anten, so voi sieu am"
+ },
+ {
+  "model": "NMR81",
+  "slug": "cam-bien-radar-tank-gauging-nmr81",
+  "kw": "radar do muc bon xang dau NMR81",
+  "links": "NMS81; FMR51; FMD71",
+  "nganh": "Kho bon xang dau, terminal, custody transfer",
+  "goc": "Radar do luong hop phap (custody) cho bon xang dau: chuan API/OIML, tich hop Tankvision"
+ },
+ {
+  "model": "FMP51",
+  "slug": "radar-dan-song-levelflex-fmp51",
+  "kw": "radar dan song Levelflex FMP51",
+  "links": "FMR51; FMP54; FMB70",
+  "nganh": "Hoa chat, dau khi, nuoc, be chua",
+  "goc": "Radar dan song FMP51: khi nao chon GWR thay radar, chon probe (rod/rope/coax), do interface 2 lop"
+ },
+ {
+  "model": "FMP54",
+  "slug": "radar-dan-song-levelflex-fmp54",
+  "kw": "Levelflex FMP54 nhiet do cao",
+  "links": "FMP51; FMR54; PMD75B",
+  "nganh": "Loc dau, hoi nuoc, hoa dau",
+  "goc": "Levelflex FMP54 cho hoi nuoc/dau nong: gioi han T/P, buong tham chieu, luu y giãn no probe"
+ },
+ {
+  "model": "FMP56",
+  "slug": "radar-dan-song-levelflex-fmp56",
+  "kw": "Levelflex FMP56 do muc silo",
+  "links": "FMR62B; FMU30; FTM51",
+  "nganh": "Silo xi mang, nong san, nhua, khai khoang",
+  "goc": "Levelflex FMP56 cho silo chat ran: chon probe rope, luc keo, chong bam dinh, so voi radar"
+ },
+ {
+  "model": "FMU30",
+  "slug": "cam-bien-sieu-am-prosonic-fmu30",
+  "kw": "cam bien sieu am do muc FMU30",
+  "links": "FMR20B; FMU90; FMP51",
+  "nganh": "Nuoc thai, tram bom, be ho, muong ho",
+  "goc": "Sieu am FMU30 do muc & do luu luong muong ho: vung mu, bu nhiet do, gioi han khi co bot/hoi"
+ },
+ {
+  "model": "FMU90+FDU91",
+  "slug": "cam-bien-sieu-am-prosonic-s-fmu90-fdu91",
+  "kw": "Prosonic S FMU90 do luu luong nuoc thai",
+  "links": "FMU30; FMR20B; FMD71",
+  "nganh": "Nuoc thai, tram bom, do luu luong open channel",
+  "goc": "Prosonic S FMU90: he do luu luong+dieu khien bom, chon sensor FDU9x, quan ly nhieu diem do"
+ },
+ {
+  "model": "FMB70",
+  "slug": "cam-bien-thuy-tinh-deltapilot-fmb70",
+  "kw": "cam bien thuy tinh do muc FMB70",
+  "links": "FMX21; PMP51B; FMR20B",
+  "nganh": "Nuoc, nuoc thai, hoa chat, bon ho",
+  "goc": "Do muc thuy tinh FMB70: nguyen ly cot ap, anh huong ty trong/nhiet do, chong tac mang do"
+ },
+ {
+  "model": "FMX21",
+  "slug": "dau-do-muc-waterpilot-fmx21",
+  "kw": "dau do muc gieng khoan FMX21",
+  "links": "FMB70; PMC71B; TM111",
+  "nganh": "Gieng khoan, quan trac nuoc ngam, ho chua",
+  "goc": "Waterpilot FMX21 do muc gieng khoan: chon dai do theo do sau, bu ap khi quyen, chong set"
+ },
+ {
+  "model": "FMI21",
+  "slug": "cam-bien-dien-dung-liquicap-fmi21",
+  "kw": "cam bien dien dung do muc FMI21",
+  "links": "FMP51; FTI51; FMB70",
+  "nganh": "Hoa chat, dan dan, chat long dan dien/cach dien",
+  "goc": "Do muc dien dung FMI21: khi nao chon dien dung, xu ly bam dinh, hieu chuan 2 diem"
+ },
+ {
+  "model": "FMD71/FMD72",
+  "slug": "do-muc-chenh-ap-dien-tu-deltabar-fmd71-fmd72",
+  "kw": "Deltabar dien tu FMD71 do muc",
+  "links": "PMD75B; PMD55B; NMR81",
+  "nganh": "Cot chung cat, thap, bon ap luc, hoa dau",
+  "goc": "Electronic DP FMD71/72 thay he chenh ap co dien: bo impulse line, giam sai so cot chat long, do muc bon ap luc"
+ },
+ {
+  "model": "FMG50",
+  "slug": "do-muc-buc-xa-gammapilot-fmg50",
+  "kw": "do muc buc xa gamma FMG50",
+  "links": "FMR54; FMR62B; FMP56",
+  "nganh": "Bon co lop lot, chat an mon manh, khai khoang",
+  "goc": "Do muc buc xa FMG50: khi nao buoc phai dung gamma, an toan buc xa, cap phep, chi phi so huu"
+ },
+ {
+  "model": "NMS81",
+  "slug": "do-muc-servo-proservo-nms81",
+  "kw": "Proservo NMS81 do muc bon",
+  "links": "NMR81; FMD71; FMR51",
+  "nganh": "Kho bon xang dau, custody, terminal",
+  "goc": "Proservo NMS81 do muc-do interface-mat do trong bon xang dau: nguyen ly servo, chuan do luong, so voi radar NMR81"
+ },
+ {
+  "model": "PMP71B",
+  "slug": "cam-bien-ap-suat-cerabar-pmp71b",
+  "kw": "cam bien ap suat Cerabar PMP71B",
+  "links": "PMC71B; PMP51B; PMD75B",
+  "nganh": "Hoa chat, dau khi, hoi nuoc, EPC",
+  "goc": "Cerabar PMP71B: chon dai do & turndown, mang kim loai vs ceramic, oil fill, SIL & Ex"
+ },
+ {
+  "model": "PMC71B",
+  "slug": "cam-bien-ap-suat-cerabar-pmc71b",
+  "kw": "cam bien ap suat mang gom PMC71B",
+  "links": "PMP71B; PMC51B; FMB70",
+  "nganh": "Hoa chat an mon, xu ly nuoc, giay, bot",
+  "goc": "Cerabar PMC71B mang ceramic: uu the chong an mon/mai mon, chan khong, khi nao chon ceramic thay kim loai"
+ },
+ {
+  "model": "PMP51B",
+  "slug": "cam-bien-ap-suat-cerabar-pmp51b",
+  "kw": "cam bien ap suat Cerabar PMP51B",
+  "links": "PMP71B; PMP21; PTP31B",
+  "nganh": "Nuoc, HVAC, may cong nghiep, hoa chat nhe",
+  "goc": "Cerabar PMP51B: giai phap ap suat tam trung, cau hinh Bluetooth, chon ket noi & mang do"
+ },
+ {
+  "model": "PMP21",
+  "slug": "cam-bien-ap-suat-cerabar-pmp21",
+  "kw": "cam bien ap suat compact PMP21",
+  "links": "PMP51B; PTP31B; PMP71B",
+  "nganh": "OEM, may nen khi, thuy luc, HVAC",
+  "goc": "Cerabar PMP21 compact cho OEM: chon dai do, output 4-20mA/ratiometric, lap dat gon"
+ },
+ {
+  "model": "PMP75",
+  "slug": "cam-bien-ap-suat-cerabar-pmp75-mang-ngan",
+  "kw": "cam bien ap suat mang ngan PMP75",
+  "links": "PMP71B; PMD75B; FMR54",
+  "nganh": "Hoa dau, thuc pham nhot, chan khong, chat ket tinh",
+  "goc": "Cerabar PMP75 voi mang ngan: chon loai seal & capillary, bu nhiet do, sai so do cot dau seal"
+ },
+ {
+  "model": "PMD75B",
+  "slug": "cam-bien-chenh-ap-deltabar-pmd75b",
+  "kw": "cam bien chenh ap Deltabar PMD75B",
+  "links": "PMD55B; FMD71; PMP71B",
+  "nganh": "Loc bui/filter, luu luong, do muc bon kin",
+  "goc": "Deltabar PMD75B: 3 bai toan DP (luu luong, tac loc, muc bon kin), chon dai do & lap dat manifold"
+ },
+ {
+  "model": "PMD55B",
+  "slug": "cam-bien-chenh-ap-deltabar-pmd55b",
+  "kw": "cam bien chenh ap thap PMD55B",
+  "links": "PMD75B; PMP51B; TM111",
+  "nganh": "HVAC, buong sach, loc khi, xu ly nuoc",
+  "goc": "Deltabar PMD55B do chenh ap thap: giam sat loc/quat, buong sach, luu y do DP dai rat thap"
+ },
+ {
+  "model": "PTP31B",
+  "slug": "cong-tac-ap-suat-ceraphant-ptp31b",
+  "kw": "cong tac ap suat dien tu PTP31B",
+  "links": "PMP21; PMP51B; FTL51",
+  "nganh": "May cong nghiep, bom, khi nen, phu tro",
+  "goc": "Ceraphant PTP31B thay cong tac ap suat co: cai dat nguong PNP, them 4-20mA, do tin cay switching"
+ },
+ {
+  "model": "FTL51",
+  "slug": "cong-tac-muc-liquiphant-ftl51",
+  "kw": "cong tac muc Liquiphant FTL51",
+  "links": "FTL31; FTL62; FTM51",
+  "nganh": "Hoa chat, dau khi, chong tran (overfill), phu tro",
+  "goc": "Liquiphant FTL51 bao muc & chong tran: nguyen ly am thoa, SIL/WHG, khong bi anh huong boi bot/bam dinh"
+ },
+ {
+  "model": "FTL31",
+  "slug": "cong-tac-muc-liquiphant-ftl31",
+  "kw": "cong tac muc compact FTL31",
+  "links": "FTL51; FTW33; PTP31B",
+  "nganh": "Cap nuoc, HVAC, may, bon phu",
+  "goc": "Liquiphant FTL31 compact: bao muc bom chay kho, chon ket noi ren, cai dat don gian"
+ },
+ {
+  "model": "FTL62",
+  "slug": "cong-tac-muc-liquiphant-ftl62",
+  "kw": "cong tac muc nhiet do cao FTL62",
+  "links": "FTL51; FMR54; PMP75",
+  "nganh": "Loc dau, dau nong, hoi, hoa dau",
+  "goc": "Liquiphant FTL62 nhiet do cao: ong noi dai tach nhiet, bao muc dau nong, luu y lap dat cach nhiet"
+ },
+ {
+  "model": "FTM51",
+  "slug": "cong-tac-muc-soliphant-ftm51",
+  "kw": "cong tac muc chat ran Soliphant FTM51",
+  "links": "FTL51; FMR62B; FTI26",
+  "nganh": "Silo xi mang, nong san, nhua, bot",
+  "goc": "Soliphant FTM51 bao muc silo chat ran: chon nga (fork/rod), bao day/vong/tran silo, chong bam bui"
+ },
+ {
+  "model": "FTI26",
+  "slug": "cong-tac-muc-dien-dung-nivector-fti26",
+  "kw": "cong tac muc dien dung FTI26",
+  "links": "FTM51; FMI21; FMR62B",
+  "nganh": "Silo nho, bột min, nhua hat, thuc pham kho",
+  "goc": "Nivector FTI26 bao muc bot/hat min: bu bam dinh, mat bích phang, khac biet vs am thoa"
+ },
+ {
+  "model": "FTW33",
+  "slug": "cong-tac-muc-dan-dien-liquipoint-ftw33",
+  "kw": "cong tac muc dan dien FTW33",
+  "links": "FTL31; FMX21; FMU30",
+  "nganh": "Nuoc, nuoc thai, chat long dan dien",
+  "goc": "Liquipoint FTW33 bao muc nuoc dan dien: do dan dien toi thieu, nhieu diem (day/day/tran), gioi han khi nuoc DI"
+ },
+ {
+  "model": "FDR56",
+  "slug": "rao-vi-song-soliwave-fdr56",
+  "kw": "rao vi song do muc Soliwave FDR56",
+  "links": "FTM51; FMR62B; FTR16",
+  "nganh": "Silo bui nang, bang tai, khai khoang, xi mang",
+  "goc": "Soliwave FDR56/FQR56 rao vi song: phat-thu qua thanh silo, phat hien tac bang tai, lap dat qua cua so song"
+ },
+ {
+  "model": "FTE20",
+  "slug": "cong-tac-canh-quay-soliswitch-fte20",
+  "kw": "cong tac canh quay FTE20",
+  "links": "FTM51; FMR62B; FDR56",
+  "nganh": "Silo nong san, thuc an chan nuoi, hat nhua",
+  "goc": "Soliswitch FTE20 canh quay bao muc silo: chon canh & lo xo theo ty trong, khi nao chon paddle thay am thoa"
+ },
+ {
+  "model": "TMT82",
+  "slug": "bo-chuyen-doi-nhiet-itemp-tmt82",
+  "kw": "bo chuyen doi nhiet do TMT82",
+  "links": "TMT162; TM111; TMT86",
+  "nganh": "Hoa chat, dau khi, SIL loop, EPC",
+  "goc": "iTEMP TMT82 HART dual-input: cau hinh, sensor drift/backup, SIL2, dau vao kep RTD/TC"
+ },
+ {
+  "model": "TMT162",
+  "slug": "bo-chuyen-doi-nhiet-itemp-tmt162",
+  "kw": "transmitter nhiet hien truong TMT162",
+  "links": "TMT82; TM111; TST310",
+  "nganh": "Ngoai troi, dau khi, tram xa, moi truong an mon",
+  "goc": "iTEMP TMT162 field housing: chon vo & do kin IP, hien thi tai cho, HART/fieldbus cho tram xa"
+ },
+ {
+  "model": "TMT86",
+  "slug": "bo-chuyen-doi-nhiet-itemp-tmt86",
+  "kw": "transmitter nhiet PROFINET TMT86",
+  "links": "TMT82; TMT162; TM371",
+  "nganh": "Nha may so hoa, Ethernet-APL, IIoT",
+  "goc": "iTEMP TMT86 PROFINET/Ethernet-APL: chuyen doi so nen tang, topology APL, chan doan nang cao"
+ },
+ {
+  "model": "TM371",
+  "slug": "nhiet-ke-tu-hieu-chuan-itherm-tm371",
+  "kw": "nhiet ke tu hieu chuan TM371",
+  "links": "TMT82; TM411; TM111",
+  "nganh": "Duoc pham, thuc pham, CIP/SIP, GMP",
+  "goc": "iTHERM TM371 tu hieu chuan: co che Curie tu hieu chuan moi chu ky CIP/SIP, giam calibration thu cong, tuan thu GMP"
+ },
+ {
+  "model": "TM111",
+  "slug": "nhiet-ke-cong-nghiep-itherm-tm111",
+  "kw": "nhiet ke cong nghiep TM111",
+  "links": "TM411; TMT82; TST310",
+  "nganh": "Hoa chat, dau khi, nang luong, phu tro",
+  "goc": "iTHERM TM111: cau truc modular, chon thermowell theo ung dung, thay insert khong dung process"
+ },
+ {
+  "model": "TM411",
+  "slug": "nhiet-ke-ve-sinh-itherm-tm411",
+  "kw": "nhiet ke ve sinh TM411",
+  "links": "TM371; TM111; FMR43",
+  "nganh": "Duoc pham, thuc pham, do uong, hygienic",
+  "goc": "iTHERM TM411 hygienic: ket noi ve sinh (Tri-Clamp...), do nhap Ra, dap ung nhanh, CIP/SIP"
+ },
+ {
+  "model": "TST310",
+  "slug": "cam-bien-nhiet-cap-omnigrad-tst310",
+  "kw": "cam bien nhiet dang cap TST310",
+  "links": "TM111; TMT162; TAF16",
+  "nganh": "Dong co, o truc, HVAC, phu tro, kho lanh",
+  "goc": "Omnigrad TST310 cam bien cap: chon dau do (RTD/TC), luon cap chiu nhiet, do nhiet o truc/dong co"
+ },
+ {
+  "model": "TAF16",
+  "slug": "nhiet-ke-nhiet-do-cao-itherm-taf16",
+  "kw": "nhiet ke nhiet do cao TAF16",
+  "links": "TST310; TM111; FMR54",
+  "nganh": "Lo hoi, lo nung, xi mang, luyen kim",
+  "goc": "iTHERM TAF16 do nhiet lo nung: chon cap nhiet (TC) & thermowell chiu nhiet, sai so & tuoi tho o nhiet cao"
+ }
+]
