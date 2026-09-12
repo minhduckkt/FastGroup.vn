@@ -202,7 +202,7 @@ def footer(up, hubs):
             '<div class="footer-bottom"><div>© 2026 <a href="%(root)s" target="_blank" rel="noopener">%(own)s</a>. All rights reserved.</div>'
             '<div>Website được vận hành độc lập nhằm hỗ trợ tra cứu, tư vấn và báo giá sản phẩm Endress+Hauser tại Việt Nam.</div>'
             '</div></div></footer>'
-            '<script src="%(up)sassets/search-index.js"></script><script src="%(up)sassets/hero-search.js"></script>'
+            '<script src="%(up)sassets/search-index.js"></script><script src="%(up)sassets/hero-search.js"></script><script>window.FG_RFQ_SOURCE=\"Endress+Hauser\";</script><script src="/assets/fg-rfq.js" defer></script>'
             '</body></html>') % dict(up=up, site=e(SITE), own=e(OWNER), mst=MST, cats=cats, root=ROOT,
                                      addr=e(ADDR), addr2=e(ADDR2), ph=PHONE, pht=PHONE_TXT, mail=EMAIL)
 

@@ -45,3 +45,15 @@
   });
   document.addEventListener("click",function(e){if(!form.contains(e.target))box.classList.remove("on");});
 })();
+
+/* ---------------------------------------------------------------------
+   Fast Group — form RFQ dùng chung. Khai nguồn rồi nạp /assets/fg-rfq.js.
+   Script đó tự chèn form vào mọi trang có JSON-LD Product (trang sản phẩm),
+   và dùng khối [data-fg-rfq] nếu trang đã khai sẵn (trang Liên hệ).
+   --------------------------------------------------------------------- */
+window.FG_RFQ_SOURCE = 'WIKA';
+(function () {
+  var s = document.createElement('script');
+  s.src = '/assets/fg-rfq.js';
+  (document.head || document.documentElement).appendChild(s);
+})();

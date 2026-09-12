@@ -557,31 +557,18 @@ def build_contact(hubs):
             '<p class="lead">Càng đủ dữ liệu kỹ thuật, báo giá càng nhanh: mã model, môi chất, nhiệt độ và áp suất làm việc, '
             'kết nối quá trình, tín hiệu ra và yêu cầu chứng nhận.</p></div></section>',
             '<section class="section"><div class="container contact-layout">'
-            '<div class="form-panel"><h2>Thông tin nên gửi trong RFQ</h2><div class="form-grid">'
-            '<div class="field"><label>Mã model</label><input id="rfqModel" value="FMR20B / PMP71B / FTL51 / TMT82..." readonly></div>'
-            '<div class="field"><label>Nhóm đo</label><select>'
-            '<option>Đo mức liên tục</option><option>Đo áp suất & chênh áp</option>'
-            '<option>Công tắc báo mức</option><option>Đo nhiệt độ</option></select></div>'
-            '<div class="field"><label>Điều kiện quá trình</label><input value="Môi chất, nhiệt độ, áp suất làm việc" readonly></div>'
-            '<div class="field"><label>Kết nối & tín hiệu</label><input value="Ren/mặt bích; 4-20mA, HART, PROFIBUS PA..." readonly></div>'
-            '<div class="field full"><label>Nội dung RFQ mẫu</label>'
-            '<textarea readonly>Kính gửi Fast Group, vui lòng báo giá Endress+Hauser [mã model], số lượng [..]. '
-            'Điều kiện quá trình: môi chất [..], nhiệt độ [..], áp suất [..]. Kết nối quá trình [..], tín hiệu ra [..]. '
-            'Yêu cầu chứng nhận [ATEX/IECEx nếu có], CO/CQ và lead time giao tại [địa điểm].</textarea></div>'
-            '</div><div class="form-actions">'
-            '<a class="button button-primary" href="mailto:%s?subject=RFQ%%20Endress%%2BHauser">Gửi email RFQ</a>'
-            '<a class="button button-secondary" href="tel:%s">Gọi/Zalo %s</a></div></div>'
+            '<div data-fg-rfq data-fg-source="Endress+Hauser" id="fgqBox" data-fg-title="Gửi yêu cầu báo giá Endress+Hauser" data-fg-note="Nêu mã model, môi chất, nhiệt độ và áp suất làm việc, kết nối quá trình, tín hiệu ra và yêu cầu chứng nhận."></div>'
             '<aside class="contact-stack">'
             '<div class="contact-card"><h3>Email</h3><p><a href="mailto:%s">%s</a></p></div>'
             '<div class="contact-card"><h3>Điện thoại / Zalo</h3><p><a href="tel:%s">%s</a></p></div>'
             '<div class="contact-card"><h3>Trụ sở</h3><p>%s</p></div>'
             '<div class="contact-card"><h3>Chưa có mã model?</h3><p>Gửi ảnh nhãn thiết bị đang dùng hoặc mô tả bài toán đo '
             '(môi chất, kích thước bồn, điều kiện vận hành) để Fast Group đề xuất model tương đương.</p></div>'
-            '</aside></div></section>' % (g.EMAIL, g.PHONE, g.PHONE_TXT, g.EMAIL, g.EMAIL, g.PHONE, g.PHONE_TXT, g.e(g.ADDR)),
+            '</aside></div></section>' % (g.EMAIL, g.EMAIL, g.PHONE, g.PHONE_TXT, g.e(g.ADDR)),
             # doc model tu fragment (#model=...) thay vi query — khong sinh URL trung lap
-            '<script>(function(){var h=location.hash||"";var m=/[#&]model=([^&]+)/.exec(h);'
-            'if(m){var v=decodeURIComponent(m[1].replace(/\\+/g," "));'
-            'var i=document.getElementById("rfqModel");if(i){i.value=v;}}})();</script>']
+            '<script>(function(){var m=/[#&?]model=([^&]+)/.exec(location.hash+location.search);'
+            'if(!m)return;var v=decodeURIComponent(m[1].replace(/\+/g," "));'
+            'var b=document.getElementById("fgqBox");if(b)b.setAttribute("data-fg-model",v);})();</script>']
     g.write(os.path.join(OUT, 'lien-he', 'index.html'), page(hd, up, hubs, ''.join(body)))
 
 

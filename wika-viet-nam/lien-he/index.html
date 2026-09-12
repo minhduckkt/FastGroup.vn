@@ -60,56 +60,7 @@
 
       <section class="section" id="form-rfq">
         <div class="container contact-layout">
-          <form class="form-panel" action="mailto:minhduc@fastgroup.vn" method="post" enctype="text/plain">
-            <div class="section-heading">
-              <div class="kicker">RFQ WIKA</div>
-              <h2>Thông tin yêu cầu báo giá</h2>
-              <p>Nhập mã WIKA nếu đã có. Nếu chưa rõ mã, mô tả ứng dụng, dải đo và gửi ảnh nameplate qua email/Zalo sau khi gửi form.</p>
-            </div>
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Họ tên</label>
-                <input id="name" name="Ho ten" autocomplete="name" />
-              </div>
-              <div class="field">
-                <label for="company">Công ty</label>
-                <input id="company" name="Cong ty" autocomplete="organization" />
-              </div>
-              <div class="field">
-                <label for="phone">Số điện thoại</label>
-                <input id="phone" name="So dien thoai" autocomplete="tel" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="Email" type="email" autocomplete="email" />
-              </div>
-              <div class="field">
-                <label for="request-type">Loại yêu cầu</label>
-                <select id="request-type" name="Loai yeu cau">
-                  <option>Báo giá theo mã WIKA</option>
-                  <option>Tìm mã thay thế</option>
-                  <option>Tư vấn chọn dải đo</option>
-                  <option>BOM dự án</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="quantity">Số lượng dự kiến</label>
-                <input id="quantity" name="So luong" placeholder="Ví dụ: 2 pcs, 10 pcs" />
-              </div>
-              <div class="field full">
-                <label for="part-number">Mã WIKA hoặc mã đang dùng</label>
-                <input id="part-number" name="Ma WIKA" placeholder="Ví dụ: MW 140, DMB-1ES, DMU-1ES, DRSEW-1..." />
-              </div>
-              <div class="field full">
-                <label for="details">Thông số, ứng dụng hoặc ghi chú</label>
-                <textarea id="details" name="Thong tin ky thuat" placeholder="Dải đo, đơn vị, ren kết nối, vật liệu, môi chất, nhiệt độ, áp suất làm việc, thời gian cần hàng..."></textarea>
-              </div>
-            </div>
-            <div class="form-actions">
-              <button class="button button-primary" type="submit">Gửi yêu cầu</button>
-              <a class="button button-secondary" href="mailto:minhduc@fastgroup.vn?subject=RFQ%20WIKA">Gửi email trực tiếp</a>
-            </div>
-          </form>
+          <div data-fg-rfq data-fg-source="WIKA" data-fg-title="Thông tin yêu cầu báo giá WIKA" data-fg-note="Nhập mã WIKA nếu đã có. Chưa rõ mã thì mô tả ứng dụng và dải đo, Fast Group sẽ đề xuất mã phù hợp." id="fgqBox"></div>
 
           <aside class="contact-stack">
             <article class="contact-card">
@@ -212,7 +163,9 @@
         </div>
       </div>
     </footer>
-  </body>
+  <script>(function(){var q=location.search+location.hash;var m=/[?&#]model=([^&#]+)/.exec(q);if(!m)return;var v=decodeURIComponent(m[1].replace(/\+/g," "));var b=document.getElementById("fgqBox");if(b)b.setAttribute("data-fg-model",v);})();</script>
+<script src="/assets/fg-rfq.js" defer></script>
+</body>
 </html>
 
 
