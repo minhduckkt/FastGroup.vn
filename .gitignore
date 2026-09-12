@@ -1,0 +1,19 @@
+# Repo nay dang de che do Public tren GitHub.
+# Moi thu commit len deu doc duoc cong khai, ke ca thu Jekyll khong phuc vu tren fastgroup.vn.
+# Cac duong dan duoi day la noi bo — khong bao gio day len.
+
+# Bo sinh, du lieu scrape va tai lieu ban giao cua portal Qlight
+_tools/qlight/
+
+# Thu muc lam viec tam
+Claude outputs/
+
+# Rac Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ghi chu: _tools/endress-hauser/ DA nam tren GitHub tu truoc, nen dong ignore
+# khong go no ra duoc. Muon go phai chay rieng:
+#   git rm -r --cached "_tools/endress-hauser"
+# roi commit. Lich su cu van con tren GitHub sau khi go.

@@ -72,7 +72,7 @@ def build_product(p, hubs, byslug, all_products):
         '<ul class="quote-list"><li>Mã model: <strong>%s</strong></li><li>Nhóm đo: %s</li>'
         '<li>Môi chất, nhiệt độ và áp suất làm việc</li><li>Kết nối quá trình sẵn có trên thiết bị</li>'
         '<li>Yêu cầu chứng nhận phòng nổ, CO/CQ</li></ul>'
-        '<a class="button button-primary" href="%slien-he/?model=%s">Gửi RFQ ngay</a></aside></div></section>' % (
+        '<a class="button button-primary" href="%slien-he/#model=%s">Gửi RFQ ngay</a></aside></div></section>' % (
             g.e(p['title']), g.e(p['catalog_vi']), intro, art_block,
             g.e(p['title']), g.e(p['sku']), g.e(p['catalog_vi']), up,
             g.e(p['sku'].replace(' ', '%20'))))
@@ -578,8 +578,10 @@ def build_contact(hubs):
             '<div class="contact-card"><h3>Chưa có mã model?</h3><p>Gửi ảnh nhãn thiết bị đang dùng hoặc mô tả bài toán đo '
             '(môi chất, kích thước bồn, điều kiện vận hành) để Fast Group đề xuất model tương đương.</p></div>'
             '</aside></div></section>' % (g.EMAIL, g.PHONE, g.PHONE_TXT, g.EMAIL, g.EMAIL, g.PHONE, g.PHONE_TXT, g.e(g.ADDR)),
-            '<script>(function(){var m=new URLSearchParams(location.search).get("model");'
-            'if(m){var i=document.getElementById("rfqModel");if(i){i.value=m;}}})();</script>']
+            # doc model tu fragment (#model=...) thay vi query — khong sinh URL trung lap
+            '<script>(function(){var h=location.hash||"";var m=/[#&]model=([^&]+)/.exec(h);'
+            'if(m){var v=decodeURIComponent(m[1].replace(/\\+/g," "));'
+            'var i=document.getElementById("rfqModel");if(i){i.value=v;}}})();</script>']
     g.write(os.path.join(OUT, 'lien-he', 'index.html'), page(hd, up, hubs, ''.join(body)))
 
 
