@@ -567,7 +567,7 @@ def build_contact(hubs):
             '</aside></div></section>' % (g.EMAIL, g.EMAIL, g.PHONE, g.PHONE_TXT, g.e(g.ADDR)),
             # doc model tu fragment (#model=...) thay vi query — khong sinh URL trung lap
             '<script>(function(){var m=/[#&?]model=([^&]+)/.exec(location.hash+location.search);'
-            'if(!m)return;var v=decodeURIComponent(m[1].replace(/\+/g," "));'
+            r'if(!m)return;var v=decodeURIComponent(m[1].replace(/\+/g," "));'
             'var b=document.getElementById("fgqBox");if(b)b.setAttribute("data-fg-model",v);})();</script>']
     g.write(os.path.join(OUT, 'lien-he', 'index.html'), page(hd, up, hubs, ''.join(body)))
 

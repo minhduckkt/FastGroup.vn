@@ -5,6 +5,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from data_layer import OUT
 import gen_lib as g
 
+# Duong dan bat dau bang "/" la tuyet doi theo goc website (fastgroup.vn),
+# khong phai theo thu muc portal. Vi du /assets/fg-rfq.js nam o goc repo.
+SITE_ROOT = os.path.dirname(os.path.abspath(OUT))
+
 err = collections.defaultdict(list)
 pages = []
 for root, dirs, files in os.walk(OUT):
@@ -65,7 +69,10 @@ for path in pages:
         clean = href.split('?')[0].split('#')[0]
         if not clean:
             continue
-        tgt = os.path.normpath(os.path.join(base, clean))
+        if clean.startswith('/'):
+            tgt = os.path.normpath(os.path.join(SITE_ROOT, clean.lstrip('/')))
+        else:
+            tgt = os.path.normpath(os.path.join(base, clean))
         if clean.endswith('/') or (os.path.isdir(tgt) and not os.path.splitext(clean)[1]):
             tgt = os.path.join(tgt, 'index.html')
         if not os.path.exists(tgt):
