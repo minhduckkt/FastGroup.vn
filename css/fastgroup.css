@@ -315,3 +315,31 @@ footer.site a:hover { color: var(--accent-2); }
 .brand-facts { display: flex; flex-wrap: wrap; gap: 44px; padding: 22px 0; margin-bottom: 10px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .brand-fact .bf-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; font-family: 'Manrope', sans-serif; margin-bottom: 5px; }
 .brand-fact .bf-value { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 18px; color: var(--navy); }
+
+/* ==== FASTGROUP v2026-09 : contact dock + RFQ + CWV ==== */
+.fg-dock{position:fixed;left:18px;bottom:20px;z-index:95;display:flex;flex-direction:column;gap:10px}
+.fg-dock a{position:relative;width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 10px 24px rgba(7,20,38,.25);transition:transform .18s}
+.fg-dock a:hover{transform:translateY(-3px)}
+.fg-dock svg{width:23px;height:23px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fg-dock .d-call{background:#16a34a}
+.fg-dock .d-zalo{background:#0068ff;font-family:'Manrope',sans-serif;font-weight:800;font-size:13.5px;letter-spacing:.01em}
+.fg-dock .d-mail{background:var(--navy)}
+.fg-dock .tip{position:absolute;left:62px;white-space:nowrap;background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;padding:7px 11px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .18s}
+.fg-dock a:hover .tip{opacity:1}
+@media (max-width:860px){
+  .fg-dock{left:0;right:0;bottom:0;flex-direction:row;gap:0}
+  .fg-dock a{flex:1;width:auto;height:56px;border-radius:0;box-shadow:0 -4px 16px rgba(7,20,38,.18);gap:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:14.5px}
+  .fg-dock .tip{position:static;opacity:1;background:none;padding:0;border-radius:0;font-size:14.5px;font-weight:700}
+  .fg-dock .d-zalo .tip{display:none}
+  body{padding-bottom:56px}
+  .back-to-top{bottom:70px}
+}
+.fg-msg{margin-top:14px;padding:12px 14px;border-radius:10px;font-size:14.5px;line-height:1.55;display:none}
+.fg-msg.ok{display:block;background:#e9f7ef;color:#14663a;border:1px solid #bce3cd}
+.fg-msg.err{display:block;background:#fdeceb;color:#8c1f1f;border:1px solid #f3c4c2}
+.fg-msg a{font-weight:700;text-decoration:underline}
+.rfq-form input.bad,.rfq-form textarea.bad{border-color:#d9534f;background:#fffafa}
+.fg-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.rfq-form button[disabled]{opacity:.6;cursor:progress}
+.split img{background:#eef2f7}
+.brand-portal-flag{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#0d6efd;background:#eaf1ff;border:1px solid #cfe0ff;border-radius:999px;padding:4px 11px}

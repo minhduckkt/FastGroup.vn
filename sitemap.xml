@@ -51,22 +51,12 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://fastgroup.vn/brands/wika.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
     <loc>https://fastgroup.vn/brands/hydac.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/eaton.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://fastgroup.vn/brands/endress-hauser.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.64</priority>
   </url>
@@ -87,11 +77,6 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/rheintacho.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://fastgroup.vn/brands/qlight.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.64</priority>
   </url>
@@ -295,11 +280,6 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://fastgroup.vn/en/brands/qlight.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.60</priority>
-  </url>
-  <url>
     <loc>https://fastgroup.vn/en/brands/rheintacho.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.60</priority>
@@ -335,11 +315,6 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://fastgroup.vn/en/brands/wika.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.60</priority>
-  </url>
-  <url>
     <loc>https://fastgroup.vn/en/brands/hydac.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.60</priority>
@@ -348,15 +323,6 @@
     <loc>https://fastgroup.vn/en/brands/eaton.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.60</priority>
-  </url>
-  <url>
-    <loc>https://fastgroup.vn/en/brands/endress-hauser.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.60</priority>
-  </url>  <url>
-    <loc>https://fastgroup.vn/brands/diffu-therm.html</loc>
-    <lastmod>2026-08-30</lastmod>
-    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/diffu-therm-viet-nam/</loc>
@@ -407,11 +373,6 @@
     <loc>https://fastgroup.vn/endress-hauser-viet-nam/blog/</loc>
     <lastmod>2026-08-30</lastmod>
     <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://fastgroup.vn/en/brands/diffu-therm.html</loc>
-    <lastmod>2026-08-30</lastmod>
-    <priority>0.60</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/qlight-viet-nam/</loc>

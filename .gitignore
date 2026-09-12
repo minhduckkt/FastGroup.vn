@@ -17,3 +17,10 @@ __pycache__/
 # khong go no ra duoc. Muon go phai chay rieng:
 #   git rm -r --cached "_tools/endress-hauser"
 # roi commit. Lich su cu van con tren GitHub sau khi go.
+
+# Rac he dieu hanh / trinh soan thao
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
