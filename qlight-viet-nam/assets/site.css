@@ -44,8 +44,6 @@
   --t-smart:#0f7bbd;
   --t-limit:#5a6b74;
 
-  --page-image:none;
-
   --radius:2px;
   --container:1220px;
   --shadow:0 1px 2px rgba(34,41,46,.06);
@@ -263,7 +261,7 @@ em{font-style:italic}
 .page-hero{
   background:
     linear-gradient(90deg,var(--surface) 0 60%,#fff 60% 100%),
-    var(--hero-image,none) right 6% center/auto 74% no-repeat,
+    var(--page-image) right 6% center/auto 74% no-repeat,
     var(--surface);
   border-bottom:1px solid var(--line);
 }
@@ -417,7 +415,7 @@ em{font-style:italic}
   .nav-dropdown-panel{top:calc(100% - 2px);left:0;width:300px;transform:none}
   .hero,.page-hero{background:
     linear-gradient(180deg,rgba(240,244,246,.94) 0 62%,rgba(240,244,246,.7) 100%),
-    var(--hero-image,none) right bottom/auto 46% no-repeat,var(--surface)}
+    var(--hero-image,var(--page-image)) right bottom/auto 46% no-repeat,var(--surface)}
   .hero-copy{width:100%}
   .metrics,.grid-3,.grid-4,.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .split,.contact-layout,.article-card,.product-hero-grid,.article-visual-pack{grid-template-columns:1fr}
@@ -472,4 +470,37 @@ em{font-style:italic}
 @media (max-width:720px){
   .product-hero-grid{grid-template-columns:1fr}
   .table-wrap{overflow-x:auto}
+}
+/* ================= HERO: cho anh hien ra =================
+   Loi goc: lop gradient DAU TIEN cua .hero va .page-hero la gradient DUC
+   (surface 0-57%, #fff 57-100%) ve de len lop anh ben duoi -> trinh duyet
+   tai anh ve nhung khong bao gio nhin thay. Sua: gradient mo dan ve trong
+   suot, nen duoi cung doi tu --surface sang --white de giu bo cuc hai tong.
+   rgba(240,243,246,0) = --surface o alpha 0; doi --surface thi sua ca day. */
+@media (min-width:981px){
+  .hero,.page-hero{
+    background:
+      linear-gradient(90deg,var(--surface) 0 48%,rgba(240,243,246,0) 74%),
+      var(--hero-image,none) right 4% center/auto 84% no-repeat,
+      var(--white);
+  }
+  .home-hero{
+    background:
+      linear-gradient(90deg,var(--surface) 0 46%,rgba(240,243,246,0) 70%),
+      var(--hero-image,none) right -30px center/auto 76% no-repeat,
+      var(--white);
+  }
+}
+@media (max-width:980px){
+  /* Tren dien thoai anh dat o mot dai rieng duoi cung — khong de sau nut bam. */
+  .hero,.page-hero{
+    background:
+      linear-gradient(180deg,var(--surface) 0 60%,rgba(240,243,246,0) 88%),
+      var(--hero-image,none) center bottom 14px/auto 128px no-repeat,
+      var(--white);
+  }
+  .hero .hero-inner,.page-hero .page-hero-inner{padding-bottom:162px}
+  /* Trang chu: anh ca dong san pham qua rong, bo han tren mobile. */
+  .home-hero{background:var(--surface)}
+  .home-hero .hero-inner{padding-bottom:48px}
 }
