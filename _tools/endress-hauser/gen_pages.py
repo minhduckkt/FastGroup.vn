@@ -126,7 +126,11 @@ def build_hub(h, hubs, byslug, posts):
     up = '../'
     m = h['meta']
     canon = g.BASE + h['slug'] + '/'
-    title = '%s | Fast Group' % m.get('meta_title', h['name'])
+    # meta_title trong content/hubs/*.md DA co san duoi ' | Fast Group'.
+    # Truoc day noi them lan nua -> <title> ket thuc bang
+    # '| Fast Group | Fast Group' tren ca 14 trang danh muc. (13/09/2026)
+    _mt = (m.get('meta_title') or h['name']).strip()
+    title = _mt if _mt.endswith('Fast Group') else '%s | Fast Group' % _mt
     desc = m.get('meta_desc', '')
     faq = hub_faq(h)
     trail = [(g.SITE, g.BASE)]
