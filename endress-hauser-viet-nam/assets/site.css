@@ -438,3 +438,28 @@ em{font-style:italic}
 .diagram-stage svg{width:100%;height:auto;display:block}
 .article-diagram figcaption{margin-top:12px;font-size:.9rem;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:10px;line-height:1.5}
 .article-diagram figcaption strong{color:var(--ink);font-weight:600}
+/* ================= HERO: cho anh hien ra  (13/09/2026) =================
+   Loi goc: lop gradient DAU TIEN cua .hero va .page-hero la gradient DUC
+   (surface 0-57%/60%, #fff den 100%) ve de len lop anh ben duoi -> trinh
+   duyet tai anh hero ve nhung khong bao gio nhin thay no.
+   Sua: gradient mo dan ve trong suot, nen duoi cung doi tu --surface sang
+   --white de giu nguyen bo cuc hai tong sang.
+   rgba(240,244,246,0) = --surface o alpha 0; doi --surface thi sua ca day. */
+@media (min-width:981px){
+  .hero,.page-hero{
+    background:
+      linear-gradient(90deg,var(--surface) 0 48%,rgba(240,244,246,0) 74%),
+      var(--hero-image,var(--page-image,none)) right 4% center/auto 84% no-repeat,
+      var(--white,#fff);
+  }
+}
+@media (max-width:980px){
+  /* Tren dien thoai dat anh o mot dai rieng duoi cung, khong de sau nut bam. */
+  .hero,.page-hero{
+    background:
+      linear-gradient(180deg,var(--surface) 0 60%,rgba(240,244,246,0) 88%),
+      var(--hero-image,var(--page-image,none)) center bottom 14px/auto 128px no-repeat,
+      var(--white,#fff);
+  }
+  .hero .hero-inner,.page-hero .page-hero-inner{padding-bottom:162px}
+}

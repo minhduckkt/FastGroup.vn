@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Thu vien dung chung cho bo sinh site Endress+Hauser Viet Nam."""
-import re, html, json, os
+import re, html, json, os, datetime, hashlib
 
 BASE   = 'https://fastgroup.vn/endress-hauser-viet-nam/'
 ROOT   = 'https://fastgroup.vn/'
@@ -13,7 +13,27 @@ ADDR   = '150/41 Nguyen Cu Trinh Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vi
 ADDR2  = '51 Le Van Loc Street, Vung Tau Ward, Ho Chi Minh City, Vietnam'
 MST    = '0315555189'
 THEME  = '#00697c'
-BUILD  = '2026-08-30'
+BUILD  = datetime.date.today().isoformat()   # lastmod trong sitemap
+
+
+def _asset_v():
+    """Chuoi chong cache cho site.css.
+
+    TRUOC DAY dung BUILD, ma BUILD bi ghi cung '2026-08-30' -> moi lan build
+    lai deu sinh ra '?v=2026-08-30'. URL khong doi nen trinh duyet va CDN cu
+    tiep tuc phuc vu ban CSS cu: sua CSS bao nhieu lan khach cung khong thay.
+    Nay lay 8 ky tu dau ma bam noi dung site.css — CSS doi thi URL doi.
+    """
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                     '..', '..', 'endress-hauser-viet-nam', 'assets', 'site.css')
+    try:
+        with open(p, 'rb') as f:
+            return hashlib.md5(f.read()).hexdigest()[:8]
+    except OSError:
+        return BUILD
+
+
+ASSET_V = _asset_v()
 
 def e(s):
     return html.escape(str(s or ''), quote=True)
@@ -149,7 +169,7 @@ def head(title, desc, canon, up, image=None, extra_ld=(), og_type='website'):
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />',
          '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" />',
          '<link rel="icon" href="%simg/favicon.ico" />' % ROOT,
-         '<link rel="stylesheet" href="%sassets/site.css?v=%s" />' % (up, BUILD),
+         '<link rel="stylesheet" href="%sassets/site.css?v=%s" />' % (up, ASSET_V),
          jsonld(ORG_LD)]
     for o in extra_ld:
         L.append(jsonld(o))
