@@ -426,3 +426,117 @@ footer.site .foot-grid img { width: auto; max-width: 100%; }
 .brand-figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; padding: 18px; background: #fff; }
 .brand-figure figcaption { padding: 12px 18px 16px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--line); background: var(--bg); }
 @media (max-width: 600px) { .spec-table td.st-thumb img { width: 72px; height: 56px; } .spec-table th.st-thumb-h, .spec-table td.st-thumb { width: 92px; } }
+
+/* ==========================================================================
+   RESPONSIVE PASS — 14/09/2026
+   Chi APPEND cuoi file, khong sua dong cu. Cac nhom sua:
+     1. Ngat tu an toan  : chuoi dai (part number, URL, email) khong day tran ngang.
+     2. Tablet <=992px   : giam padding section/hero de bot khoang trong.
+     3. Mobile <=600px   : co chu, co nut, khoang cach hop voi man hinh 360-430px.
+     4. Vung cham >=44px : burger, doi ngon ngu, menu xo, link chan trang.
+     5. iOS              : input >=16px de Safari khong tu phong to khi focus.
+   ========================================================================== */
+
+/* --- 1. Ngat tu an toan --- */
+.prose p, .prose li, .faq-item .faq-a, .brand-websites p, .cert-note,
+.spec-table td, .spec-table th, .cap-card p, .foot-brands a, .table-note {
+	overflow-wrap: break-word;
+}
+.spec-table-wrap { -webkit-overflow-scrolling: touch; }
+
+/* --- 2. Tablet / man hinh trung (<=992px) --- */
+@media (max-width: 992px) {
+	.section { padding: 72px 0; }
+	.section-head { margin-bottom: 42px; }
+	.hero-inner { padding: 76px 0 84px; }
+	.page-hero { padding: 56px 0 48px; }
+	.rfq-form { padding: 26px; }
+	.brand-facts { gap: 22px 34px; }
+	.other-brands { margin-top: 46px; }
+}
+
+/* --- 3. Dien thoai (<=600px) --- */
+@media (max-width: 600px) {
+	.container { padding: 0 18px; }
+	.section { padding: 52px 0; }
+	.section-head { margin-bottom: 32px; }
+	.section-head p { font-size: 16px; margin-top: 12px; }
+	.eyebrow { font-size: 12px; margin-bottom: 10px; }
+
+	.hero-inner { padding: 52px 0 60px; }
+	.hero h1 { font-size: clamp(26px, 7.2vw, 33px); letter-spacing: -.015em; }
+	.hero .sub-en { margin-top: 12px; font-size: 15px; }
+	.hero p.lead { font-size: 16px; margin-top: 16px; }
+	.hero-cta { margin-top: 26px; gap: 10px; }
+	.hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+
+	.page-hero { padding: 40px 0 36px; }
+	.page-hero h1 { font-size: clamp(24px, 6.6vw, 31px); }
+	.page-hero p { font-size: 15.5px; }
+	.page-hero::after { width: 200px; height: 200px; right: -70px; top: -70px; }
+	.breadcrumb-nav { font-size: 13px; flex-wrap: wrap; }
+
+	.prose p { font-size: 16px; }
+	.prose h3 { font-size: 19px; margin: 22px 0 8px; }
+	.cap-card { padding: 24px 20px; }
+	.brand-facts { gap: 18px 30px; padding: 18px 0; }
+	.brand-websites { padding: 13px 15px; }
+	.brand-websites p { font-size: 14.5px; }
+	.cert-note { padding: 14px 15px; font-size: 14.5px; }
+
+	.faq-item summary { padding: 15px 16px; font-size: 15.5px; }
+	.faq-item .faq-a { padding: 0 16px 16px; font-size: 15px; }
+
+	.spec-table { font-size: 14px; }
+	.spec-table th, .spec-table td { padding: 11px 13px; }
+
+	.logo-chip { min-width: 0; flex: 1 1 calc(50% - 9px); height: 74px; padding: 14px 16px; }
+	.logo-strip { gap: 12px; }
+
+	.rfq-form { padding: 22px 18px; }
+	.btn { padding: 13px 20px; }
+}
+
+/* --- 3b. Man hinh rat hep (<=380px: iPhone SE, Galaxy A0x) --- */
+@media (max-width: 380px) {
+	.container { padding: 0 14px; }
+	.hero h1 { font-size: 25px; }
+	.logo-chip { flex: 1 1 100%; }
+	.fg-dock a { font-size: 13px; }
+}
+
+/* --- 4. Vung cham toi thieu 44px (WCAG 2.5.5) --- */
+@media (max-width: 1150px) {
+	.burger { width: 44px; height: 44px; align-items: center; justify-content: center; margin-right: -8px; }
+	.menu.open { padding: 8px 24px 14px; gap: 0; }
+	.menu.open > a, .menu.open .dd-toggle { padding: 12px 0; font-size: 16px; }
+	.menu.open .dd-menu a { padding: 11px 0 11px 12px; font-size: 15.5px; }
+}
+@media (max-width: 600px) {
+	.topbar .container { height: auto; min-height: 46px; padding: 0 18px; }
+	.topbar .tb-right > a[href^="tel"] { padding: 12px 0; display: inline-block; }
+	.lang-switch a { padding: 12px 6px; display: inline-block; }
+	.foot-brands { columns: 1; }
+	.foot-brands a { padding: 9px 0; margin-bottom: 0; }
+	.foot-contact p a { display: inline-block; padding: 5px 0; }
+	.breadcrumb-nav a, .breadcrumb-nav span { padding: 6px 0; display: inline-block; }
+	.foot-social a { width: 42px; height: 42px; }
+}
+
+/* --- 5. iOS: chan Safari tu phong to khi focus o nhap lieu --- */
+@media (max-width: 992px) {
+	.field input, .field textarea, .field select { font-size: 16px; }
+}
+
+/* ==========================================================================
+   GO THANH LIEN HE NOI (contact dock) — 14/09/2026
+   Markup .fg-dock da duoc xoa khoi 42 trang. Ba dong duoi la luoi an toan:
+   neu con trang nao (hoac trang sinh tu cong cu khac) van con markup cu thi
+   no cung khong hien; dong thoi tra lai khoang cach duoi cua body va nut
+   "len dau trang" ve dung vi tri cu.
+   ========================================================================== */
+.fg-dock { display: none !important; }
+@media (max-width: 860px) {
+	body { padding-bottom: 0; }
+	.back-to-top { bottom: 22px; }
+}

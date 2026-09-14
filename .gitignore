@@ -8,6 +8,9 @@ _tools/qlight/
 # Thu muc lam viec tam
 Claude outputs/
 
+# Log chan doan cua _push.bat
+_push-log.txt
+
 # Rac Python
 __pycache__/
 *.pyc
