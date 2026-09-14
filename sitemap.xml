@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fastgroup.vn/</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
@@ -67,12 +67,12 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/hansford_sensor.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/iminorgren.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/crouzet.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -92,12 +92,20 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/tempil.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
+    <priority>0.64</priority>
+  </url><url>
+    <loc>https://fastgroup.vn/brands/rotork.html</loc>
+    <lastmod>2026-09-14</lastmod>
+    <priority>0.64</priority>
+  </url><url>
+    <loc>https://fastgroup.vn/brands/gestra.html</loc>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/markal.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -117,7 +125,7 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/gf.html</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-09-14</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
