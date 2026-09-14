@@ -457,9 +457,14 @@ em{font-style:italic}
   background:var(--surface-2);color:var(--ink-soft);font-size:.78rem;font-weight:600;letter-spacing:.01em}
 .part-table td:first-child a{color:var(--blue);font-weight:600}
 .part-table tbody tr:hover{background:var(--blue-tint)}
-.product-visual.certificate img{width:100%;max-width:520px;border:1px solid var(--line);
-  border-radius:var(--radius);object-fit:contain;background:var(--white)}
-.product-visual.certificate figcaption{font-size:.8rem;color:var(--muted);margin-top:10px;word-break:break-word}
+.product-visual.certificate{padding:22px;align-content:start}
+.product-visual.certificate a{display:block;width:100%}
+.product-visual.certificate img{width:100%;height:auto;max-width:520px;max-height:none;
+  border:1px solid var(--line);border-radius:var(--radius);object-fit:contain;background:var(--white);
+  transition:box-shadow .18s ease}
+.product-visual.certificate a:hover img{box-shadow:0 6px 22px rgba(13,91,171,.18)}
+.product-visual.certificate figcaption{font-size:.8rem;color:var(--muted);margin-top:12px;word-break:break-word;
+  text-align:center;line-height:1.6}
 .hub-grid a{word-break:break-word}
 /* quick-facts la luoi 2 cot: o le cuoi cung phai trai het hang, khong de o trong */
 .quick-facts > div:last-child:nth-child(odd){grid-column:1 / -1}
@@ -564,3 +569,10 @@ em{font-style:italic}
 @media (max-width:720px){
   .blog-thumb img{height:170px}
 }
+
+/* Giay chung nhan Certificate of Distributor — trang dai ly */
+.cod-figure{margin:30px 0;padding:0}
+.cod-figure img{display:block;width:100%;max-width:560px;height:auto;margin:0 auto;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--white)}
+.cod-figure figcaption{margin:14px auto 0;max-width:560px;color:var(--muted);
+  font-size:.82rem;line-height:1.65;text-align:center}
