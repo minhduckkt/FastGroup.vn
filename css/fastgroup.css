@@ -343,3 +343,38 @@ footer.site a:hover { color: var(--accent-2); }
 .rfq-form button[disabled]{opacity:.6;cursor:progress}
 .split img{background:#eef2f7}
 .brand-portal-flag{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#0d6efd;background:#eaf1ff;border:1px solid #cfe0ff;border-radius:999px;padding:4px 11px}
+
+/* ==========================================================================
+   SUA HEADER — 13/09/2026
+   Van de: thanh .nav can 1192px de xep duoc mot hang, trong khi be rong trong
+   cua .container chi vua dung 1192px (1240px tru 48px padding). Khong con
+   khoang du nao, nen menu rot xuong 2-3 dong o MOI do rong man hinh, ke ca
+   1440px. Do cao menu do len 74px lam header trong luom thuom.
+   Cach sua, chi bang CSS — khong dung toi 77 file HTML dang chua san JS burger:
+     1. Tu 1151px tro len : thu nho logo 42->36px, giam gap 28->18px, cam ngat
+                            dong giua muc menu. Header chi con can 1053px.
+     2. Tu 993 den 1150px : dung menu burger. Muc con cua "Dich vu" luon mo san
+                            vi JS trong tung trang van gan cung nguong 992px.
+     3. Tu 992px tro xuong: giu nguyen hoan toan hanh vi cu.
+   ========================================================================== */
+@media (min-width: 1151px) {
+	.nav { flex-wrap: nowrap; gap: 20px; }
+	.logo { flex: 0 0 auto; }
+	.logo img { height: 36px; width: auto; }
+	.menu { gap: 18px; flex-wrap: nowrap; }
+	.menu a { white-space: nowrap; }
+	.nav-cta { flex: 0 0 auto; }
+	.nav-cta .btn { white-space: nowrap; }
+}
+@media (max-width: 1150px) {
+	.menu, .nav-cta .btn { display: none; }
+	.burger { display: flex; }
+	.menu.open { display: flex; position: absolute; top: 76px; left: 0; right: 0; background: #fff; flex-direction: column; padding: 18px 24px; gap: 16px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+}
+@media (min-width: 993px) and (max-width: 1150px) {
+	.has-dd { width: 100%; }
+	.dd-toggle { width: 100%; justify-content: center; pointer-events: none; }
+	.dd-toggle .car { display: none; }
+	.dd-menu { position: static; display: flex; width: 100%; min-width: 0; margin-top: 8px; padding: 6px 0 0 14px; box-shadow: none; border: 0; border-left: 2px solid var(--line); border-radius: 0; background: transparent; }
+	.dd-menu a { padding: 8px 0 8px 12px; }
+}
