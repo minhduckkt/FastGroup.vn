@@ -59,7 +59,7 @@ img { max-width: 100%; display: block; }
 header.site { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .logo { display: inline-flex; align-items: center; }
-.logo img { height: 42px; }
+.logo img { height: 42px; width: auto; max-width: 100%; }
 .brand-seo { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .menu { display: flex; gap: 28px; align-items: center; }
 .menu a { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 15px; color: var(--ink); position: relative; }
@@ -539,4 +539,44 @@ footer.site .foot-grid img { width: auto; max-width: 100%; }
 @media (max-width: 860px) {
 	body { padding-bottom: 0; }
 	.back-to-top { bottom: 22px; }
+}
+
+/* ==========================================================================
+   FIX HIEN THI TREN DIEN THOAI — 15/09/2026
+   1. LOGO BI KEO GIAN: the <img> cua logo mang width="1076" height="198".
+      Hai thuoc tinh nay la presentational hint; khi gap img{max-width:100%}
+      trinh duyet ep chieu rong anh bang chieu rong khung (vd 340px) trong khi
+      CSS van khoa height:42px -> chu "FAST GROUP ENGINEERING" bi keo dai theo
+      chieu ngang. Chi xay ra tu 1150px tro xuong vi rule width:auto truoc day
+      chi nam trong @media (min-width:1151px).
+      Khoa width:auto cho ca header va footer de anh luon giu ty le 1076:198.
+   2. ANH HERO BI CHIM: lop phu cu bat dau o rgba(...,.93) va tren man hinh hep
+      thi gan nhu toan bo khung hero roi vao doan .93-.82 -> khong con nhin ro
+      anh cang. Doi sang gradient doc, nhat hon, va them text-shadow de chu van
+      du tuong phan.
+   ========================================================================== */
+.logo img,
+header.site .logo img,
+footer.site img { width: auto; max-width: 100%; }
+
+@media (max-width: 860px) {
+	.hero::before {
+		background-image:
+			linear-gradient(180deg, rgba(7,20,38,.88) 0%, rgba(8,24,45,.74) 48%, rgba(7,20,38,.82) 100%),
+			var(--hero-img);
+		background-position: 56% center;
+	}
+	/* Anh hero cua trang chu tieng Viet: ban goc 1920x1061 nam ngang, khi cover
+	   vao khung doc ~390x670 tren dien thoai thi bi phong to gan 2 lan -> mo.
+	   Dung ban cat doc rieng (990x1697, da lam net) de khong phai phong to.
+	   Selector bam theo ten file trong inline style nen khong dung toi cac
+	   trang hero khac (vd /en/ dung hero-petrochem.webp). */
+	.hero[style*="hero-logistics.webp"]::before {
+		background-image:
+			linear-gradient(180deg, rgba(7,20,38,.88) 0%, rgba(8,24,45,.74) 48%, rgba(7,20,38,.82) 100%),
+			url('../img/hero-logistics-mobile.webp');
+		background-position: center center;
+	}
+	.hero h1, .hero p.lead, .hero .eyebrow { text-shadow: 0 2px 12px rgba(4,12,24,.55); }
+	.hero .btn-ghost { background: rgba(7,20,38,.42); backdrop-filter: blur(2px); border-color: rgba(255,255,255,.42); }
 }

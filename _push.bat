@@ -57,6 +57,9 @@ REM  KHONG dung "git add -A": repo nay PUBLIC, thu muc goc con tai lieu noi bo
 REM  (_push-log.txt, HANDOFF-*.md, _tools\qlight, "Claude outputs") khong duoc day len.
 "%GIT%" add -u >> "%LOG%" 2>&1
 "%GIT%" add ".gitignore" >> "%LOG%" 2>&1
+REM  File anh moi (chua duoc git theo doi) phai them tay o day,
+REM  vi "git add -u" khong bat file moi.
+"%GIT%" add "img/hero-logistics-mobile.webp" >> "%LOG%" 2>&1
 
 echo.
 echo === File se duoc commit ===
@@ -68,7 +71,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "UI: go thanh lien he noi va muc he thong website, toi uu responsive" -m "- Go .fg-dock (Goi ngay / Zalo / Gui email) khoi 42 trang; them luoi an toan trong CSS" -m "- Tra lai body padding-bottom va vi tri nut len dau trang tren mobile" -m "- Go muc He thong website chuyen nganh khoi index.html va brands.html" -m "- Doi cach dien dat khoi lien ket tren 8 trang brand: bo ngu canh so huu, giu nguyen link" -m "- CSS responsive: breakpoint <=992 / <=600 / <=380px, vung cham >=44px, input 16px chong iOS zoom" -m "- Kiem tra 25 trang x 8 do rong man hinh: khong trang nao tran ngang" -m "" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01WN2jFRP8R2qo9oiS884yFa" >> "%LOG%" 2>&1
+"%GIT%" commit -m "Fix hien thi mobile: logo bi keo gian va anh hero bi chim" -m "- .logo img: them width:auto/max-width:100%%. Thuoc tinh width=1076 tren the img la presentational hint, gap img{max-width:100%%} nen anh bi ep rong het khung trong khi height van khoa 42px -> chu FAST GROUP ENGINEERING bi keo dai tren moi man hinh <=1150px" -m "- footer.site img: khoa width:auto cho toan bo anh trong footer (truoc day chi ap cho .foot-grid)" -m "- Hero mobile (<=860px): doi gradient phu tu 110deg .93/.82/.55 sang 180deg .88/.74/.82 de nhin ro anh cang; them text-shadow va nen mo cho nut ghost de giu tuong phan" -m "- Them img/hero-logistics-mobile.webp (990x1697, cat doc tu ban goc + lam net): ban 1920x1061 nam ngang khi cover vao khung doc tren dien thoai bi phong to ~1.9 lan nen mo" -m "- index.html: preload hero tach theo media query, bump ?v=20260915a" -m "" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XW2K95mdmjHurQkbKoRioS" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
