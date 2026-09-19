@@ -1,12 +1,15 @@
 (function(){
 var HUBS=window.AT_INDEX||[],PARTS=null,partsPending=false;
+var indexScript=document.querySelector('script[src$="search-index.js"]')||{};
+var SITE_BASE=(indexScript.src||new URL("assets/search-index.js",location.href).href).replace(/assets\/search-index\.js(?:\?.*)?$/,"");
 function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
 function key(s){return norm(s).replace(/[^a-z0-9]/g,"");}
+function href(u){return new URL(String(u||"").replace(/^\.\.\//,""),SITE_BASE).href;}
 function loadParts(cb){
   if(PARTS){cb();return;}
   if(partsPending){return;}
   partsPending=true;
-  var base=(document.querySelector('script[src$="search-index.js"]')||{}).src||"";
+  var base=indexScript.src||"";
   var s=document.createElement("script");
   s.src=base.replace("search-index.js","parts-index.js");
   s.onload=function(){PARTS=window.AT_PARTS||[];partsPending=false;cb();};
@@ -39,7 +42,7 @@ function card(x){var it=x.it;
   var t=x.p?"Mã hàng":(it.t||"");
   var sub=x.p?("Model "+it.m+(it.d?" · "+it.d:"")):(it.d||"");
   return '<article class="card"><div class="product-meta">'+t+'</div>'+
-         '<h3><a href="'+it.u+'">'+it.c+'</a></h3><p>'+sub+'</p></article>';}
+         '<h3><a href="'+href(it.u)+'">'+it.c+'</a></h3><p>'+sub+'</p></article>';}
 /* --- o tra ma o hero --- */
 var hero=document.getElementById("heroq"),ac=document.getElementById("heroAc");
 if(hero&&ac){
@@ -48,10 +51,10 @@ if(hero&&ac){
     if(!q){ac.classList.remove("on");ac.innerHTML="";return;}
     var hits=ranked(q,6);
     ac.innerHTML=hits.map(function(x){var it=x.it;
-      return '<a href="'+it.u.replace(/^\.\.\//,"")+'"><span class="code">'+it.c+'</span>'+
+      return '<a href="'+href(it.u)+'"><span class="code">'+it.c+'</span>'+
              '<span>'+(x.p?("Model "+it.m):(it.d||""))+'</span>'+
              '<span class="mt">'+(x.p?"Mã hàng":(it.t||""))+'</span></a>';}).join("")+
-      '<a class="all" href="tra-cuu-part-number/?q='+encodeURIComponent(q)+'">Xem tất cả kết quả</a>';
+      '<a class="all" href="'+href("tra-cuu-part-number/?q="+encodeURIComponent(q))+'">Xem tất cả kết quả</a>';
     ac.classList.add("on");};
   hero.addEventListener("input",function(){loadParts(draw);draw();});
   hero.addEventListener("focus",function(){loadParts(function(){});});
