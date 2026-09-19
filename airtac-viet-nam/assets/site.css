@@ -855,3 +855,21 @@ em{font-style:italic}
   }
 }
 @media (max-width:720px){.doc-list li{grid-template-columns:1fr;gap:4px}}
+
+
+/* AirTAC internal optimizer */
+.airtac-deep-links,.airtac-decision,.airtac-faq,.airtac-category-path{position:relative}
+.airtac-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.airtac-link-grid a{display:block;min-height:132px;padding:20px;background:#fff;border:1px solid var(--line);transition:border-color .18s ease,box-shadow .18s ease}
+.airtac-link-grid a:hover{border-color:var(--tone,var(--blue));box-shadow:0 10px 28px rgba(39,50,55,.08)}
+.airtac-link-grid span{display:block;margin-bottom:8px;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.airtac-link-grid strong{display:block;color:var(--ink);line-height:1.32}
+.airtac-link-grid small{display:block;margin-top:8px;color:var(--muted);font-size:.9rem;line-height:1.45}
+.airtac-process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin:0 0 28px}
+.airtac-process>div{background:#fff;border:1px solid var(--line);padding:22px}
+.airtac-process strong{display:block;color:var(--ink);margin-bottom:8px}
+.airtac-process p{margin:0;color:var(--ink-soft)}
+.airtac-decision .tech-panel .airtac-link-grid{grid-template-columns:1fr;gap:1px;margin-bottom:16px}
+.airtac-decision .tech-panel .airtac-link-grid a{min-height:0;padding:14px 16px}
+@media (max-width:980px){.airtac-link-grid,.airtac-process{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.airtac-link-grid,.airtac-process{grid-template-columns:1fr}.airtac-link-grid a{min-height:0}}
