@@ -16,9 +16,10 @@ REM  QUAN TRONG: "git add -u" chi bat file DA duoc git theo doi.
 REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
-set "NEWFILES=brands/kacon.html img/kacon-logo.png img/kacon-og.jpg"
+REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
+set "NEWFILES=rosemount-emerson-viet-nam"
 
-set "MSG_TIEUDE=Them trang thuong hieu KACON + lien ket cheo voi kacon.vn"
+set "MSG_TIEUDE=Them portal thuong hieu Rosemount - Emerson (fastgroup.vn/rosemount-emerson-viet-nam)"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -69,15 +70,15 @@ REM  (_push-log.txt, HANDOFF-*.md, _tools\qlight, "Claude outputs") khong duoc d
 "%GIT%" add -u >> "%LOG%" 2>&1
 "%GIT%" add ".gitignore" >> "%LOG%" 2>&1
 
-REM  Them tung file moi trong NEWFILES, bao loi ngay neu file khong ton tai.
+REM  Them tung file/thu muc moi trong NEWFILES, bao loi ngay neu khong ton tai.
 for %%F in (%NEWFILES%) do (
   if exist "%%F" (
     "%GIT%" add "%%F" >> "%LOG%" 2>&1
     echo   + da them %%F
     echo add %%F - OK >> "%LOG%"
   ) else (
-    echo   [CANH BAO] khong thay file %%F
-    echo add %%F - KHONG TIM THAY FILE >> "%LOG%"
+    echo   [CANH BAO] khong thay %%F
+    echo add %%F - KHONG TIM THAY >> "%LOG%"
   )
 )
 
@@ -106,7 +107,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "TRANG MOI brands/kacon.html" -m "- Ho so thuong hieu KACON (Korea Auto Controls) theo dung khuon mau trang Honeywell: gioi thieu hang, bang 11 nhom thiet bi kem ky hieu dong, ung dung theo 6 nganh, 4 luu y ky thuat, chung tu theo lo hang, 6 cau FAQ" -m "- SEO: title/description/canonical/hreflang/OG/Twitter + 4 khoi JSON-LD (BreadcrumbList, Brand, WebPage, FAQPage)" -m "- 31 lien ket ra kacon.vn: trang chu, tra cuu part number, tai lieu, shop, lien he, trang dai ly, 11 trang nhom san pham, 7 trang dong san pham" -m "- Cach dat cau: Fast Group la don vi cung ung doc lap, hang KACON chinh hang; chua ghi authorized distributor vi Certificate of Distributor con dang xin" -m "ANH MOI" -m "- img/kacon-logo.png (logo goc, da tach nen ngoai thanh trong suot)" -m "- img/kacon-og.jpg (anh OG dung chung voi kacon.vn)" -m "CAP NHAT brands.html" -m "- Them the KACON vao Nhom 3 (Tu dong hoa and Dieu khien), gan nhan Brand portal" -m "- Cap nhat so thuong hieu 32 -> 33 trong title, description va the OG/Twitter" -m "CAP NHAT sitemap.xml" -m "- Them URL brands/kacon.html, priority 0.64" -m "CAP NHAT _push.bat" -m "- Dua danh sach file moi ra bien NEWFILES o dau file, them vong lap add va canh bao khi file khong ton tai" -m "- Dung lai co thong bao ro rang khi khong co gi trong staging (truoc day commit that bai voi ma 1 ma khong noi ly do)" -m "" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01JMJQwqEU86XzXgUQKB11Q2" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "PORTAL MOI rosemount-emerson-viet-nam/ (21 file)" -m "- 1 trang hub + 6 trang nhom: do ap suat, do luu luong, do muc, do nhiet do, phan tich khi, phan tich long" -m "- 12 pillar chi tiet: 3051, 3051S, 2051, 3051SFA Annubar, 3417, 8750W, 700XA, 770XA, 5408, 3308, 3144, 1056" -m "- assets/site.css (he thiet ke mau Emerson #004B8D, nen #f5f7fa dong bo trang chinh) + logo brand-rosemount-emerson.png" -m "- SEO: title/description/canonical/OG/Twitter + JSON-LD (Organization, ItemList, Article, BreadcrumbList, FAQPage)" -m "- Positioning: nha cung cap doc lap, hang chinh hang CO/CQ; KHONG ghi authorized distributor; co disclaimer + link emerson.com" -m "" -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01KKLPPsSPyGvuZPs2fDdpgC" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -141,7 +142,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/brands/kacon.html
+echo   Kiem tra: https://fastgroup.vn/rosemount-emerson-viet-nam/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.
