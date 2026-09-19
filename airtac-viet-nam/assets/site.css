@@ -873,3 +873,13 @@ em{font-style:italic}
 .airtac-decision .tech-panel .airtac-link-grid a{min-height:0;padding:14px 16px}
 @media (max-width:980px){.airtac-link-grid,.airtac-process{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.airtac-link-grid,.airtac-process{grid-template-columns:1fr}.airtac-link-grid a{min-height:0}}
+
+
+/* AirTAC priority series enrichment */
+.airtac-priority .section-heading p{max-width:760px}
+.airtac-priority-links{display:grid;grid-template-columns:1fr;gap:1px;margin-bottom:16px}
+.airtac-priority-links a{display:block;padding:14px 16px;background:#fff;border:1px solid var(--line);transition:border-color .18s ease,box-shadow .18s ease}
+.airtac-priority-links a:hover{border-color:var(--tone,var(--blue));box-shadow:0 10px 24px rgba(39,50,55,.08)}
+.airtac-priority-links span{display:block;margin-bottom:6px;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.airtac-priority-links strong{display:block;color:var(--ink);line-height:1.32}
+.airtac-priority-links small{display:block;margin-top:6px;color:var(--muted);font-size:.88rem;line-height:1.42}

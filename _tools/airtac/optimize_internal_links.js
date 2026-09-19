@@ -46,7 +46,7 @@ const groupConfig = {
     rfqFields: ["series", "bore", "stroke", "kiểu gá", "cảm biến từ", "ren cổng", "tải làm việc"],
     whenUse: "Dùng cho cơ cấu đẩy/kéo, kẹp gắp, bàn trượt, xoay và các cụm tự động cần chuyển động khí nén.",
     caution: "Khi thay thế xi lanh, kích thước lắp, bore/stroke, vị trí gá và cảm biến từ thường quan trọng hơn tên gọi series.",
-    priority: ["SC Series", "SDA Series", "ACQ Series", "MAL Series", "HFC Series", "HRQ Series", "TR Series"]
+    priority: ["NACQ Series", "NPB Series", "NFPA Cylinder NSU Series", "TR Series", "TCL,TCM Series", "HFC Series", "HRQ Series", "RMS Series"]
   },
   "Fittings & Tubing & Accessories": {
     tone: "t-fitting",
@@ -82,6 +82,18 @@ const categoryBySlug = {
   "xi-lanh-khi-nen": "Actuators",
   "dau-noi-ong-khi-nen": "Fittings & Tubing & Accessories",
   "thanh-truot-linear-guide": "Guide"
+};
+
+const contentGroupBySlug = {
+  "huong-dan/chon-bo-loc-dieu-ap-frl-airtac/": "Preparation Units",
+  "huong-dan/chon-van-dien-tu-airtac/": "Control Components",
+  "huong-dan/chon-xi-lanh-khi-nen-airtac/": "Actuators",
+  "huong-dan/chon-dau-noi-ong-khi-nen-airtac/": "Fittings & Tubing & Accessories",
+  "huong-dan/chon-linear-guide-airtac/": "Guide",
+  "blog/bo-loc-dieu-ap-frl-airtac-gac-gafr-gar-gal/": "Preparation Units",
+  "blog/van-dien-tu-airtac-4v-3v-6d-7v/": "Control Components",
+  "blog/xi-lanh-khi-nen-airtac-cach-chon/": "Actuators",
+  "blog/dau-noi-ong-khi-nen-airtac-fitting-tubing/": "Fittings & Tubing & Accessories"
 };
 
 function readIndex() {
@@ -166,6 +178,11 @@ function groupFromIndex(rel, index) {
   const current = currentUrlFromRel(rel);
   const hit = index.find((item) => item.u === current);
   return hit && groupConfig[hit.g] ? hit.g : null;
+}
+
+function groupFromRel(rel) {
+  const current = currentUrlFromRel(rel);
+  return contentGroupBySlug[current] || null;
 }
 
 function removeOptimizerBlocks(html) {
@@ -269,7 +286,7 @@ function optimizeHtml(html, rel, index) {
   if (type === "other") return { html, changed: html !== original };
 
   const prefix = prefixFor(rel);
-  const group = groupFromIndex(rel, index) || groupFromHtml(html, rel);
+  const group = groupFromRel(rel) || groupFromIndex(rel, index) || groupFromHtml(html, rel);
   const cfg = groupConfig[group];
   const title = getTitle(html) || "trang AirTAC này";
   const series = getSeriesLink(html);
