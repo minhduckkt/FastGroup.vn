@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cách Đọc Model Code Rosemount Trước Khi Gửi RFQ Báo Giá</title>
+<meta name="description" content="Model code Rosemount là gì, cấu trúc từng khối ký tự, hậu quả khi sai một ký tự và cách dựng lại mã từ nameplate trước khi gửi RFQ xin báo giá.">
+<link rel="canonical" href="https://fastgroup.vn/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Fast Group">
+<meta property="og:title" content="Cách Đọc Model Code Rosemount Trước Khi Gửi RFQ Báo Giá">
+<meta property="og:description" content="Model code Rosemount là gì, cấu trúc từng khối ký tự, hậu quả khi sai một ký tự và cách dựng lại mã từ nameplate trước khi gửi RFQ xin báo giá.">
+<meta property="og:url" content="https://fastgroup.vn/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/">
+<meta property="og:image" content="https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/cach-doc-model-code-rosemount.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/rosemount-emerson-viet-nam/blog/assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cách đọc model code Rosemount trước khi gửi RFQ","description":"Model code Rosemount là gì, cấu trúc từng khối ký tự, hậu quả khi sai một ký tự và cách dựng lại mã từ nameplate trước khi gửi RFQ xin báo giá.","image":["https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/cach-doc-model-code-rosemount.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-3051-cum-lap-san.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-2051-cac-dang-than-may.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-114c-thermowell-van-stone.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-vo-phong-no-ex-d.webp"],"inLanguage":"vi-VN","datePublished":"2026-09-20","dateModified":"2026-09-21","author":{"@type":"Organization","name":"Fast Group","url":"https://fastgroup.vn"},"publisher":{"@type":"Organization","name":"CÔNG TY TNHH FAST GROUP","url":"https://fastgroup.vn"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://fastgroup.vn/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/"},"articleSection":"Báo giá &amp; RFQ","keywords":"model code Rosemount, đọc mã Rosemount, RFQ Rosemount, cấu hình Rosemount, đơn vị cung cấp Rosemount chính hãng","wordCount":2057}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://fastgroup.vn/"},{"@type":"ListItem","position":2,"name":"Rosemount Emerson Việt Nam","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/"},{"@type":"ListItem","position":3,"name":"Blog kỹ thuật","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/blog/"},{"@type":"ListItem","position":4,"name":"Cách đọc model code Rosemount trước khi gửi RFQ","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Model code Rosemount nằm ở đâu trên thiết bị?","acceptedAnswer":{"@type":"Answer","text":"Trên nameplate gắn ở vỏ thiết bị, thường cùng khu vực với serial number và thông tin chứng chỉ phòng nổ. Với một số dòng, nameplate có nhiều tấm: một tấm thông tin sản phẩm và một tấm chứng chỉ an toàn — nên chụp cả hai."}},{"@type":"Question","name":"Mã trên nameplate khác mã trên PO thì sao?","acceptedAnswer":{"@type":"Answer","text":"Dừng lại và làm rõ trước khi ký biên bản nhận hàng. Khác biệt có thể do nhà sản xuất thay mã tương đương khi một option ngừng cung cấp, nhưng cũng có thể là giao nhầm cấu hình. Cần văn bản giải trình từ nhà cung cấp trong cả hai trường hợp."}},{"@type":"Question","name":"Có thể tự tra ý nghĩa model code trên mạng không?","acceptedAnswer":{"@type":"Answer","text":"Nguồn chuẩn là Product Data Sheet của Emerson cho đúng dòng sản phẩm. Các bảng mã đăng lại trên diễn đàn hoặc website bên thứ ba thường thuộc phiên bản tài liệu cũ, và các dòng khác nhau không dùng chung quy ước ký tự — suy luận chéo giữa các dòng là nguồn sai sót phổ biến."}},{"@type":"Question","name":"Model code cũ đã ngừng sản xuất thì tìm thiết bị thay thế thế nào?","acceptedAnswer":{"@type":"Answer","text":"Cần đối chiếu bốn nhóm: kết nối quá trình và kích thước lắp đặt, dải đo và cấp chính xác, tín hiệu và giao thức tương thích DCS, chứng chỉ phòng nổ theo phân vùng. Fast Group dựng cấu hình thay thế từ nameplate cũ và nêu rõ những điểm khác biệt cần xử lý trước khi bạn phát hành PO."}},{"@type":"Question","name":"Vì sao nhà cung cấp cần biết môi chất khi đã có model code?","acceptedAnswer":{"@type":"Answer","text":"Vì model code cho biết thiết bị là gì, còn môi chất cho biết thiết bị đó có phù hợp hay không. Nhiều trường hợp mã hợp lệ về mặt kỹ thuật nhưng vật liệu màng ngăn hoặc dầu điền không tương thích với môi chất thực tế. Kiểm tra chéo hai thông tin này là cách chặn lỗi trước khi đặt hàng."}},{"@type":"Question","name":"Gửi ảnh nameplate mờ có dùng được không?","acceptedAnswer":{"@type":"Answer","text":"Thường vẫn dùng được nếu chụp nhiều góc với ánh sáng nghiêng để làm nổi chữ dập chìm, kèm theo thông tin vận hành như vị trí lắp đặt, môi chất và dải đo. Đội ngũ kỹ thuật của chúng tôi xử lý các trường hợp nameplate ăn mòn khá thường xuyên trong môi trường ngoài khơi và nhà máy hóa chất."}}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap hd">
+    <a class="brand" href="/rosemount-emerson-viet-nam/blog/">
+      <span class="brand-mark">FG</span>
+      <span>Fast Group<small>Rosemount · Emerson Việt Nam</small></span>
+    </a>
+    <nav class="nav">
+      <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Trang Rosemount</a>
+      <a href="/rosemount-emerson-viet-nam/blog/" class="is-active">Blog kỹ thuật</a>
+      <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-3051/">Sản phẩm</a>
+      <a href="/rosemount-emerson-viet-nam/lien-he/">Liên hệ</a>
+    </nav>
+    <a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="https://fastgroup.vn/">Trang chủ</a><span>/</span>
+    <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Rosemount Emerson Việt Nam</a><span>/</span>
+    <a href="/rosemount-emerson-viet-nam/blog/">Blog kỹ thuật</a><span>/</span>Cách đọc model code Rosemount trước khi gửi RFQ
+  </nav>
+
+  <header class="post-head">
+    <span class="tag tag-b">Báo giá &amp; RFQ</span>
+    <h1>Cách đọc model code Rosemount trước khi gửi RFQ</h1>
+    <div class="post-meta">
+      <span>Fast Group · Đội ngũ kỹ thuật</span><span class="dot">•</span>
+      <span>Cập nhật 21/09/2026</span><span class="dot">•</span>
+      <span>10 phút đọc</span><span class="dot">•</span>
+      <span>2,057 từ</span>
+    </div>
+  </header>
+
+  <figure class="post-hero" style="margin-bottom:10px">
+    <img src="/rosemount-emerson-viet-nam/blog/assets/img/cach-doc-model-code-rosemount.webp" width="1600" height="900" alt="Đọc model code Rosemount trên thiết bị trước khi gửi RFQ" fetchpriority="high">
+  </figure>
+  <p class="figcap">Đọc model code Rosemount trên thiết bị trước khi gửi RFQ — ảnh minh họa, Fast Group.</p>
+
+  <div class="post-layout">
+    <article class="prose">
+<p>Hai kỹ sư cùng đặt "Rosemount 3051" có thể nhận về hai thiết bị khác nhau đến mức không lắp thay cho nhau được: khác vật liệu màng ngăn, khác kết nối quá trình, khác loại chứng chỉ phòng nổ, khác cả dải đo. Thứ phân biệt chúng không phải tên dòng mà là <strong>model code</strong> — chuỗi ký tự mã hóa toàn bộ cấu hình thiết bị.</p>
+<p>Đọc được model code là kỹ năng nền tảng khi làm việc với thiết bị Rosemount, dù bạn ở phía kỹ thuật, procurement hay nhà thầu. Bài viết này giải thích cấu trúc mã, chỉ ra những hậu quả cụ thể khi sai một ký tự, và hướng dẫn cách dựng lại mã từ nameplate thiết bị đang vận hành.</p>
+<h2 id="model-code-rosemount-la-gi-va-vi-sao-no-quan-trong">Model code Rosemount là gì và vì sao nó quan trọng</h2>
+<p>Model code là "địa chỉ" duy nhất của một cấu hình thiết bị trong hệ thống của nhà sản xuất. Từ mã này, nhà máy biết chính xác phải lắp module cảm biến nào, mặt bích vật liệu gì, dầu điền loại nào, vỏ bằng nhôm hay thép không gỉ, cổng cáp ren gì, có màn hình hay không, và thiết bị được cấp chứng chỉ phòng nổ nào.</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-3051-cum-lap-san.webp" width="1200" height="1154" loading="lazy" decoding="async" alt="Model code mã hoá toàn bộ cụm thiết bị này: thân máy, kiểu đo, vật liệu, kết nối quá trình, manifold, tín hiệu và chứn"><figcaption>Model code mã hoá toàn bộ cụm thiết bị này: thân máy, kiểu đo, vật liệu, kết nối quá trình, manifold, tín hiệu và chứng chỉ.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<p>Vì thế, model code là đơn vị làm việc duy nhất có ý nghĩa trong ba tình huống:</p>
+<ul>
+<li><strong>Khi xin báo giá</strong> — đơn giá gắn với cấu hình, không gắn với tên dòng.</li>
+<li><strong>Khi đặt hàng</strong> — PO ghi model code đầy đủ mới ràng buộc được nhà cung cấp.</li>
+<li><strong>Khi nhận hàng</strong> — đối chiếu model code trên nameplate với PO và CQ là bước kiểm tra cốt lõi.</li>
+</ul>
+<p>Một <strong>đơn vị cung cấp Rosemount chính hãng</strong> làm việc nghiêm túc sẽ luôn chào giá bằng model code đầy đủ. Nếu báo giá chỉ ghi "Rosemount 3051 DP", đó chưa phải báo giá — đó là ước lượng.</p>
+<h2 id="cau-truc-chung-cua-mot-model-code-rosemount">Cấu trúc chung của một model code Rosemount</h2>
+<p>Model code được ghép từ nhiều <strong>khối ký tự</strong>, mỗi khối điều khiển một nhóm thuộc tính. Cấu trúc và số khối khác nhau giữa các dòng sản phẩm, nhưng logic chung thì giống nhau:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Khối</th>
+<th>Điều khiển thuộc tính gì</th>
+<th>Ví dụ ảnh hưởng thực tế</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dòng sản phẩm</td>
+<td>Họ thiết bị (3051, 3051S, 2051, 248, 3144S, 5408…)</td>
+<td>Nền tảng, cấp hiệu năng, bộ chẩn đoán</td>
+</tr>
+<tr>
+<td>Kiểu thân máy</td>
+<td>Coplanar, in-line, lắp mặt bích đo mức…</td>
+<td>Cách lắp đặt, kích thước, phụ kiện đi kèm</td>
+</tr>
+<tr>
+<td>Kiểu đo</td>
+<td>Chênh áp / tương đối / tuyệt đối</td>
+<td>Phép đo thực hiện được, không đổi sau khi sản xuất</td>
+</tr>
+<tr>
+<td>Range class</td>
+<td>Dải đo danh định của cảm biến</td>
+<td>Sai số thực tế tại dải làm việc</td>
+</tr>
+<tr>
+<td>Vật liệu tiếp xúc môi chất</td>
+<td>Màng ngăn, mặt bích, van xả</td>
+<td>Khả năng chống ăn mòn, tuổi thọ thiết bị</td>
+</tr>
+<tr>
+<td>Dầu điền</td>
+<td>Silicone, dầu trơ…</td>
+<td>Giới hạn nhiệt độ, tương thích môi chất (oxy, thực phẩm)</td>
+</tr>
+<tr>
+<td>Kết nối quá trình</td>
+<td>Ren NPT, mặt bích, remote seal</td>
+<td>Lắp được hay không vào điểm đo hiện hữu</td>
+</tr>
+<tr>
+<td>Tín hiệu &amp; giao thức</td>
+<td>4–20 mA HART, WirelessHART, Fieldbus</td>
+<td>Tương thích với DCS/PLC hiện hữu</td>
+</tr>
+<tr>
+<td>Vỏ và cổng cáp</td>
+<td>Nhôm / thép không gỉ, ren cổng cáp</td>
+<td>Phù hợp môi trường, khớp phụ kiện đấu nối</td>
+</tr>
+<tr>
+<td>Màn hình hiển thị</td>
+<td>Có / không, loại giao diện</td>
+<td>Khả năng đọc và cấu hình tại chỗ</td>
+</tr>
+<tr>
+<td>Chứng chỉ phòng nổ</td>
+<td>ATEX, IECEx, phương pháp bảo vệ, Zone</td>
+<td>Được phép lắp hay bị HSE từ chối</td>
+</tr>
+<tr>
+<td>Option bổ sung</td>
+<td>Hiệu chuẩn đặc biệt, SIL, NACE, thử nghiệm</td>
+<td>Giá, lead time, khả năng qua nghiệm thu</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bảng này giúp bạn biết <strong>cần hỏi những gì</strong> khi làm việc với một model code, ngay cả khi chưa thuộc bảng mã của dòng cụ thể.</p>
+<h2 id="doc-mot-model-code-trong-thuc-te">Đọc một model code trong thực tế</h2>
+<p>Lấy một mã transmitter áp suất dạng Coplanar làm ví dụ minh họa cấu trúc:</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-2051-cac-dang-than-may.webp" width="1000" height="621" loading="lazy" decoding="async" alt="Khối ký tự đầu quyết định kiểu thân máy và kết nối quá trình — sai khối này thì thiết bị đúng tên nhưng không lắp được"><figcaption>Khối ký tự đầu quyết định kiểu thân máy và kết nối quá trình — sai khối này thì thiết bị đúng tên nhưng không lắp được.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<pre><code class="language-text">3051 C D 2 A 02 A 1 A B4 ...
+ │   │ │ │ │  │  │ │ │  └── option bổ sung (chứng chỉ, hiệu chuẩn, SIL...)
+ │   │ │ │ │  │  │ │ └───── vật liệu / chi tiết phụ
+ │   │ │ │ │  │  │ └─────── cổng cáp, đấu nối điện
+ │   │ │ │ │  │  └───────── vỏ thiết bị
+ │   │ │ │ │  └──────────── kết nối quá trình / mặt bích
+ │   │ │ │ └─────────────── tín hiệu đầu ra &amp; giao thức
+ │   │ │ └───────────────── range class (dải đo danh định)
+ │   │ └─────────────────── kiểu đo: chênh áp / tương đối / tuyệt đối
+ │   └───────────────────── kiểu thân máy: Coplanar / in-line / đo mức
+ └───────────────────────── dòng sản phẩm
+</code></pre>
+<p><strong>Lưu ý quan trọng:</strong> ý nghĩa cụ thể của từng ký tự khác nhau giữa các dòng và có thể thay đổi giữa các phiên bản tài liệu. Đừng suy luận mã của dòng này từ mã của dòng khác. Nguồn tra cứu chuẩn duy nhất là Product Data Sheet của Emerson cho đúng dòng sản phẩm — và đó cũng là lý do một nhà cung cấp có thư viện tài liệu gốc sẽ xử lý cấu hình nhanh và chắc hơn.</p>
+<h2 id="sai-mot-ky-tu-dan-toi-hau-qua-gi">Sai một ký tự dẫn tới hậu quả gì?</h2>
+<p>Đây là phần khiến model code trở thành chuyện nghiêm túc chứ không phải thủ tục giấy tờ:</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-114c-thermowell-van-stone.webp" width="1200" height="801" loading="lazy" decoding="async" alt="Khối vật liệu trong model code quyết định bộ phận tiếp xúc môi chất: sai một ký tự là sai vật liệu."><figcaption>Khối vật liệu trong model code quyết định bộ phận tiếp xúc môi chất: sai một ký tự là sai vật liệu.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<ul>
+<li><strong>Sai ký tự kiểu đo</strong> — đặt bản đo áp suất tương đối thay vì chênh áp. Thiết bị về kho không thực hiện được phép đo cần thiết, phải đặt lại từ đầu.</li>
+<li><strong>Sai range class</strong> — dải đo danh định lệch so với dải làm việc. Thiết bị vẫn đo được nhưng sai số tại điểm làm việc không đạt yêu cầu ứng dụng.</li>
+<li><strong>Sai vật liệu màng ngăn</strong> — dùng 316L SST cho môi chất đáng lẽ cần Alloy C-276. Thiết bị chạy bình thường vài tháng đầu rồi ăn mòn, rò rỉ, hỏng đột ngột.</li>
+<li><strong>Sai dầu điền</strong> — dùng dầu điền không tương thích với dịch vụ oxy hoặc vượt giới hạn nhiệt độ quá trình. Đây là rủi ro an toàn, không chỉ rủi ro đo lường.</li>
+<li><strong>Sai kết nối quá trình</strong> — mặt bích khác tiêu chuẩn, khác rating, hoặc khoảng cách tâm lỗ khác. Thiết bị đúng nhưng không lắp được, phải gia công chuyển tiếp hoặc đặt lại.</li>
+<li><strong>Sai chứng chỉ phòng nổ</strong> — đặt Ex ia trong khi khu vực yêu cầu Ex d. HSE từ chối cho lắp đặt, và đổi chứng chỉ thường đồng nghĩa với đặt lại từ đầu.</li>
+<li><strong>Sai option hiệu chuẩn hoặc chứng chỉ vật liệu</strong> — thiếu material certificate 3.1 hoặc chứng chỉ hiệu chuẩn nhiều điểm khiến hồ sơ nghiệm thu không hoàn thiện được.</li>
+</ul>
+<p>Điểm chung của cả bảy trường hợp: chi phí sửa sai luôn lớn hơn nhiều so với chi phí kiểm tra kỹ ở bước RFQ.</p>
+<h2 id="ba-loi-thuong-gap-khi-gui-model-code-trong-rfq">Ba lỗi thường gặp khi gửi model code trong RFQ</h2>
+<p><strong>Lỗi 1 — Gửi mã cắt ngắn.</strong> Chỉ ghi phần đầu ("3051CD2") và bỏ phần option phía sau. Phần bị bỏ thường là phần chứa chứng chỉ phòng nổ và yêu cầu hiệu chuẩn — đúng những thứ ảnh hưởng mạnh nhất tới giá và lead time.</p>
+<p><strong>Lỗi 2 — Chép mã từ email cũ mà không kiểm tra.</strong> Mã của dự án trước được dùng lại cho dự án mới với điều kiện quá trình khác. Đây là nguồn gốc phổ biến nhất của sai vật liệu và sai dải đo.</p>
+<p><strong>Lỗi 3 — Nhầm ký tự khi gõ tay.</strong> Số 0 và chữ O, số 1 và chữ I, số 5 và chữ S. Cách an toàn nhất là gửi ảnh nameplate kèm theo mã đã gõ, để bên nhận đối chiếu chéo.</p>
+<h2 id="khi-nao-can-dung-lai-model-code-tu-nameplate">Khi nào cần dựng lại model code từ nameplate</h2>
+<p>Với nhà máy đang vận hành, mã trên nameplate thường là nguồn thông tin duy nhất còn lại. Dựng lại mã là việc cần làm khi:</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-vo-phong-no-ex-d.webp" width="772" height="720" loading="lazy" decoding="async" alt="Khi hồ sơ đã thất lạc, nameplate trên vỏ thiết bị là nguồn thông tin đáng tin cậy nhất để dựng lại model code."><figcaption>Khi hồ sơ đã thất lạc, nameplate trên vỏ thiết bị là nguồn thông tin đáng tin cậy nhất để dựng lại model code.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<ul>
+<li>Hồ sơ thiết bị đã thất lạc sau nhiều năm vận hành.</li>
+<li>Nameplate đã mờ một phần do ăn mòn hoặc nhiệt.</li>
+<li>Model code trên nameplate thuộc thế hệ cũ đã ngừng sản xuất, cần tìm cấu hình thay thế tương đương.</li>
+<li>Thiết bị được mua theo gói EPC trước đây, không còn tài liệu bàn giao.</li>
+</ul>
+<p>Cách xử lý: chụp nameplate nhiều góc với ánh sáng nghiêng để làm nổi phần chữ dập chìm, kết hợp với dữ liệu vận hành (môi chất, dải đo, vị trí lắp đặt, kết nối quá trình). Từ các mảnh thông tin này, đội ngũ kỹ thuật có kinh nghiệm dựng lại được cấu hình, hoặc đề xuất model thay thế kèm chỉ rõ khác biệt cần xử lý khi lắp đặt.</p>
+<h2 id="khi-gui-rfq-can-chuan-bi-gi">Khi gửi RFQ cần chuẩn bị gì?</h2>
+<ol>
+<li><strong>Model code đầy đủ, không cắt ngắn</strong> — kèm ảnh nameplate để đối chiếu chéo nếu có.</li>
+<li><strong>Dữ liệu quá trình</strong>: môi chất, dải đo làm việc, nhiệt độ, áp suất tĩnh, tính ăn mòn.</li>
+<li><strong>Kết nối quá trình</strong>: NPT hay mặt bích (tiêu chuẩn, size, rating), manifold, remote seal.</li>
+<li><strong>Tín hiệu và giao thức</strong> tương thích với DCS/PLC hiện hữu.</li>
+<li><strong>Chứng chỉ bắt buộc</strong>: ATEX hoặc IECEx (Ex d hay Ex ia, phân vùng Zone), mức SIL nếu dùng trong SIF.</li>
+<li><strong>Số lượng theo từng cấu hình, nơi giao hàng, mốc tiến độ.</strong></li>
+<li><strong>Danh mục chứng từ</strong>: CO, CQ khớp serial, calibration certificate, material certificate 3.1.</li>
+</ol>
+<p>Xem thêm <a href="/rosemount-emerson-viet-nam/checklist-yeu-cau-mua-rosemount/">checklist gửi yêu cầu mua Rosemount</a> và <a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/">báo giá Rosemount 3051 cần gửi thông tin gì</a>.</p>
+<h2 id="gui-model-code-cho-fast-group-kiem-tra">Gửi model code cho Fast Group kiểm tra</h2>
+<p>Fast Group là <strong>đơn vị cung cấp Rosemount chính hãng, nhà phân phối thiết bị Rosemount</strong> tại thị trường Việt Nam. Kiểm tra model code là bước đầu tiên trong mọi RFQ chúng tôi tiếp nhận — trước khi nói đến giá.</p>
+<ul>
+<li><strong>Kỹ sư xuất thân từ Halliburton, Baker Hughes và SLB</strong>, hơn 10 năm đọc instrument datasheet và làm việc với thiết bị đo tại hiện trường.</li>
+<li><strong>Thư viện kỹ thuật Rosemount nội bộ hơn 470 tài liệu gốc của Emerson</strong> — product data sheet, manual, chứng chỉ, bản vẽ — số hóa và lập chỉ mục, nên chúng tôi tra ý nghĩa từng ký tự từ tài liệu chuẩn thay vì đoán.</li>
+<li><strong>Chúng tôi trả lại kết quả kiểm tra, không chỉ trả giá</strong>: mã hợp lệ hay không, option nào xung đột, option nào đẩy lead time, và cấu hình thay thế nếu mã cũ đã ngừng sản xuất.</li>
+</ul>
+<div class="cta-box"><h3>Gửi model code hoặc ảnh nameplate để được kiểm tra</h3><p>Đội ngũ kỹ thuật Fast Group kiểm tra model code, đối chiếu điều kiện quá trình và phản hồi kèm cấu hình hoàn chỉnh — ngay trong ngày làm việc khi đủ thông tin.</p><a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi yêu cầu báo giá →</a><div class="cta-meta"><strong>CÔNG TY TNHH FAST GROUP</strong><br>Trụ sở chính: 51 Lê Văn Lộc, Phường Vũng Tàu, TP. Hồ Chí Minh<br>Văn phòng: 150/41 Nguyễn Cư Trinh, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh<br>Email: minhduc@fastgroup.vn · Hotline/Zalo: (+84) 938 888 958</div></div>
+<div class="ref-strip"><strong>Đọc tiếp trong cụm bài Rosemount</strong><a href="/rosemount-emerson-viet-nam/blog/">tổng quan thiết bị Rosemount</a> · <a href="/rosemount-emerson-viet-nam/mua-rosemount-chinh-hang-o-dau/">mua Rosemount chính hãng ở đâu</a> · <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-3051/">Rosemount 3051</a> · <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-3144s/">Rosemount 3144S</a></div>
+<section class="faq"><h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+  <details class="qa"><summary>Model code Rosemount nằm ở đâu trên thiết bị?</summary><div class="qa-body"><p>Trên nameplate gắn ở vỏ thiết bị, thường cùng khu vực với serial number và thông tin chứng chỉ phòng nổ. Với một số dòng, nameplate có nhiều tấm: một tấm thông tin sản phẩm và một tấm chứng chỉ an toàn — nên chụp cả hai.</p></div></details>
+  <details class="qa"><summary>Mã trên nameplate khác mã trên PO thì sao?</summary><div class="qa-body"><p>Dừng lại và làm rõ trước khi ký biên bản nhận hàng. Khác biệt có thể do nhà sản xuất thay mã tương đương khi một option ngừng cung cấp, nhưng cũng có thể là giao nhầm cấu hình. Cần văn bản giải trình từ nhà cung cấp trong cả hai trường hợp.</p></div></details>
+  <details class="qa"><summary>Có thể tự tra ý nghĩa model code trên mạng không?</summary><div class="qa-body"><p>Nguồn chuẩn là Product Data Sheet của Emerson cho đúng dòng sản phẩm. Các bảng mã đăng lại trên diễn đàn hoặc website bên thứ ba thường thuộc phiên bản tài liệu cũ, và các dòng khác nhau không dùng chung quy ước ký tự — suy luận chéo giữa các dòng là nguồn sai sót phổ biến.</p></div></details>
+  <details class="qa"><summary>Model code cũ đã ngừng sản xuất thì tìm thiết bị thay thế thế nào?</summary><div class="qa-body"><p>Cần đối chiếu bốn nhóm: kết nối quá trình và kích thước lắp đặt, dải đo và cấp chính xác, tín hiệu và giao thức tương thích DCS, chứng chỉ phòng nổ theo phân vùng. Fast Group dựng cấu hình thay thế từ nameplate cũ và nêu rõ những điểm khác biệt cần xử lý trước khi bạn phát hành PO.</p></div></details>
+  <details class="qa"><summary>Vì sao nhà cung cấp cần biết môi chất khi đã có model code?</summary><div class="qa-body"><p>Vì model code cho biết thiết bị <em>là gì</em>, còn môi chất cho biết thiết bị đó <em>có phù hợp hay không</em>. Nhiều trường hợp mã hợp lệ về mặt kỹ thuật nhưng vật liệu màng ngăn hoặc dầu điền không tương thích với môi chất thực tế. Kiểm tra chéo hai thông tin này là cách chặn lỗi trước khi đặt hàng.</p></div></details>
+  <details class="qa"><summary>Gửi ảnh nameplate mờ có dùng được không?</summary><div class="qa-body"><p>Thường vẫn dùng được nếu chụp nhiều góc với ánh sáng nghiêng để làm nổi chữ dập chìm, kèm theo thông tin vận hành như vị trí lắp đặt, môi chất và dải đo. Đội ngũ kỹ thuật của chúng tôi xử lý các trường hợp nameplate ăn mòn khá thường xuyên trong môi trường ngoài khơi và nhà máy hóa chất.</p></div></details>
+</section>
+<div class="pagenav"><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/"><span>← Bài trước</span><strong>Báo giá Rosemount 3051</strong></a><a class="next" href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/"><span>Bài tiếp →</span><strong>Vì sao báo giá Rosemount cần đúng dải đo, vật liệu và chứng chỉ</strong></a></div>
+    </article>
+
+    <aside class="side">
+      <nav class="toc" aria-label="Nội dung bài viết">
+        <h4>Nội dung bài viết</h4>
+        <ol>
+      <li><a href="#model-code-rosemount-la-gi-va-vi-sao-no-quan-trong">Model code Rosemount là gì và vì sao nó quan trọng</a></li>
+      <li><a href="#cau-truc-chung-cua-mot-model-code-rosemount">Cấu trúc chung của một model code Rosemount</a></li>
+      <li><a href="#doc-mot-model-code-trong-thuc-te">Đọc một model code trong thực tế</a></li>
+      <li><a href="#sai-mot-ky-tu-dan-toi-hau-qua-gi">Sai một ký tự dẫn tới hậu quả gì?</a></li>
+      <li><a href="#ba-loi-thuong-gap-khi-gui-model-code-trong-rfq">Ba lỗi thường gặp khi gửi model code trong RFQ</a></li>
+      <li><a href="#khi-nao-can-dung-lai-model-code-tu-nameplate">Khi nào cần dựng lại model code từ nameplate</a></li>
+      <li><a href="#khi-gui-rfq-can-chuan-bi-gi">Khi gửi RFQ cần chuẩn bị gì?</a></li>
+      <li><a href="#gui-model-code-cho-fast-group-kiem-tra">Gửi model code cho Fast Group kiểm tra</a></li>
+      <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
+      <div class="side-cta">
+        <h4>Cần báo giá Rosemount?</h4>
+        <p>Gửi model code hoặc ảnh nameplate — phản hồi trong ngày làm việc khi đủ thông tin cấu hình.</p>
+        <a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="kicker">Bài liên quan</p>
+      <h2>Đọc tiếp trong cụm bài Rosemount</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/bao-gia-rosemount-3051-800.webp" width="800" height="450" loading="lazy" alt="Rosemount 3051 lắp cùng manifold trong nhà máy công nghiệp"></a>
+        <div class="card-body">
+          <span class="tag tag-b">Báo giá &amp; RFQ</span>
+          <h3><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/">Báo giá Rosemount 3051</a></h3>
+          <p>Hướng dẫn gửi RFQ Rosemount 3051 chuẩn: model code, dải đo, vật liệu, chứng chỉ, số lượng — nhận báo giá từ nhà phân phối Rosemount nga…</p>
+          <div class="card-foot"><span>11 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/bao-gia-rosemount-dai-do-vat-lieu-chung-chi-800.webp" width="800" height="450" loading="lazy" alt="Transmitter Rosemount với mặt bích và màng ngăn vật liệu đặc biệt"></a>
+        <div class="card-body">
+          <span class="tag tag-b">Báo giá &amp; RFQ</span>
+          <h3><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/">Vì sao báo giá Rosemount cần đúng dải đo, vật liệu và chứng chỉ</a></h3>
+          <p>Vì sao báo giá Rosemount phụ thuộc dải đo, vật liệu màng ngăn, dầu điền và chứng chỉ SIL, ATEX/IECEx — và các yếu tố này đẩy giá, lead …</p>
+          <div class="card-foot"><span>11 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/transmitter-nhiet-do-rosemount-248-3144s-214c/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/transmitter-nhiet-do-rosemount-248-3144s-214c-800.webp" width="800" height="450" loading="lazy" alt="Transmitter nhiệt độ Rosemount cùng cảm biến và thermowell"></a>
+        <div class="card-body">
+          <span class="tag tag-c">Chọn thiết bị</span>
+          <h3><a href="/rosemount-emerson-viet-nam/transmitter-nhiet-do-rosemount-248-3144s-214c/">Cách chọn transmitter nhiệt độ Rosemount 248, 3144S và cảm biến 214C</a></h3>
+          <p>Phân biệt transmitter nhiệt độ Rosemount 248 và 3144S, cảm biến 214C và thermowell 114C — cách chọn theo ứng dụng nhà máy, dầu khí và y…</p>
+          <div class="card-foot"><span>12 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="brand-mark">FG</span> Fast Group</div>
+        <p class="foot-addr">
+          <strong>CÔNG TY TNHH FAST GROUP</strong><br>
+          Trụ sở chính: 51 Lê Văn Lộc, Phường Vũng Tàu, TP. Hồ Chí Minh<br>
+          Văn phòng: 150/41 Nguyễn Cư Trinh, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh<br>
+          Email: minhduc@fastgroup.vn · Hotline: (+84) 938 888 958
+        </p>
+        <p class="foot-note">
+          Fast Group là đại lý, nhà phân phối và nhà cung cấp thiết bị Rosemount chính hãng
+          tại thị trường Việt Nam, phục vụ dầu khí, EPC và nhà máy công nghiệp.
+          Rosemount™ và Emerson™ là thương hiệu của Emerson Electric Co.
+        </p>
+      </div>
+      <div>
+        <h5>Nhà cung cấp &amp; báo giá</h5>
+        <ul>
+      <li><a href="/rosemount-emerson-viet-nam/nha-cung-cap-rosemount-uy-tin/">Nhà cung cấp Rosemount uy tín tại Việt Nam</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/mua-rosemount-chinh-hang-o-dau/">Mua Rosemount chính hãng ở đâu</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/dai-ly-cung-cap-rosemount-dau-khi-epc/">Đại lý cung cấp Rosemount cho dầu khí, EPC và nhà máy tại Việt Nam</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/rosemount-chinh-hang-va-hang-troi-noi/">Rosemount chính hãng và hàng trôi nổi</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/">Báo giá Rosemount 3051</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/">Cách đọc model code Rosemount trước khi gửi RFQ</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/">Vì sao báo giá Rosemount cần đúng dải đo, vật liệu và chứng chỉ</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/checklist-yeu-cau-mua-rosemount/">Checklist gửi yêu cầu mua Rosemount</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Chọn thiết bị</h5>
+        <ul>
+      <li><a href="/rosemount-emerson-viet-nam/chon-rosemount-3051-3051s-2051/">Cách chọn Rosemount 3051, 3051S, 2051 cho đo áp suất</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/thiet-bi-do-muc-rosemount-radar-gwr-chenh-ap/">Cách chọn thiết bị đo mức Rosemount</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/transmitter-nhiet-do-rosemount-248-3144s-214c/">Cách chọn transmitter nhiệt độ Rosemount 248, 3144S và cảm biến 214C</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/">Rosemount cho dầu khí Việt Nam</a></li>
+        </ul>
+        <h5 style="margin-top:22px">Liên kết</h5>
+        <ul>
+          <li><a href="/rosemount-emerson-viet-nam/blog/">Blog kỹ thuật Rosemount</a></li>
+          <li><a href="/rosemount-emerson-viet-nam/lien-he/">Gửi yêu cầu báo giá</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CÔNG TY TNHH FAST GROUP. Bảo lưu mọi quyền.</span>
+      <span>fastgroup.vn</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rosemount Cho Dầu Khí Việt Nam: Chứng Chỉ SIL, ATEX, IECEx</title>
+<meta name="description" content="Hướng dẫn chứng chỉ Rosemount cho dầu khí Việt Nam: ATEX và IECEx, Ex d hay Ex ia, phân vùng Zone, SIL theo IEC 61508, FMEDA và hồ sơ kỹ thuật nộp thầu.">
+<link rel="canonical" href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Fast Group">
+<meta property="og:title" content="Rosemount Cho Dầu Khí Việt Nam: Chứng Chỉ SIL, ATEX, IECEx">
+<meta property="og:description" content="Hướng dẫn chứng chỉ Rosemount cho dầu khí Việt Nam: ATEX và IECEx, Ex d hay Ex ia, phân vùng Zone, SIL theo IEC 61508, FMEDA và hồ sơ kỹ thuật nộp thầu.">
+<meta property="og:url" content="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/">
+<meta property="og:image" content="https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/rosemount-dau-khi-viet-nam-sil-atex-iecex.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/rosemount-emerson-viet-nam/blog/assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Rosemount cho dầu khí Việt Nam: chứng chỉ SIL, ATEX/IECEx và hồ sơ kỹ thuật","description":"Hướng dẫn chứng chỉ Rosemount cho dầu khí Việt Nam: ATEX và IECEx, Ex d hay Ex ia, phân vùng Zone, SIL theo IEC 61508, FMEDA và hồ sơ kỹ thuật nộp thầu.","image":["https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/rosemount-dau-khi-viet-nam-sil-atex-iecex.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-dp-flow-cum-do-luu-luong.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-vo-phong-no-ex-d.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-248-nhan-sil-iec-61508.webp","https://fastgroup.vn/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-3051-danh-muc-cau-hinh.webp"],"inLanguage":"vi-VN","datePublished":"2026-09-20","dateModified":"2026-09-21","author":{"@type":"Organization","name":"Fast Group","url":"https://fastgroup.vn"},"publisher":{"@type":"Organization","name":"CÔNG TY TNHH FAST GROUP","url":"https://fastgroup.vn"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/"},"articleSection":"Chọn thiết bị","keywords":"Rosemount dầu khí Việt Nam, Rosemount SIL, Rosemount ATEX, Rosemount IECEx, hồ sơ kỹ thuật Rosemount","wordCount":2341}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://fastgroup.vn/"},{"@type":"ListItem","position":2,"name":"Rosemount Emerson Việt Nam","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/"},{"@type":"ListItem","position":3,"name":"Blog kỹ thuật","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/blog/"},{"@type":"ListItem","position":4,"name":"Rosemount cho dầu khí Việt Nam","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ATEX và IECEx có thay thế cho nhau được không?","acceptedAnswer":{"@type":"Answer","text":"Về kỹ thuật, hai hệ dựa trên cùng nền tảng IEC 60079 nên yêu cầu thiết kế tương đồng, nhưng về hồ sơ thì không thay thế tự động. Spec chỉ định IECEx mà thiết bị chỉ có ATEX thì hội đồng kỹ thuật có quyền từ chối. Hãy ghi rõ hệ chứng nhận trong RFQ, vì đó là mã option riêng trong model code."}},{"@type":"Question","name":"Thiết bị ghi \"SIL 2/3 certified\" thì dùng ngay cho vòng an toàn được không?","acceptedAnswer":{"@type":"Answer","text":"Chưa đủ. Bộ phận an toàn cần tài liệu FMEDA của đúng cấu hình để tính PFDavg cho toàn vòng, dựa trên kiến trúc dự phòng và chu kỳ kiểm chứng. Nhãn chứng nhận cho biết thiết bị đủ điều kiện được xem xét; FMEDA mới là thứ chứng minh vòng đạt mức SIL."}},{"@type":"Question","name":"Chọn Ex d hay Ex ia cho dự án mới?","acceptedAnswer":{"@type":"Answer","text":"Theo thiết kế tổng thể của vòng đo và quy định nội bộ nhà máy. Ex ia cần barrier phía phòng điều khiển nhưng cho phép thao tác khi đang vận hành mà không cần giấy phép làm việc nóng; Ex d không cần barrier nhưng ràng buộc chặt về đấu nối cáp và mở vỏ. Cần thống nhất với thiết kế điện và HSE trước khi chốt model code."}},{"@type":"Question","name":"Dự án yêu cầu NACE thì cần bổ sung gì?","acceptedAnswer":{"@type":"Answer","text":"Nêu rõ trong RFQ tiêu chuẩn NACE hoặc tương đương mà spec chỉ định, cùng xác nhận dịch vụ có chứa H₂S. Yêu cầu này ảnh hưởng tới vật liệu bộ phận tiếp xúc môi chất và kéo theo yêu cầu material certificate để truy xuất."}},{"@type":"Question","name":"Hồ sơ kỹ thuật nên xin ở giai đoạn nào?","acceptedAnswer":{"@type":"Answer","text":"Ngay khi gửi RFQ. Liệt kê danh mục tài liệu chủ đầu tư yêu cầu cùng yêu cầu báo giá để nhà cung cấp chuẩn bị song song. Xin bổ sung sau khi đã chốt giá luôn tốn thời gian hơn và thường đã trễ so với mốc nộp thầu."}},{"@type":"Question","name":"Fast Group hỗ trợ được tới đâu về hồ sơ chứng chỉ?","acceptedAnswer":{"@type":"Answer","text":"Chúng tôi cung cấp product data sheet, bản vẽ kích thước, chứng chỉ mẫu ATEX/IECEx, tài liệu FMEDA khi spec yêu cầu SIL, cùng diễn giải model code để đối chiếu với spec. Khi giao hàng, bộ chứng từ gồm CO, CQ khớp serial, calibration certificate và material certificate 3.1 theo danh mục đã thống nhất trong PO."}}]}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap hd">
+    <a class="brand" href="/rosemount-emerson-viet-nam/blog/">
+      <span class="brand-mark">FG</span>
+      <span>Fast Group<small>Rosemount · Emerson Việt Nam</small></span>
+    </a>
+    <nav class="nav">
+      <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Trang Rosemount</a>
+      <a href="/rosemount-emerson-viet-nam/blog/" class="is-active">Blog kỹ thuật</a>
+      <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-3051/">Sản phẩm</a>
+      <a href="/rosemount-emerson-viet-nam/lien-he/">Liên hệ</a>
+    </nav>
+    <a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="https://fastgroup.vn/">Trang chủ</a><span>/</span>
+    <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Rosemount Emerson Việt Nam</a><span>/</span>
+    <a href="/rosemount-emerson-viet-nam/blog/">Blog kỹ thuật</a><span>/</span>Rosemount cho dầu khí Việt Nam
+  </nav>
+
+  <header class="post-head">
+    <span class="tag tag-c">Chọn thiết bị</span>
+    <h1>Rosemount cho dầu khí Việt Nam: chứng chỉ SIL, ATEX/IECEx và hồ sơ kỹ thuật</h1>
+    <div class="post-meta">
+      <span>Fast Group · Đội ngũ kỹ thuật</span><span class="dot">•</span>
+      <span>Cập nhật 21/09/2026</span><span class="dot">•</span>
+      <span>12 phút đọc</span><span class="dot">•</span>
+      <span>2,341 từ</span>
+    </div>
+  </header>
+
+  <figure class="post-hero" style="margin-bottom:10px">
+    <img src="/rosemount-emerson-viet-nam/blog/assets/img/rosemount-dau-khi-viet-nam-sil-atex-iecex.webp" width="1600" height="900" alt="Thiết bị Rosemount chứng nhận phòng nổ dùng trong nhà máy lọc hóa dầu" fetchpriority="high">
+  </figure>
+  <p class="figcap">Thiết bị Rosemount chứng nhận phòng nổ dùng trong nhà máy lọc hóa dầu — ảnh minh họa, Fast Group.</p>
+
+  <div class="post-layout">
+    <article class="prose">
+<p>Trong một gói thầu dầu khí, thiết bị đo không được đánh giá trước hết bằng thông số kỹ thuật mà bằng hồ sơ. Một transmitter có cấp chính xác xuất sắc nhưng thiếu chứng chỉ phòng nổ đúng loại sẽ bị loại ngay tại vòng kỹ thuật; một thiết bị nằm trong vòng an toàn nhưng không có tài liệu FMEDA của đúng cấu hình thì bộ phận an toàn không tính được PFDavg và không thể phê duyệt.</p>
+<p>Bài viết này hệ thống lại các nhóm chứng chỉ áp dụng cho thiết bị <strong>Rosemount dầu khí Việt Nam</strong> — ATEX, IECEx, an toàn chức năng theo IEC 61508 — cùng danh mục hồ sơ kỹ thuật cần chuẩn bị, để kỹ sư và nhà thầu EPC không phải quay lại xin bổ sung tài liệu sau khi hàng đã về.</p>
+<h2 id="boi-canh-vi-sao-chung-chi-quyet-dinh-truoc-thong-so">Bối cảnh: vì sao chứng chỉ quyết định trước thông số</h2>
+<p>Thiết bị đo trong ngành dầu khí làm việc trong ba lớp ràng buộc chồng lên nhau:</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-dp-flow-cum-do-luu-luong.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Thiết bị đo trong dự án dầu khí chịu ba lớp ràng buộc cùng lúc: phòng nổ, an toàn chức năng và hồ sơ truy xuất."><figcaption>Thiết bị đo trong dự án dầu khí chịu ba lớp ràng buộc cùng lúc: phòng nổ, an toàn chức năng và hồ sơ truy xuất.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<p><strong>Lớp 1 — Môi trường nguy hiểm.</strong> Khu vực có nguy cơ tồn tại hỗn hợp khí cháy nổ đòi hỏi thiết bị được chứng nhận phòng nổ theo đúng phân vùng, nhóm khí và cấp nhiệt độ — ràng buộc pháp lý, không thương lượng được.</p>
+<p><strong>Lớp 2 — Chức năng an toàn.</strong> Khi thiết bị thuộc một vòng an toàn (SIF), nó phải có số liệu độ tin cậy đủ để chứng minh vòng đó đạt mức SIL yêu cầu.</p>
+<p><strong>Lớp 3 — Hồ sơ nghiệm thu và truy xuất.</strong> CO, CQ khớp serial, calibration certificate, material certificate chứng minh thiết bị đúng nguồn gốc, đúng cấu hình, đúng vật liệu.</p>
+<p>Thiếu bất kỳ lớp nào cũng dẫn tới cùng kết quả: thiết bị không được đưa vào vận hành, dù hoàn toàn tốt về kỹ thuật.</p>
+<h2 id="atex-va-iecex-khac-nhau-va-khi-nao-can-loai-nao">ATEX và IECEx: khác nhau và khi nào cần loại nào</h2>
+<p><strong>ATEX</strong> là khung chứng nhận thiết bị dùng trong môi trường nổ theo quy định của Liên minh châu Âu. <strong>IECEx</strong> là hệ thống chứng nhận quốc tế dựa trên bộ tiêu chuẩn IEC, được chấp nhận rộng rãi ở nhiều quốc gia ngoài châu Âu.</p>
+<p>Về mặt kỹ thuật, hai hệ dựa trên cùng nền tảng tiêu chuẩn IEC 60079, nên yêu cầu thiết kế thiết bị tương đồng. Khác biệt nằm ở khung pháp lý, cơ quan chứng nhận và định dạng hồ sơ.</p>
+<p>Trong thực tế các dự án tại Việt Nam: nhiều spec chỉ định <strong>IECEx</strong> vì đây là hệ quốc tế, thuận tiện cho dự án có nhà thầu đa quốc gia; một số dự án kế thừa thiết kế châu Âu chỉ định <strong>ATEX</strong>; không ít gói thầu yêu cầu <strong>cả hai</strong>, và nhiều thiết bị Rosemount có sẵn tùy chọn chứng nhận kép.</p>
+<p>Điều quan trọng khi lập RFQ: đừng ghi chung chung "có chứng chỉ phòng nổ". Hãy ghi rõ hệ chứng nhận nào, vì mỗi hệ là một mã option riêng trong model code — đổi option này sau khi đặt hàng thường đồng nghĩa với đặt lại từ đầu.</p>
+<h2 id="ex-d-ex-ia-va-phan-vung-zone">Ex d, Ex ia và phân vùng Zone</h2>
+<p><strong>Ex d — bảo vệ bằng vỏ chống cháy nổ (flameproof).</strong> Vỏ thiết bị được thiết kế để chịu được vụ nổ xảy ra bên trong và không cho ngọn lửa lan ra môi trường xung quanh. Không cần thiết bị hạn chế năng lượng phía phòng điều khiển, nhưng yêu cầu rất chặt về đấu nối cáp và quy trình mở vỏ khi có khí.</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-vo-phong-no-ex-d.webp" width="772" height="720" loading="lazy" decoding="async" alt="Bảo vệ Ex d bằng vỏ chống cháy nổ: vỏ chịu được vụ nổ bên trong và không cho ngọn lửa lan ra môi trường xung quanh."><figcaption>Bảo vệ Ex d bằng vỏ chống cháy nổ: vỏ chịu được vụ nổ bên trong và không cho ngọn lửa lan ra môi trường xung quanh.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<p><strong>Ex ia — an toàn tia lửa (intrinsic safety).</strong> Năng lượng trong mạch được giới hạn ở mức không đủ gây cháy, kể cả khi có sự cố. Cần barrier hoặc isolator phía phòng điều khiển, nhưng đổi lại cho phép thao tác trên thiết bị khi đang vận hành mà không cần giấy phép làm việc nóng — một lợi thế vận hành đáng kể.</p>
+<p>Hai phương pháp này <strong>không thay thế cho nhau</strong>, vì chúng dẫn tới thiết kế vòng đo khác nhau. Chọn sai không phải chuyện điều chỉnh cấu hình mà là phải thay thiết bị.</p>
+<p><strong>Phân vùng khu vực (Zone)</strong> xác định mức độ hiện diện của hỗn hợp khí nổ:</p>
+<ul>
+<li><strong>Zone 0</strong> — hỗn hợp nổ hiện diện liên tục hoặc trong thời gian dài.</li>
+<li><strong>Zone 1</strong> — có khả năng xuất hiện trong vận hành bình thường.</li>
+<li><strong>Zone 2</strong> — ít khả năng xuất hiện, và nếu có thì chỉ trong thời gian ngắn.</li>
+</ul>
+<p>Ngoài Zone, còn phải xác định <strong>nhóm khí</strong> (theo loại khí hiện diện) và <strong>cấp nhiệt độ</strong> (nhiệt độ bề mặt tối đa cho phép của thiết bị). Ba thông tin này phải có đủ trong RFQ.</p>
+<h2 id="an-toan-chuc-nang-sil-iec-61508-va-tai-lieu-fmeda">An toàn chức năng: SIL, IEC 61508 và tài liệu FMEDA</h2>
+<p><strong>IEC 61508</strong> là tiêu chuẩn nền về an toàn chức năng cho hệ thống điện, điện tử và điện tử lập trình. <strong>SIL (Safety Integrity Level)</strong> là thang phân loại mức toàn vẹn an toàn, từ SIL 1 đến SIL 4, thể hiện mức giảm rủi ro mà một vòng an toàn đạt được.</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-248-nhan-sil-iec-61508.webp" width="1140" height="1156" loading="lazy" decoding="async" alt="Nhãn chứng nhận an toàn theo IEC 61508 — điều kiện cần, nhưng tính toán PFDavg vẫn phải dựa trên tài liệu FMEDA."><figcaption>Nhãn chứng nhận an toàn theo IEC 61508 — điều kiện cần, nhưng tính toán PFDavg vẫn phải dựa trên tài liệu FMEDA.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<p>Ba điểm thường bị hiểu sai:</p>
+<p><strong>Thứ nhất, SIL là thuộc tính của vòng an toàn, không phải của một thiết bị đơn lẻ.</strong> Một transmitter "SIL 2 certified" không làm cho vòng an toàn đạt SIL 2. Mức SIL của vòng phụ thuộc vào toàn bộ chuỗi: cảm biến, bộ xử lý logic, phần tử chấp hành, kiến trúc dự phòng (1oo1, 1oo2, 2oo3) và chu kỳ kiểm chứng.</p>
+<p><strong>Thứ hai, nhãn trên catalogue không thay được số liệu.</strong> Bộ phận an toàn cần <strong>tài liệu FMEDA</strong> (Failure Modes, Effects and Diagnostic Analysis) của đúng cấu hình được chọn, chứa các tham số như tỷ lệ hỏng hóc an toàn và nguy hiểm, độ bao phủ chẩn đoán — đầu vào để tính PFDavg.</p>
+<p><strong>Thứ ba, cấu hình quyết định số liệu.</strong> FMEDA gắn với model code cụ thể, không gắn với tên dòng sản phẩm.</p>
+<p>Nhiều dòng thiết bị Rosemount có bản chứng nhận an toàn: các dòng transmitter áp suất 3051, 3051S, 2051 và transmitter đo mức chênh áp 3051SAL có chứng nhận SIL 2/3 theo IEC 61508 (qua bên thứ ba) kèm chứng chỉ prior-use dựa trên dữ liệu FMEDA; các dòng đo mức radar 5408, 5300 và 3408 có bản chứng nhận SIL 2. Cấp chứng nhận cụ thể luôn phải đối chiếu theo đúng cấu hình đặt hàng.</p>
+<h2 id="bang-nhom-chung-chi-va-vai-tro-trong-ho-so-du-an">Bảng: nhóm chứng chỉ và vai trò trong hồ sơ dự án</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Nhóm chứng chỉ / tài liệu</th>
+<th>Do ai cấp</th>
+<th>Vai trò trong dự án</th>
+<th>Khi nào bắt buộc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATEX</td>
+<td>Tổ chức chứng nhận theo khung EU</td>
+<td>Cho phép lắp trong khu vực nguy hiểm</td>
+<td>Khi spec chỉ định ATEX</td>
+</tr>
+<tr>
+<td>IECEx</td>
+<td>Tổ chức chứng nhận trong hệ IECEx</td>
+<td>Như trên, khung quốc tế</td>
+<td>Khi spec chỉ định IECEx</td>
+</tr>
+<tr>
+<td>Chứng nhận SIL theo IEC 61508</td>
+<td>Bên thứ ba đánh giá</td>
+<td>Cơ sở để thiết bị dùng trong SIF</td>
+<td>Khi thiết bị thuộc vòng an toàn</td>
+</tr>
+<tr>
+<td>Tài liệu FMEDA</td>
+<td>Nhà sản xuất</td>
+<td>Đầu vào tính PFDavg cho vòng an toàn</td>
+<td>Khi tính toán SIL cho SIF</td>
+</tr>
+<tr>
+<td>CO</td>
+<td>Cơ quan có thẩm quyền nước xuất khẩu</td>
+<td>Chứng minh xuất xứ, phục vụ hải quan</td>
+<td>Hầu hết dự án lớn</td>
+</tr>
+<tr>
+<td>CQ</td>
+<td>Nhà sản xuất</td>
+<td>Xác nhận đúng model code và serial</td>
+<td>Hầu hết dự án lớn</td>
+</tr>
+<tr>
+<td>Calibration certificate</td>
+<td>Nhà sản xuất</td>
+<td>Điểm mốc theo dõi độ trôi thiết bị</td>
+<td>Thiết bị đo quan trọng</td>
+</tr>
+<tr>
+<td>Material certificate EN 10204 3.1</td>
+<td>Nhà sản xuất</td>
+<td>Truy xuất vật liệu tiếp xúc môi chất</td>
+<td>Dầu khí, hóa chất</td>
+</tr>
+<tr>
+<td>NACE / tiêu chuẩn tương đương</td>
+<td>Theo spec dự án</td>
+<td>Dịch vụ chứa H₂S</td>
+<td>Khi spec yêu cầu</td>
+</tr>
+<tr>
+<td>Báo cáo wake frequency</td>
+<td>Nhà sản xuất</td>
+<td>Chống gãy thermowell do cộng hưởng</td>
+<td>Đường ống lưu tốc cao</td>
+</tr>
+<tr>
+<td>Datasheet, bản vẽ kích thước</td>
+<td>Nhà sản xuất</td>
+<td>Hồ sơ kỹ thuật nộp thầu</td>
+<td>Mọi gói thầu</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="ho-so-ky-thuat-can-chuan-bi-cho-goi-thau-dau-khi">Hồ sơ kỹ thuật cần chuẩn bị cho gói thầu dầu khí</h2>
+<p>Bộ hồ sơ nộp cùng báo giá thường gồm:</p>
+<figure class="fig"><img src="/rosemount-emerson-viet-nam/blog/assets/img/fig/rosemount-3051-danh-muc-cau-hinh.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Hồ sơ kỹ thuật nộp thầu phải bám đúng cấu hình được chào, không phải bám tên dòng sản phẩm."><figcaption>Hồ sơ kỹ thuật nộp thầu phải bám đúng cấu hình được chào, không phải bám tên dòng sản phẩm.<span class="fig-src">Nguồn ảnh: tài liệu kỹ thuật Emerson / Rosemount.</span></figcaption></figure>
+
+<ul>
+<li><strong>Product data sheet</strong> của đúng dòng và cấu hình được chào.</li>
+<li><strong>Model code diễn giải</strong> — bảng bóc tách từng khối ký tự, giúp hội đồng kỹ thuật đối chiếu nhanh với spec.</li>
+<li><strong>Bản vẽ kích thước</strong> phục vụ thiết kế bố trí và kiểm tra không gian lắp đặt.</li>
+<li><strong>Chứng chỉ mẫu</strong> ATEX/IECEx kèm số chứng chỉ để tra cứu.</li>
+<li><strong>Tài liệu FMEDA</strong> và chứng chỉ SIL khi thiết bị nằm trong SIF.</li>
+<li><strong>Cam kết danh mục chứng từ giao hàng</strong>: CO (ghi rõ form), CQ khớp serial, calibration, material certificate 3.1.</li>
+<li><strong>Bảng lead time tách theo từng dòng hàng</strong>, phân biệt hàng có sẵn với hàng đặt sản xuất.</li>
+</ul>
+<p>Kinh nghiệm thực tế: hồ sơ đến sau báo giá vài ngày thường đã muộn so với mốc nộp thầu. Hồ sơ kỹ thuật nên được chuẩn bị <strong>song song</strong> với báo giá, không phải sau khi khách hàng chấp nhận giá.</p>
+<h2 id="khi-gui-rfq-can-chuan-bi-gi">Khi gửi RFQ cần chuẩn bị gì?</h2>
+<ol>
+<li><strong>Model code đầy đủ</strong> hoặc ảnh nameplate, hoặc instrument datasheet của dự án.</li>
+<li><strong>Phân vùng khu vực lắp đặt</strong>: Zone 0, 1, 2 hay khu vực thường.</li>
+<li><strong>Hệ chứng nhận yêu cầu</strong>: ATEX, IECEx, hay cả hai.</li>
+<li><strong>Phương pháp bảo vệ</strong>: Ex d hay Ex ia — kèm xác nhận thiết kế vòng đo có barrier hay không.</li>
+<li><strong>Nhóm khí và cấp nhiệt độ</strong> theo phân loại khu vực.</li>
+<li><strong>Mức SIL yêu cầu</strong> và xác nhận cần tài liệu FMEDA.</li>
+<li><strong>Dữ liệu quá trình</strong>: môi chất, dải đo, nhiệt độ, áp suất, tính ăn mòn; nêu rõ nếu dịch vụ chứa H₂S.</li>
+<li><strong>Danh mục hồ sơ kỹ thuật</strong> mà chủ đầu tư yêu cầu nộp.</li>
+<li><strong>Số lượng, nơi giao hàng, mốc đóng thầu</strong> và danh mục chứng từ giao hàng.</li>
+</ol>
+<p>Xem thêm <a href="/rosemount-emerson-viet-nam/checklist-yeu-cau-mua-rosemount/">checklist gửi yêu cầu mua Rosemount</a> và <a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/">vì sao báo giá Rosemount cần đúng dải đo, vật liệu và chứng chỉ</a>.</p>
+<h2 id="fast-group-don-vi-cung-cap-rosemount-chinh-hang-cho-nganh-dau-khi">Fast Group — đơn vị cung cấp Rosemount chính hãng cho ngành dầu khí</h2>
+<p>Fast Group là <strong>đơn vị cung cấp Rosemount chính hãng, đại lý và nhà phân phối thiết bị Rosemount</strong> tại thị trường Việt Nam, phục vụ dầu khí, nhà thầu EPC và nhà máy công nghiệp. Chứng chỉ và hồ sơ là phần chúng tôi xử lý cùng lúc với cấu hình, không phải phần xử lý sau.</p>
+<ul>
+<li><strong>Đội ngũ kỹ sư với hơn 10 năm tại Halliburton, Baker Hughes và SLB</strong> — chúng tôi đã làm việc trong chính môi trường mà những chứng chỉ này được sinh ra để bảo vệ.</li>
+<li><strong>Thư viện kỹ thuật Rosemount nội bộ hơn 470 tài liệu gốc của Emerson</strong>, gồm product data sheet, manual, chứng chỉ và bản vẽ — số hóa, lập chỉ mục, tra cứu ngay khi lập hồ sơ thầu.</li>
+<li><strong>Chúng tôi diễn giải model code cho hội đồng kỹ thuật</strong>, chỉ rõ khối ký tự nào tương ứng với yêu cầu nào trong spec.</li>
+<li><strong>Trụ sở chính tại Vũng Tàu</strong> ngay trung tâm dịch vụ dầu khí, văn phòng TP.HCM phục vụ EPC và nhà máy phía Nam.</li>
+<li><strong>CO/CQ theo từng lô hàng</strong>, kèm calibration certificate, material certificate 3.1, FMEDA và chứng chỉ phòng nổ theo yêu cầu.</li>
+</ul>
+<div class="cta-box"><h3>Gửi spec dự án hoặc danh mục vật tư để nhận báo giá kèm hồ sơ</h3><p>Đội ngũ kỹ thuật Fast Group kiểm tra model code, đối chiếu điều kiện quá trình và phản hồi kèm cấu hình hoàn chỉnh — ngay trong ngày làm việc khi đủ thông tin.</p><a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi yêu cầu báo giá →</a><div class="cta-meta"><strong>CÔNG TY TNHH FAST GROUP</strong><br>Trụ sở chính: 51 Lê Văn Lộc, Phường Vũng Tàu, TP. Hồ Chí Minh<br>Văn phòng: 150/41 Nguyễn Cư Trinh, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh<br>Email: minhduc@fastgroup.vn · Hotline/Zalo: (+84) 938 888 958</div></div>
+<div class="ref-strip"><strong>Đọc tiếp trong cụm bài Rosemount</strong><a href="/rosemount-emerson-viet-nam/blog/">tổng quan thiết bị Rosemount</a> · <a href="/rosemount-emerson-viet-nam/dai-ly-cung-cap-rosemount-dau-khi-epc/">đại lý cung cấp Rosemount cho dầu khí và EPC</a> · <a href="/rosemount-emerson-viet-nam/mua-rosemount-chinh-hang-o-dau/">mua Rosemount chính hãng ở đâu</a> · <a href="https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-3051/">Rosemount 3051</a></div>
+<section class="faq"><h2 id="cau-hoi-thuong-gap">Câu hỏi thường gặp</h2>
+  <details class="qa"><summary>ATEX và IECEx có thay thế cho nhau được không?</summary><div class="qa-body"><p>Về kỹ thuật, hai hệ dựa trên cùng nền tảng IEC 60079 nên yêu cầu thiết kế tương đồng, nhưng về hồ sơ thì không thay thế tự động. Spec chỉ định IECEx mà thiết bị chỉ có ATEX thì hội đồng kỹ thuật có quyền từ chối. Hãy ghi rõ hệ chứng nhận trong RFQ, vì đó là mã option riêng trong model code.</p></div></details>
+  <details class="qa"><summary>Thiết bị ghi &quot;SIL 2/3 certified&quot; thì dùng ngay cho vòng an toàn được không?</summary><div class="qa-body"><p>Chưa đủ. Bộ phận an toàn cần tài liệu FMEDA của đúng cấu hình để tính PFDavg cho toàn vòng, dựa trên kiến trúc dự phòng và chu kỳ kiểm chứng. Nhãn chứng nhận cho biết thiết bị đủ điều kiện được xem xét; FMEDA mới là thứ chứng minh vòng đạt mức SIL.</p></div></details>
+  <details class="qa"><summary>Chọn Ex d hay Ex ia cho dự án mới?</summary><div class="qa-body"><p>Theo thiết kế tổng thể của vòng đo và quy định nội bộ nhà máy. Ex ia cần barrier phía phòng điều khiển nhưng cho phép thao tác khi đang vận hành mà không cần giấy phép làm việc nóng; Ex d không cần barrier nhưng ràng buộc chặt về đấu nối cáp và mở vỏ. Cần thống nhất với thiết kế điện và HSE trước khi chốt model code.</p></div></details>
+  <details class="qa"><summary>Dự án yêu cầu NACE thì cần bổ sung gì?</summary><div class="qa-body"><p>Nêu rõ trong RFQ tiêu chuẩn NACE hoặc tương đương mà spec chỉ định, cùng xác nhận dịch vụ có chứa H₂S. Yêu cầu này ảnh hưởng tới vật liệu bộ phận tiếp xúc môi chất và kéo theo yêu cầu material certificate để truy xuất.</p></div></details>
+  <details class="qa"><summary>Hồ sơ kỹ thuật nên xin ở giai đoạn nào?</summary><div class="qa-body"><p>Ngay khi gửi RFQ. Liệt kê danh mục tài liệu chủ đầu tư yêu cầu cùng yêu cầu báo giá để nhà cung cấp chuẩn bị song song. Xin bổ sung sau khi đã chốt giá luôn tốn thời gian hơn và thường đã trễ so với mốc nộp thầu.</p></div></details>
+  <details class="qa"><summary>Fast Group hỗ trợ được tới đâu về hồ sơ chứng chỉ?</summary><div class="qa-body"><p>Chúng tôi cung cấp product data sheet, bản vẽ kích thước, chứng chỉ mẫu ATEX/IECEx, tài liệu FMEDA khi spec yêu cầu SIL, cùng diễn giải model code để đối chiếu với spec. Khi giao hàng, bộ chứng từ gồm CO, CQ khớp serial, calibration certificate và material certificate 3.1 theo danh mục đã thống nhất trong PO.</p></div></details>
+</section>
+<div class="pagenav"><a href="/rosemount-emerson-viet-nam/transmitter-nhiet-do-rosemount-248-3144s-214c/"><span>← Bài trước</span><strong>Cách chọn transmitter nhiệt độ Rosemount 248, 3144S và cảm biến 214C</strong></a><span></span></div>
+    </article>
+
+    <aside class="side">
+      <nav class="toc" aria-label="Nội dung bài viết">
+        <h4>Nội dung bài viết</h4>
+        <ol>
+      <li><a href="#boi-canh-vi-sao-chung-chi-quyet-dinh-truoc-thong-so">Bối cảnh: vì sao chứng chỉ quyết định trước thông số</a></li>
+      <li><a href="#atex-va-iecex-khac-nhau-va-khi-nao-can-loai-nao">ATEX và IECEx: khác nhau và khi nào cần loại nào</a></li>
+      <li><a href="#ex-d-ex-ia-va-phan-vung-zone">Ex d, Ex ia và phân vùng Zone</a></li>
+      <li><a href="#an-toan-chuc-nang-sil-iec-61508-va-tai-lieu-fmeda">An toàn chức năng: SIL, IEC 61508 và tài liệu FMEDA</a></li>
+      <li><a href="#bang-nhom-chung-chi-va-vai-tro-trong-ho-so-du-an">Bảng: nhóm chứng chỉ và vai trò trong hồ sơ dự án</a></li>
+      <li><a href="#ho-so-ky-thuat-can-chuan-bi-cho-goi-thau-dau-khi">Hồ sơ kỹ thuật cần chuẩn bị cho gói thầu dầu khí</a></li>
+      <li><a href="#khi-gui-rfq-can-chuan-bi-gi">Khi gửi RFQ cần chuẩn bị gì?</a></li>
+      <li><a href="#fast-group-don-vi-cung-cap-rosemount-chinh-hang-cho-nganh-dau-khi">Fast Group — đơn vị cung cấp Rosemount chính hãng cho ngành dầu khí</a></li>
+      <li><a href="#cau-hoi-thuong-gap">Câu hỏi thường gặp</a></li>
+        </ol>
+      </nav>
+      <div class="side-cta">
+        <h4>Cần báo giá Rosemount?</h4>
+        <p>Gửi model code hoặc ảnh nameplate — phản hồi trong ngày làm việc khi đủ thông tin cấu hình.</p>
+        <a class="btn" href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ</a>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="kicker">Bài liên quan</p>
+      <h2>Đọc tiếp trong cụm bài Rosemount</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/chon-rosemount-3051-3051s-2051/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/chon-rosemount-3051-3051s-2051-800.webp" width="800" height="450" loading="lazy" alt="Ba dòng transmitter áp suất Rosemount 3051, 3051S và 2051"></a>
+        <div class="card-body">
+          <span class="tag tag-c">Chọn thiết bị</span>
+          <h3><a href="/rosemount-emerson-viet-nam/chon-rosemount-3051-3051s-2051/">Cách chọn Rosemount 3051, 3051S, 2051 cho đo áp suất</a></h3>
+          <p>So sánh transmitter áp suất Rosemount 3051, 3051S và 2051: nền tảng, độ ổn định, chẩn đoán, chứng chỉ SIL và tiêu chí chọn dòng theo từ…</p>
+          <div class="card-foot"><span>12 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/thiet-bi-do-muc-rosemount-radar-gwr-chenh-ap/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/thiet-bi-do-muc-rosemount-radar-gwr-chenh-ap-800.webp" width="800" height="450" loading="lazy" alt="Thiết bị đo mức Rosemount lắp mặt bích tại khu bồn chứa"></a>
+        <div class="card-body">
+          <span class="tag tag-c">Chọn thiết bị</span>
+          <h3><a href="/rosemount-emerson-viet-nam/thiet-bi-do-muc-rosemount-radar-gwr-chenh-ap/">Cách chọn thiết bị đo mức Rosemount</a></h3>
+          <p>So sánh thiết bị đo mức Rosemount 5408, 5300, 3051SAL: radar không tiếp xúc, radar dẫn sóng hay chênh áp — chọn theo môi chất, bọt, hơi…</p>
+          <div class="card-foot"><span>12 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+      <article class="card">
+        <a class="card-media" href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/"><img src="/rosemount-emerson-viet-nam/blog/assets/img/bao-gia-rosemount-3051-800.webp" width="800" height="450" loading="lazy" alt="Rosemount 3051 lắp cùng manifold trong nhà máy công nghiệp"></a>
+        <div class="card-body">
+          <span class="tag tag-b">Báo giá &amp; RFQ</span>
+          <h3><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/">Báo giá Rosemount 3051</a></h3>
+          <p>Hướng dẫn gửi RFQ Rosemount 3051 chuẩn: model code, dải đo, vật liệu, chứng chỉ, số lượng — nhận báo giá từ nhà phân phối Rosemount nga…</p>
+          <div class="card-foot"><span>11 phút đọc</span><span class="readmore">Đọc bài →</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><span class="brand-mark">FG</span> Fast Group</div>
+        <p class="foot-addr">
+          <strong>CÔNG TY TNHH FAST GROUP</strong><br>
+          Trụ sở chính: 51 Lê Văn Lộc, Phường Vũng Tàu, TP. Hồ Chí Minh<br>
+          Văn phòng: 150/41 Nguyễn Cư Trinh, Phường Cầu Ông Lãnh, TP. Hồ Chí Minh<br>
+          Email: minhduc@fastgroup.vn · Hotline: (+84) 938 888 958
+        </p>
+        <p class="foot-note">
+          Fast Group là đại lý, nhà phân phối và nhà cung cấp thiết bị Rosemount chính hãng
+          tại thị trường Việt Nam, phục vụ dầu khí, EPC và nhà máy công nghiệp.
+          Rosemount™ và Emerson™ là thương hiệu của Emerson Electric Co.
+        </p>
+      </div>
+      <div>
+        <h5>Nhà cung cấp &amp; báo giá</h5>
+        <ul>
+      <li><a href="/rosemount-emerson-viet-nam/nha-cung-cap-rosemount-uy-tin/">Nhà cung cấp Rosemount uy tín tại Việt Nam</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/mua-rosemount-chinh-hang-o-dau/">Mua Rosemount chính hãng ở đâu</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/dai-ly-cung-cap-rosemount-dau-khi-epc/">Đại lý cung cấp Rosemount cho dầu khí, EPC và nhà máy tại Việt Nam</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/rosemount-chinh-hang-va-hang-troi-noi/">Rosemount chính hãng và hàng trôi nổi</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-3051/">Báo giá Rosemount 3051</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/cach-doc-model-code-rosemount/">Cách đọc model code Rosemount trước khi gửi RFQ</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/bao-gia-rosemount-dai-do-vat-lieu-chung-chi/">Vì sao báo giá Rosemount cần đúng dải đo, vật liệu và chứng chỉ</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/checklist-yeu-cau-mua-rosemount/">Checklist gửi yêu cầu mua Rosemount</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Chọn thiết bị</h5>
+        <ul>
+      <li><a href="/rosemount-emerson-viet-nam/chon-rosemount-3051-3051s-2051/">Cách chọn Rosemount 3051, 3051S, 2051 cho đo áp suất</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/thiet-bi-do-muc-rosemount-radar-gwr-chenh-ap/">Cách chọn thiết bị đo mức Rosemount</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/transmitter-nhiet-do-rosemount-248-3144s-214c/">Cách chọn transmitter nhiệt độ Rosemount 248, 3144S và cảm biến 214C</a></li>
+      <li><a href="/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/">Rosemount cho dầu khí Việt Nam</a></li>
+        </ul>
+        <h5 style="margin-top:22px">Liên kết</h5>
+        <ul>
+          <li><a href="/rosemount-emerson-viet-nam/blog/">Blog kỹ thuật Rosemount</a></li>
+          <li><a href="/rosemount-emerson-viet-nam/lien-he/">Gửi yêu cầu báo giá</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CÔNG TY TNHH FAST GROUP. Bảo lưu mọi quyền.</span>
+      <span>fastgroup.vn</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
