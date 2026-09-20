@@ -302,6 +302,10 @@ em{font-style:italic}
 .content-figure figcaption{padding:11px 16px;background:#fff;border-top:1px solid var(--line-soft);
   color:var(--muted);font-size:.84rem;line-height:1.55}
 .related-articles{margin:38px 0 0;display:grid;gap:2px}
+.related-siblings{grid-template-columns:repeat(2,minmax(0,1fr))}
+.related-siblings h3{grid-column:1/-1}
+.related-siblings .related-link span{color:var(--blue)}
+@media(max-width:700px){.related-siblings{grid-template-columns:1fr}}
 .related-articles h3{margin:0 0 6px}
 .related-link{display:block;padding:16px 20px;background:#fff;border:1px solid var(--line)}
 .related-link:hover{border-color:var(--blue)}
@@ -313,6 +317,21 @@ em{font-style:italic}
 .disclaimer{margin:0;padding:16px 20px;background:var(--surface-2);border:1px solid var(--line);
   border-left:3px solid var(--silver);color:var(--muted);font-size:.86rem;line-height:1.6}
 .disclaimer strong{color:var(--ink-soft)}
+
+/* ---------- dải CTA "mua ở đâu" ---------- */
+.buy-strip{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.buy-inner{padding:52px 0;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);
+  gap:44px;align-items:start}
+.buy-copy h2{margin:0 0 12px;font-size:clamp(1.4rem,2vw,1.8rem)}
+.buy-copy p{margin:0;max-width:56ch;color:var(--ink-soft)}
+.buy-copy .hero-actions{margin-top:22px}
+.buy-places{display:grid;gap:2px}
+.buy-place{padding:16px 20px;background:#fff;border:1px solid var(--line)}
+.buy-place span{display:block;margin-bottom:4px;color:var(--muted);font-size:.75rem;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase}
+.buy-place p{margin:0;color:var(--ink);font-size:.95rem}
+.buy-place a{color:var(--blue);font-weight:600}
+@media(max-width:900px){.buy-inner{grid-template-columns:1fr;gap:28px;padding:44px 0}}
 
 /* ---------- chân trang ---------- */
 .site-footer{background:var(--ink);color:rgba(255,255,255,.7)}
@@ -415,7 +434,7 @@ em{font-style:italic}
         rgba(255,255,255,.82) 54%,
         rgba(255,255,255,.22) 68%,
         rgba(255,255,255,0) 80%),
-      var(--hero-image,none) center bottom/contain no-repeat,
+      var(--hero-image-sm,var(--hero-image,none)) center bottom/contain no-repeat,
       #fff;
   }
   .hero.hero-scene .hero-inner,.page-hero.hero-scene .page-hero-inner,

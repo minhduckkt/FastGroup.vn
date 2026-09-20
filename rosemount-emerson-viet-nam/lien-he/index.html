@@ -18,6 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" />
 <link rel="icon" href="https://fastgroup.vn/img/favicon.ico" />
+<link rel="preload" as="image" href="/img/rosemount/rm-18.webp" type="image/webp" fetchpriority="high" media="(min-width:981px)" />
+<link rel="preload" as="image" href="/img/rosemount/rm-18-sm.webp" type="image/webp" fetchpriority="high" media="(max-width:980px)" />
 <link rel="stylesheet" href="../assets/site.css?v=5" />
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Liên hệ & báo giá Rosemount | Fast Group","url":"https://fastgroup.vn/rosemount-emerson-viet-nam/lien-he/","inLanguage":"vi"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Rosemount Việt Nam","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/"},{"@type":"ListItem","position":2,"name":"Liên hệ","item":"https://fastgroup.vn/rosemount-emerson-viet-nam/lien-he/"}]}</script>
@@ -36,27 +38,14 @@
 </nav></div></header>
 <nav class="breadcrumb-bar"><div class="container"><a href="../">Trang chủ</a> › <span>Liên hệ</span></div></nav>
 <main>
-<section class="page-hero t-pressure" style="--page-image:url('/img/rosemount/rm-10.webp')"><div class="container page-hero-inner">
+<section class="page-hero hero-scene t-pressure" style="--hero-image:url('/img/rosemount/rm-18.webp');--hero-image-sm:url('/img/rosemount/rm-18-sm.webp')"><div class="container page-hero-inner">
 <div class="eyebrow">Liên hệ · Yêu cầu báo giá</div>
 <h1>Liên hệ &amp; báo giá thiết bị Rosemount</h1>
 <p class="lead">Gửi model code hoặc thông số kỹ thuật, đội ngũ Fast Group phản hồi trong ngày làm việc — kèm tư vấn cấu hình, chứng chỉ và chứng từ CO/CQ.</p>
 </div></section>
 
 <section class="section"><div class="container"><div class="contact-layout">
-<form class="form-panel" id="rfqForm" novalidate>
-<div class="section-heading" style="margin-bottom:20px"><h2 style="margin:0">Gửi yêu cầu báo giá (RFQ)</h2></div>
-<div class="form-grid">
-<div class="field"><label for="f-name">Họ và tên *</label><input id="f-name" name="name" type="text" autocomplete="name" /></div>
-<div class="field"><label for="f-company">Công ty</label><input id="f-company" name="company" type="text" autocomplete="organization" /></div>
-<div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" autocomplete="email" /></div>
-<div class="field"><label for="f-phone">Điện thoại / Zalo</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" /></div>
-<div class="field full"><label for="f-model">Model / Model code / Part number</label><input id="f-model" name="model" type="text" placeholder="VD: 3051CD2A22A1AB4 hoặc Rosemount 700XA" /></div>
-<div class="field full"><label for="f-msg">Nội dung yêu cầu (dải đo, chứng chỉ, số lượng, nơi giao hàng…)</label><textarea id="f-msg" name="message"></textarea></div>
-<input type="text" id="f-hp" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-</div>
-<div class="form-actions"><button class="button button-primary" type="submit">Gửi yêu cầu báo giá</button><a class="button button-secondary" href="tel:+84938888958">Gọi (+84) 938 888 958</a></div>
-<div id="rfqMsg" class="disclaimer" style="margin-top:16px;display:none"></div>
-</form>
+<div data-fg-rfq data-fg-source="Rosemount" id="fgqBox" data-fg-title="Gửi yêu cầu báo giá Rosemount" data-fg-note="Nêu model code, dải đo, kết nối process, tín hiệu ngõ ra, chứng chỉ và số lượng — báo giá kèm lead time và danh mục chứng từ được phát hành trong ngày làm việc."></div>
 <div class="contact-stack">
 <div class="contact-card"><h3>Trụ sở</h3><p>150/41 Nguyễn Cư Trinh, P. Cầu Ông Lãnh, TP. Hồ Chí Minh</p></div>
 <div class="contact-card"><h3>VP Vũng Tàu</h3><p>51 Lê Văn Lộc, P. Vũng Tàu, TP. Hồ Chí Minh</p></div>
@@ -67,38 +56,6 @@
 </div>
 <p class="disclaimer" style="margin-top:30px"><strong>Lưu ý:</strong> Rosemount™ và Emerson™ là thương hiệu của Emerson Electric Co. Fast Group Engineering là nhà cung cấp độc lập, không được Emerson ủy quyền làm đại diện chính thức.</p>
 </div></section>
-<script>
-(function(){
-  var FORM_ENDPOINT="https://formsubmit.co/ajax/minhduc@fastgroup.vn", MAIL_TO="minhduc@fastgroup.vn";
-  var form=document.getElementById("rfqForm"); if(!form) return;
-  var box=document.getElementById("rfqMsg"), btn=form.querySelector('button[type="submit"]');
-  var RE=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
-  function show(t){ if(box){box.style.display="block"; box.textContent=t;} }
-  form.addEventListener("submit",function(e){
-    e.preventDefault();
-    if(v("f-hp")) return;
-    var d={name:v("f-name"),company:v("f-company"),email:v("f-email"),phone:v("f-phone"),model:v("f-model"),message:v("f-msg")};
-    var bad=[];
-    if(d.name.length<2) bad.push("họ tên");
-    if(!RE.test(d.email)) bad.push("email hợp lệ");
-    if(!d.model && !d.message) bad.push("model/part number hoặc nội dung");
-    if(bad.length){ show("Vui lòng nhập: "+bad.join(", ")+"."); return; }
-    if(btn){btn.disabled=true; btn.dataset.t=btn.textContent; btn.textContent="Đang gửi…";}
-    show("Đang gửi yêu cầu…");
-    var payload={_subject:"RFQ Rosemount từ fastgroup.vn — "+(d.company||d.name),_template:"table",
-      "Họ và tên":d.name,"Công ty":d.company,"Email":d.email,"Điện thoại":d.phone,
-      "Model / Part number":d.model,"Nội dung":d.message,"Trang gửi":location.href,"Nguồn":"Rosemount portal"};
-    function done(){ if(btn){btn.disabled=false; btn.textContent=btn.dataset.t||"Gửi yêu cầu báo giá";} }
-    fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
-     .then(function(r){ if(!r.ok) throw 0; return r.json().catch(function(){return {};}); })
-     .then(function(){ done(); form.reset(); show("Đã nhận yêu cầu. Fast Group sẽ phản hồi trong giờ làm việc. Hoặc gọi/nhắn Zalo 0938 888 958."); })
-     .catch(function(){ done(); show("Chưa gửi được qua web. Đang mở email của bạn với nội dung đã điền. Hoặc gọi 0938 888 958.");
-       var body=["Ho ten: "+d.name,"Cong ty: "+d.company,"Email: "+d.email,"DT: "+d.phone,"Model/Part: "+d.model,"","Noi dung:",d.message].join("\n");
-       window.location.href="mailto:"+MAIL_TO+"?subject="+encodeURIComponent("RFQ Rosemount - "+(d.company||d.name))+"&body="+encodeURIComponent(body); });
-  });
-})();
-</script>
 </main>
 <footer class="site-footer"><div class="footer-inner">
 <div class="footer-kicker">Fast Group Engineering · Nhà cung cấp thiết bị đo lường Rosemount tại Việt Nam</div>
@@ -109,7 +66,7 @@
 <div class="footer-column"><h3>Nhóm sản phẩm</h3><div class="footer-links">
 <a href="../do-ap-suat/">Đo áp suất</a><a href="../do-luu-luong/">Đo lưu lượng</a><a href="../do-muc/">Đo mức</a><a href="../do-nhiet-do/">Đo nhiệt độ</a><a href="../phan-tich-khi/">Phân tích khí</a><a href="../phan-tich-long/">Phân tích lỏng</a></div></div>
 <div class="footer-column"><h3>Hỗ trợ RFQ</h3><div class="footer-links">
-<a href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ / BOM</a><a href="/rosemount-emerson-viet-nam/ve-chung-toi/">Về Fast Group</a><a href="https://fastgroup.vn/brands/emerson.html">Trang hãng trên fastgroup.vn</a><a href="https://www.emerson.com/" rel="nofollow noopener" target="_blank">Emerson.com (trang chính thức)</a></div></div>
+<a href="/rosemount-emerson-viet-nam/lien-he/">Gửi RFQ / BOM</a><a href="/rosemount-emerson-viet-nam/mua-o-dau/">Mua ở đâu: TP.HCM &amp; Vũng Tàu</a><a href="/rosemount-emerson-viet-nam/ve-chung-toi/">Về Fast Group</a><a href="https://fastgroup.vn/brands/emerson.html">Trang hãng trên fastgroup.vn</a><a href="https://www.emerson.com/" rel="nofollow noopener" target="_blank">Emerson.com (trang chính thức)</a></div></div>
 <div class="footer-column"><h3>Thông tin liên hệ</h3><div class="footer-contact">
 <div><span>Trụ sở</span><p>150/41 Nguyen Cu Trinh Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vietnam</p></div>
 <div><span>Vũng Tàu</span><p>51 Le Van Loc Street, Vung Tau Ward, Ho Chi Minh City, Vietnam</p></div>
@@ -121,6 +78,6 @@
 <div>© 2026 <a href="https://fastgroup.vn/" target="_blank" rel="noopener">Fast Group Engineering</a>. All rights reserved.</div>
 <div>Website do Fast Group Engineering vận hành độc lập, không phải website chính thức của Emerson. Rosemount™ và Emerson™ là thương hiệu của Emerson Electric Co.</div></div>
 </div></footer>
-<script>window.FG_RFQ_SOURCE="Rosemount";</script>
+<script>window.FG_RFQ_SOURCE="Rosemount";window.FG_RFQ_ENDPOINT="https://script.google.com/macros/s/AKfycbynrnlwZwm-aFl3Lzb9S7luNm0eqSIfFkpP3IKZrFjf_RUV1xszBoMdgdB2XXp2HRAj/exec";</script>
 <script src="/assets/fg-rfq.js" defer></script>
 </body></html>

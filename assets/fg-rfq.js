@@ -44,6 +44,14 @@
    *  Để trống = form mở phần mềm email của khách (vẫn không mất lead). */
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbyKugavYly5X-TpXnAVTJRg93l6xH7K2j9P0E-z2VpPJVaTEgoiPNXRW1-VY3K9YlhLNg/exec';
 
+  /** Mỗi portal có thể dùng tài khoản Google riêng để KHÔNG chung hạn ngạch
+   *  gửi thư. Khai trong trang đó, trước khi nạp file này:
+   *      window.FG_RFQ_ENDPOINT = 'https://script.google.com/.../exec';
+   *  Portal nào không khai thì dùng ENDPOINT mặc định ở trên. */
+  function endpoint() {
+    return (typeof window !== 'undefined' && window.FG_RFQ_ENDPOINT) || ENDPOINT;
+  }
+
   /** Phải khớp với FORM_TOKEN trong Apps Script. */
   var TOKEN = 'fg-rfq-2026';
 
@@ -89,6 +97,24 @@
            'Ren / kết nối quá trình: \n' +
            'Môi chất và nhiệt độ làm việc: \n' +
            'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
+    'Rosemount': {
+      maker:  'Emerson Electric Co. (thương hiệu Rosemount)',
+      origin: 'Hoa Kỳ',
+      scope:  'Thiết bị đo lường quá trình: transmitter áp suất, lưu lượng, mức, nhiệt độ và hệ phân tích khí – lỏng',
+      role:   'Nhà cung cấp độc lập thiết bị Rosemount chính hãng tại Việt Nam',
+      proof:  'Không trực thuộc và không được Emerson ủy quyền làm đại diện chính thức.',
+      tpl: 'Vui lòng báo giá {model}.\n' +
+           'Môi chất: \n' +
+           'Dải đo: \n' +
+           'Nhiệt độ và áp suất làm việc: \n' +
+           'Kết nối process (ren / mặt bích, tiêu chuẩn, vật liệu): \n' +
+           'Tín hiệu ra (4-20 mA HART / Fieldbus / WirelessHART): \n' +
+           'Chứng chỉ yêu cầu (SIL, ATEX / IECEx): \n' +
+           'Yêu cầu chứng từ: CO, CQ, EN 10204 3.1 MTC\n' +
+           'Số lượng: \n' +
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
@@ -400,7 +426,8 @@
         if (btn) { btn.disabled = false; btn.classList.remove('fgq-busy'); btn.textContent = label; }
       }
 
-      if (!ENDPOINT) {
+      var EP = endpoint();
+      if (!EP) {
         done();
         show('ok', 'Đang mở phần mềm email của bạn với nội dung đã điền sẵn. ' + HELP);
         track('rfq_fallback_mailto', { source: cfg.source });
@@ -411,7 +438,7 @@
       /* Apps Script không xử lý được CORS preflight, nên bắt buộc gửi
          text/plain (yêu cầu "đơn giản", không sinh OPTIONS); phía server
          parse JSON từ e.postData.contents. */
-      fetch(ENDPOINT, {
+      fetch(EP, {
         method: 'POST', redirect: 'follow',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(d)
