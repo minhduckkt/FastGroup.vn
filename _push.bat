@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=rosemount-emerson-viet-nam"
+set "NEWFILES=rosemount-emerson-viet-nam img/rosemount"
 
-set "MSG_TIEUDE=Them portal thuong hieu Rosemount - Emerson (fastgroup.vn/rosemount-emerson-viet-nam)"
+set "MSG_TIEUDE=Rosemount VN: bo anh hero moi + he chu Emerson (Noto Sans)"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -93,9 +93,10 @@ REM  Neu khong co gi trong staging thi dung lai, bao ro ly do.
 if "%ERRORLEVEL%"=="0" (
   echo.
   echo   [DUNG] Khong co thay doi nao duoc dua vao commit.
-  echo   Neu git status o tren hien dau "??" truoc ten file,
-  echo   nghia la file do CHUA duoc theo doi: them duong dan cua no
-  echo   vao dong "set NEWFILES=" o dau file _push.bat roi chay lai.
+  echo   Neu git status o tren hien dau "??" truoc ten file hoac THU MUC,
+  echo   nghia la file do CHUA duoc theo doi. "git add -u" KHONG bat file moi.
+  echo   Them duong dan do vao dong "set NEWFILES=" o dau file _push.bat
+  echo   roi chay lai. Vi du da gap: anh moi nam ngoai portal -^> img/rosemount
   echo.
   echo Khong co gi trong staging - dung lai. >> "%LOG%"
   pause
@@ -107,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "PORTAL MOI rosemount-emerson-viet-nam/ (21 file)" -m "- 1 trang hub + 6 trang nhom: do ap suat, do luu luong, do muc, do nhiet do, phan tich khi, phan tich long" -m "- 12 pillar chi tiet: 3051, 3051S, 2051, 3051SFA Annubar, 3417, 8750W, 700XA, 770XA, 5408, 3308, 3144, 1056" -m "- assets/site.css (he thiet ke mau Emerson #004B8D, nen #f5f7fa dong bo trang chinh) + logo brand-rosemount-emerson.png" -m "- SEO: title/description/canonical/OG/Twitter + JSON-LD (Organization, ItemList, Article, BreadcrumbList, FAQPage)" -m "- Positioning: nha cung cap doc lap, hang chinh hang CO/CQ; KHONG ghi authorized distributor; co disclaimer + link emerson.com" -m "" -m "Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01KKLPPsSPyGvuZPs2fDdpgC" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "ANH: them img/rosemount/rm-01..21.webp (21 anh hero Rosemount 1672x941, ~1.6MB)" -m "- Hero 60 trang doi tu anh cat nen trang sang anh thuc te theo nhom san pham" -m "- Them figure minh hoa cho 51 trang san pham (truoc do 39 trang khong co anh)" -m "- og:image / twitter:image / schema image = anh hero cua chinh trang do" -m "CHU: doi sang Noto Sans (font cua emerson.com), tieu de weight 300, nhan 12px/700 IN HOA, nut vuong goc" -m "- Bang mau trung tinh hoa: ink #262728, nen #f3f3f3, ke #d9dadc; giu xanh Rosemount #004B8D" -m "- site.css?v=5 tren toan bo 60 trang de ep trinh duyet tai lai" -m "" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01KmpuwcwMBXvgz31Pwo5wVf" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
