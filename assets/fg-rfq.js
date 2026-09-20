@@ -104,8 +104,7 @@
       maker:  'Emerson Electric Co. (thương hiệu Rosemount)',
       origin: 'Hoa Kỳ',
       scope:  'Thiết bị đo lường quá trình: transmitter áp suất, lưu lượng, mức, nhiệt độ và hệ phân tích khí – lỏng',
-      role:   'Nhà cung cấp độc lập thiết bị Rosemount chính hãng tại Việt Nam',
-      proof:  'Không trực thuộc và không được Emerson ủy quyền làm đại diện chính thức.',
+      role:   'Nhà cung cấp thiết bị Rosemount chính hãng tại Việt Nam',
       tpl: 'Vui lòng báo giá {model}.\n' +
            'Môi chất: \n' +
            'Dải đo: \n' +
@@ -144,6 +143,20 @@
            'Phương pháp kiểm tra (PT / MT / UV): \n' +
            'Quy cách (bình xịt / can / bột): \n' +
            'Yêu cầu chứng từ: SDS, CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
+    'KACON': {
+      maker:  'Korea Auto Controls Co., Ltd.',
+      origin: 'Hàn Quốc',
+      scope:  'Nút nhấn, đèn báo, đèn tháp, rơ le, SSR, cầu chì, MCB, công tắc hành trình, bộ nguồn, điều khiển nhiệt độ và HMI',
+      role:   'Nhà phân phối KACON tại Việt Nam',
+      proof:  'Cung cấp thiết bị KACON chính hãng, nhập chính ngạch theo yêu cầu dự án',
+      tpl: 'Vui lòng báo giá KACON {model}.\n' +
+           'Điện áp / nguồn cấp: \n' +
+           'Cấu hình tiếp điểm hoặc tải làm việc: \n' +
+           'Kiểu lắp / kích thước mặt tủ: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
@@ -517,3 +530,5 @@
     init();
   }
 })();
+
+
