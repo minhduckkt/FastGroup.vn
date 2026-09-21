@@ -716,3 +716,182 @@ details.qa,
   .hero{padding:52px 0 48px;background:#fff}
   .grid{grid-template-columns:1fr}
 }
+
+/* Exact shell/typography lock: undo early blog rules that still beat site.css. */
+.site-header .nav a,
+.site-header .nav-dropdown summary{
+  display:block;
+  font-size:inherit;
+  font-weight:inherit;
+  line-height:inherit;
+}
+.site-header .nav-dropdown summary{display:inline-flex}
+.site-header .nav-cta{
+  display:inline-flex;
+  font-size:.75rem;
+  font-weight:500;
+  line-height:normal;
+}
+.site-header .nav a.nav-cta{
+  display:inline-flex;
+  font-size:.75rem;
+  font-weight:500;
+  line-height:normal;
+}
+
+main > .hero{
+  padding:0;
+}
+main > .hero > .wrap{
+  min-height:auto;
+  padding:76px 0 72px;
+  display:grid;
+  align-content:center;
+}
+main > .hero h1{
+  margin-bottom:20px;
+}
+main > .hero p{
+  margin-bottom:26px;
+}
+
+main .section-head,
+main .section-heading{
+  max-width:74ch;
+  margin-bottom:38px;
+}
+main .section-head.center,
+main .section-heading.center{
+  margin-right:auto;
+  margin-left:auto;
+  text-align:center;
+}
+main .section-head h2,
+main .section-heading h2{
+  margin:0 0 14px;
+  font-size:clamp(1.6rem,2.5vw,2.25rem);
+  line-height:1.34;
+  font-weight:300;
+  letter-spacing:0;
+}
+main .section-head p,
+main .section-heading p{
+  margin:0;
+  color:var(--muted,#6b6e72);
+  font-size:1rem;
+  line-height:1.6;
+}
+
+main .card{
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:0;
+  background:#fff;
+  box-shadow:none;
+  transform:none;
+}
+main .card:hover{
+  border-color:var(--blue);
+  box-shadow:0 10px 30px rgba(30,42,55,.09);
+}
+main .card-body{
+  padding:24px 26px 26px;
+}
+main .card h3{
+  margin:0 0 10px;
+  color:var(--ink);
+  font-size:1.25rem;
+  line-height:1.4;
+  font-weight:500;
+  letter-spacing:0;
+}
+main .card p{
+  margin:0;
+  color:var(--muted,#6b6e72);
+  font-size:.96rem;
+  line-height:1.5;
+}
+main .card-foot{
+  margin-top:14px;
+  color:var(--blue);
+  font-size:.85rem;
+  font-weight:600;
+}
+main .tag{
+  display:block;
+  width:auto;
+  margin:0 0 12px;
+  padding:0;
+  border-radius:0;
+  background:transparent;
+  color:var(--muted,#6b6e72);
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+main .featured{
+  border:1px solid var(--line);
+  border-radius:0;
+  background:#fff;
+  box-shadow:none;
+}
+main .featured-body{
+  padding:28px;
+}
+main .featured-body h3{
+  margin:0 0 10px;
+  color:var(--ink);
+  font-size:1.25rem;
+  line-height:1.4;
+  font-weight:500;
+  letter-spacing:0;
+}
+main .featured-body p{
+  margin:0 0 16px;
+  color:var(--muted,#6b6e72);
+  font-size:.96rem;
+  line-height:1.5;
+}
+
+.post-head h1{
+  max-width:22ch;
+  margin:0 0 20px;
+  font-size:clamp(2.1rem,3.3vw,2.75rem);
+  line-height:1.28;
+  font-weight:300;
+  letter-spacing:0;
+}
+.prose{
+  font-size:1.0625rem;
+  line-height:1.72;
+}
+.prose > p:first-of-type,
+.prose p,
+.prose li{
+  color:var(--ink-soft,#4a4d50);
+  font-size:1.0625rem;
+  line-height:1.72;
+}
+.prose h2{
+  margin:38px 0 14px;
+  font-size:clamp(1.6rem,2.5vw,2.25rem);
+  line-height:1.34;
+  font-weight:300;
+  letter-spacing:0;
+}
+.prose h3{
+  margin:28px 0 10px;
+  font-size:1.14rem;
+  line-height:1.4;
+  font-weight:500;
+  letter-spacing:0;
+}
+.prose figure.fig,
+.toc,
+.side-cta,
+.cta-box,
+details.qa,
+.ref-strip,
+.pagenav a{
+  border-radius:0;
+}

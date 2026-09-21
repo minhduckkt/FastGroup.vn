@@ -95,6 +95,12 @@ if (Test-Path $stylePath) {
     Write-Host ("- Blog CSS alignment patch marker missing: {0}" -f ($stylePath.Substring($repoRoot.Path.Length + 1)))
     exit 2
   }
+  if (-not $styleCss.Contains("Exact shell/typography lock")) {
+    Write-Host ""
+    Write-Host "Remaining issues:"
+    Write-Host ("- Blog CSS exact shell/typography lock marker missing: {0}" -f ($stylePath.Substring($repoRoot.Path.Length + 1)))
+    exit 2
+  }
 } else {
   Write-Host ""
   Write-Host "Remaining issues:"
