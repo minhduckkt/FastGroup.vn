@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=rosemount-emerson-viet-nam img\rosemount"
+set "NEWFILES=siemens-viet-nam"
 
-set "MSG_TIEUDE=Rosemount VN: trang Mua o dau + anh hero + he chu Emerson + SEO on-page"
+set "MSG_TIEUDE=Siemens VN: portal /siemens-viet-nam/ 477 trang + chuyen huong brands/siemens.html"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "MOI: trang /rosemount-emerson-viet-nam/mua-o-dau/ nham truy van mua Rosemount o dau tai TP.HCM va Vung Tau" -m "- Schema LocalBusiness cho 2 chi nhanh (HCM + Vung Tau) + FAQPage 6 cau + BreadcrumbList" -m "- Khoi CTA mua o dau tren 59 trang (tieu de bien thien theo model/nhom), link footer tren ca 61 trang" -m "ANH: img/rosemount/rm-01..21.webp + ban mobile rm-XX-sm.webp (900px)" -m "SEO: 52 title ve <=60 ky tu, 15 description ve <=160, dong bo og/twitter title" -m "SEO: link ngang 4 san pham cung nhom tren 51 trang - inlink toi thieu tu 1 len 5" -m "SEO: preload anh hero tach desktop/mobile tren ca 61 trang" -m "SEO: trang chu them the portal Rosemount; footer 10 trang goc them khoi Brand portal" -m "SITEMAP: portal 60->61 URL, sitemap goc 146->147 URL" -m "CHU: Noto Sans (font emerson.com), tieu de weight 300, nhan 12px/700 IN HOA, nut vuong goc" -m "" -m "Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01KmpuwcwMBXvgz31Pwo5wVf" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "MOI: portal /siemens-viet-nam/ - trang chu, 15 trang nhom, 448 trang ma, tra cuu ma, hang ngung san xuat, mua o dau, lien he" -m "MOI: 7 bai /siemens-viet-nam/huong-dan-mua/ (nha phan phoi, dai ly, nha cung cap, nhap khau, giao nhanh, CO/CQ, chinh hang)" -m "SEO: xoay vong 7 chu de tu khoa theo ma, title/description/FAQ rieng tung trang; schema Product, BreadcrumbList, FAQPage, Article" -m "CHUYEN HUONG: brands/siemens.html va en/brands/siemens.html ve /siemens-viet-nam/; link trang chu va brands tro thang portal" -m "SITEMAP: sitemap goc bo 2 URL brands/siemens, them /siemens-viet-nam/; robots.txt them sitemap portal; fg-rfq.js them Siemens" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01YBJLzv2zKr9wfWDctkF9KE" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +143,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/rosemount-emerson-viet-nam/
+echo   Kiem tra: https://fastgroup.vn/siemens-viet-nam/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.

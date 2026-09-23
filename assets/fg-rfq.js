@@ -146,6 +146,19 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'Siemens': {
+      maker:  'Siemens AG',
+      origin: 'Đức',
+      scope:  'PLC SIMATIC, biến tần SINAMICS, thiết bị đóng cắt SIRIUS, bộ nguồn SITOP, HMI, mạng công nghiệp và thiết bị đo SITRANS',
+      role:   'Đại lý cung cấp thiết bị Siemens chính hãng tại Việt Nam',
+      proof:  '',
+      tpl: 'Vui lòng báo giá Siemens {model}.\n' +
+           'Hàng mới chính hãng / chấp nhận mã thay thế (Có/Không): \n' +
+           'Phiên bản firmware (CPU / HMI) nếu có: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'KACON': {
       maker:  'Korea Auto Controls Co., Ltd.',
       origin: 'Hàn Quốc',
