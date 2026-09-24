@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=siemens-viet-nam"
+set "NEWFILES=qlight-viet-nam"
 
-set "MSG_TIEUDE=Siemens VN: portal /siemens-viet-nam/ 477 trang + chuyen huong brands/siemens.html"
+set "MSG_TIEUDE=Qlight VN: doi anh san pham PNG sang WebP (326 MB -> ~30 MB)"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "MOI: portal /siemens-viet-nam/ - trang chu, 15 trang nhom, 448 trang ma, tra cuu ma, hang ngung san xuat, mua o dau, lien he" -m "MOI: 7 bai /siemens-viet-nam/huong-dan-mua/ (nha phan phoi, dai ly, nha cung cap, nhap khau, giao nhanh, CO/CQ, chinh hang)" -m "SEO: xoay vong 7 chu de tu khoa theo ma, title/description/FAQ rieng tung trang; schema Product, BreadcrumbList, FAQPage, Article" -m "CHUYEN HUONG: brands/siemens.html va en/brands/siemens.html ve /siemens-viet-nam/; link trang chu va brands tro thang portal" -m "SITEMAP: sitemap goc bo 2 URL brands/siemens, them /siemens-viet-nam/; robots.txt them sitemap portal; fg-rfq.js them Siemens" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01YBJLzv2zKr9wfWDctkF9KE" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "ANH: assets/products (588) + assets/hero (588) doi PNG/JPG sang WebP q82, giu kich thuoc va nen trong suot; xoa ban PNG" -m "TRANG: sinh lai 4234 trang Qlight, anh san pham, anh hero va schema image tro toi .webp" -m "GIU PNG: logo qlight-logo.png va anh OG qlight-og.png (de chia se mang xa hoi)" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01YBJLzv2zKr9wfWDctkF9KE" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +143,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/siemens-viet-nam/
+echo   Kiem tra: https://fastgroup.vn/qlight-viet-nam/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.
