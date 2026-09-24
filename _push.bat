@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=qlight-viet-nam"
+set "NEWFILES=siemens-viet-nam"
 
-set "MSG_TIEUDE=Qlight VN: doi anh san pham PNG sang WebP (326 MB -> ~30 MB)"
+set "MSG_TIEUDE=Siemens VN: dang tier A transmitter (220 ma) va viet lai noi dung B2B"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "ANH: assets/products (588) + assets/hero (588) doi PNG/JPG sang WebP q82, giu kich thuoc va nen trong suot; xoa ban PNG" -m "TRANG: sinh lai 4234 trang Qlight, anh san pham, anh hero va schema image tro toi .webp" -m "GIU PNG: logo qlight-logo.png va anh OG qlight-og.png (de chia se mang xa hoi)" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01YBJLzv2zKr9wfWDctkF9KE" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "TIER A: them 220 trang MLFB transmitter SITRANS/SIPART (DS III, P320/P420, P200, TH/TR, PS2, LR250, LU240, MAG...) kem bang cau hinh va ma ke nhiem" -m "VIET LAI: 469 trang hien co theo van phong trang trong; ten goi Viet-Anh; khoi Cung ung; FAQ; 7 bai huong dan; sitemap 697 URL" -m "GIU NGUYEN: thong so ky thuat, ma dat hang, trang thai vong doi; fg-rfq.js khong doi" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01HTJLJVCv3twkGvchRv9zFM" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +143,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/qlight-viet-nam/
+echo   Kiem tra: https://fastgroup.vn/siemens-viet-nam/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.
