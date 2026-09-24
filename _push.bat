@@ -19,7 +19,7 @@ REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
 set "NEWFILES=siemens-viet-nam"
 
-set "MSG_TIEUDE=Siemens VN: tieu de trang ma co ten loai tieng Viet va chinh hang; sua nhan phu kien 7MF4997"
+set "MSG_TIEUDE=Siemens VN: dang tier B transmitter (439 ma), portal 1107 ma"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "TIEU DE: 501 trang ma them ten loai tieng Viet (khoi dong tu, aptomat MCB, ro-le nhiet, module analog...) va chu chinh hang khi du cho" -m "SUA LOI: 6 ma 7MF4997 (modem HART, man hinh, bo mach DS III) truoc bi ghi nham la transmitter ap suat" -m "GIU NGUYEN: thong so, ma dat hang, vong doi, noi dung trang" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01HTJLJVCv3twkGvchRv9zFM" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "TIER B: 439 trang MLFB (DS III 191, P320/P420 92, LH300/LH100 49, TH/TR320 48, P200 21, LU240 15, TF320/420 23)" -m "SEO: tieu de co thuoc tinh phan biet (Ex d/Ex ia/FM-CSA, PA, cap, vat lieu); bang so sanh hien cac thong so khac nhau giua cac ma cung dong; lien ket DS III sang ma P320/P420 de xuat" -m "SUA DU LIEU: dai do P200 so thap phan (0...1,6 bar, 0...0,6 bar abs) truoc bi cat" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01HTJLJVCv3twkGvchRv9zFM" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
