@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=siemens-viet-nam"
+set "NEWFILES=fisher-emerson"
 
-set "MSG_TIEUDE=Siemens VN: dang tier B transmitter (439 ma), portal 1107 ma"
+set "MSG_TIEUDE=Fisher Emerson VN: ra mat portal /fisher-emerson/ (378 trang)"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "TIER B: 439 trang MLFB (DS III 191, P320/P420 92, LH300/LH100 49, TH/TR320 48, P200 21, LU240 15, TF320/420 23)" -m "SEO: tieu de co thuoc tinh phan biet (Ex d/Ex ia/FM-CSA, PA, cap, vat lieu); bang so sanh hien cac thong so khac nhau giua cac ma cung dong; lien ket DS III sang ma P320/P420 de xuat" -m "SUA DU LIEU: dai do P200 so thap phan (0...1,6 bar, 0...0,6 bar abs) truoc bi cat" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01HTJLJVCv3twkGvchRv9zFM" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "312 trang san pham + 26 nhom + 17 bai viet + 13 trang khu vuc; 107 trang co noi dung tieng Viet, con lai noindex" -m "Anh WebP (the 480px, lon 900px), JSON-LD Product/FAQ/Breadcrumb, sitemap rieng; robots.txt them sitemap Fisher" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01Cnbb6XazEfeZSU6k1GbTUJ" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +143,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/siemens-viet-nam/
+echo   Kiem tra: https://fastgroup.vn/fisher-emerson/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.
