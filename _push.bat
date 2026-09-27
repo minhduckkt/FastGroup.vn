@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=brands\smc.html brands\festo.html brands\bosch-rexroth.html img\festo-logo.png img\bosch-rexroth-logo.png"
+set "NEWFILES=fisher-emerson\assets\scene fisher-emerson\assets\fisher-rfq.js rosemount-emerson-viet-nam\assets\rosemount-rfq.js rosemount-emerson-viet-nam\assets\rfq.css"
 
-set "MSG_TIEUDE=Trang brand: viet lai Fisher, HYDAC; them SMC, Festo, Bosch Rexroth"
+set "MSG_TIEUDE=Fisher + Rosemount: anh canh hero/blog, form RFQ ky thuat, trang Lien he va Ve chung toi, lien ket cheo"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -108,7 +108,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "Noi dung 1.300-1.800 tu/trang: nhom san pham, bang dong tieu bieu, huong dan doc ma, chung tu, FAQ; JSON-LD WebPage/Brand/FAQPage" -m "Link noi dung sang /fisher-emerson/, hydraulic.com.vn, smcworld.com.vn (moi link mot URL rieng); brands.html them 3 the; sitemap them 3 URL" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01Cnbb6XazEfeZSU6k1GbTUJ" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "Fisher: 20 anh canh WebP (hero, thumbnail blog, og:image), anh minh hoa giua bai, form RFQ 6 phan tren trang Lien he, viet lai Ve chung toi; footer: tru so chinh Vung Tau" -m "Rosemount: viet lai Lien he + form RFQ thiet bi do, bo sung Ve chung toi; 13 trang co khoi lien ket sang Fisher; fg-rfq.js them muc Fisher" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01VcazTtPwCTAKKaECrmnxPu" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +143,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/brands.html
+echo   Kiem tra: https://fastgroup.vn/fisher-emerson/lien-he/ va /rosemount-emerson-viet-nam/lien-he/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.

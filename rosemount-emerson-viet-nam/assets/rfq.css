@@ -1,0 +1,33 @@
+/* Form RFQ ky thuat (trang Lien he) – dung chung kieu voi portal Fisher */
+.frfq{display:grid;gap:22px}
+.frfq .section-heading{margin-bottom:0}
+.frfq-set{border:0;margin:0;padding:0;min-width:0}
+.frfq-set legend,.frfq-proc summary{font-weight:700;color:var(--ink);font-size:1rem;margin-bottom:12px;padding:0}
+.frfq-proc summary{cursor:pointer;list-style:none}.frfq-proc summary::-webkit-details-marker{display:none}
+.frfq-proc summary::before{content:"+ ";color:var(--blue)}.frfq-proc[open] summary::before{content:"– "}
+.frfq-proc summary span{font-weight:400;color:var(--muted);font-size:.9rem}
+.frfq-chips{display:flex;flex-wrap:wrap;gap:8px}
+.frfq-chip input,.frfq-check input{position:absolute;opacity:0;pointer-events:none}
+.frfq-chip span{display:inline-block;padding:10px 16px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.93rem}
+.frfq-chip input:checked+span{border-color:var(--blue);background:var(--blue-tint);color:var(--blue);font-weight:600}
+.frfq-chip input:focus-visible+span,.frfq-check input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.frfq-hint{margin:10px 0 0;color:var(--muted);font-size:.92rem}
+.frfq-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.frfq-check span{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.93rem}
+.frfq-check span::before{content:"";width:16px;height:16px;border:1.5px solid var(--silver);flex:none}
+.frfq-check input:checked+span{border-color:var(--blue)}
+.frfq-check input:checked+span::before{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 3px #fff}
+.frfq-note{margin:0;color:var(--muted);font-size:.9rem}
+.frfq .form-actions{display:flex;flex-wrap:wrap;gap:12px}
+.fgq-req{color:#d33;margin-left:2px}
+.fgq-brand{margin:0;padding:13px 16px;font-size:.92rem;line-height:1.6;background:var(--blue-tint);color:var(--ink)}
+.fgq-brand b{display:block;font-size:1rem;margin-bottom:2px}.fgq-brand span{color:var(--muted)}
+.fgq-ctx{margin:0;padding:11px 14px;font-size:.92rem;border:1px dashed var(--line)}.fgq-ctx span{color:var(--muted)}
+.fgq-msg{padding:12px 14px;font-size:.94rem;line-height:1.55;display:none}.fgq-msg.on{display:block}
+.fgq-msg.ok{background:#e9f7ef;color:#14663a;border:1px solid #bce3cd}.fgq-msg.err{background:#fdeceb;color:#8c1f1f;border:1px solid #f3c4c2}
+.fgq-msg a{font-weight:700;text-decoration:underline;color:inherit}
+.fgq-bad{border-color:#d9534f!important;background:#fffafa!important}
+.fgq-trap{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.fgq-busy{opacity:.6;cursor:progress}
+.contact-card .meta-line{margin:6px 0 0;font-size:.88rem;color:var(--muted);font-weight:400}
+@media (max-width:640px){.frfq-checks{grid-template-columns:1fr}.form-panel.frfq{padding:22px 18px}}
