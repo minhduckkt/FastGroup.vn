@@ -173,6 +173,24 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'Fisher': {
+      maker:  'Emerson Electric Co. (thương hiệu Fisher)',
+      origin: 'Hoa Kỳ',
+      scope:  'Van điều khiển, positioner FIELDVUE, regulator, actuator, bộ điều khiển mức và thiết bị LPG',
+      role:   'Nhà phân phối hàng Fisher chính hãng tại Việt Nam',
+      proof:  'Hàng chính hãng, đủ CO/CQ; bảo hành chính hãng 12 tháng kể từ ngày giao hàng',
+      tpl: 'Vui lòng báo giá {model}.\n' +
+           'Thay thế theo nameplate (serial): \n' +
+           'Lưu chất: \n' +
+           'Áp suất vào / ra (P1 / P2): \n' +
+           'Nhiệt độ làm việc: \n' +
+           'Lưu lượng hoặc Cv: \n' +
+           'Size & class, vật liệu thân / trim: \n' +
+           'Actuator, fail action, positioner / tín hiệu: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'Site mẹ': {
       maker:  'Fast Group Engineering',
       origin: 'Việt Nam',
