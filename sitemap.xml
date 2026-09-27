@@ -52,7 +52,7 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/hydac.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -149,7 +149,7 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/fisher.html</loc>
-    <lastmod>2026-07-25</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
@@ -795,5 +795,20 @@
     <loc>https://fastgroup.vn/rosemount-emerson-viet-nam/rosemount-dau-khi-viet-nam-sil-atex-iecex/</loc>
     <lastmod>2026-09-21</lastmod>
     <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/smc.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/festo.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/brands/bosch-rexroth.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <priority>0.64</priority>
   </url>
 </urlset>
