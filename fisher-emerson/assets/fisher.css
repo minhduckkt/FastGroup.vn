@@ -1,0 +1,9 @@
+/* Bo sung cho portal Fisher: anh san pham dang dung -> tren mobile hien anh rieng, khong de len chu */
+.fisher-hero-img{display:none}
+@media (max-width:980px){
+  .hero-scene.fisher-hero{background-image:none!important}
+  .fisher-hero .hero-inner,.fisher-hero .page-hero-inner{padding-bottom:28px!important}
+  .fisher-hero-img{display:block;width:auto;max-width:min(78vw,340px);height:auto;max-height:260px;margin:22px auto 0;object-fit:contain}
+}
+.variant-more summary{cursor:pointer;font-weight:600;color:var(--blue);margin:12px 0}
+.product-media picture,.category-media picture{display:contents}
