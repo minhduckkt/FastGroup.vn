@@ -148,9 +148,9 @@
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://fastgroup.vn/brands/fisher.html</loc>
+    <loc>https://fastgroup.vn/fisher-emerson/</loc>
     <lastmod>2026-09-27</lastmod>
-    <priority>0.64</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://fastgroup.vn/brands/abb.html</loc>
@@ -243,11 +243,6 @@
   </url>
   <url>
     <loc>https://fastgroup.vn/en/brands/emerson.html</loc>
-    <lastmod>2026-07-25</lastmod>
-    <priority>0.60</priority>
-  </url>
-  <url>
-    <loc>https://fastgroup.vn/en/brands/fisher.html</loc>
     <lastmod>2026-07-25</lastmod>
     <priority>0.60</priority>
   </url>
