@@ -1,0 +1,105 @@
+/* Bo sung cho portal TESCOM: anh san pham dang dung -> tren mobile hien anh rieng, khong de len chu */
+.tescom-hero-img{display:none}
+@media (max-width:980px){
+  .hero-scene.tescom-hero{background-image:none!important}
+  .tescom-hero .hero-inner,.tescom-hero .page-hero-inner{padding-bottom:28px!important}
+  .tescom-hero-img{display:block;width:auto;max-width:min(78vw,340px);height:auto;max-height:260px;margin:22px auto 0;object-fit:contain}
+}
+.variant-more summary{cursor:pointer;font-weight:600;color:var(--blue);margin:12px 0}
+.product-media picture,.category-media picture{display:contents}
+/* form RFQ TESCOM (trang lien he) + kieu thong bao dung chung voi fg-rfq.js */
+.frfq{display:grid;gap:22px}
+.frfq .section-heading{margin-bottom:0}
+.frfq-set{border:0;margin:0;padding:0;min-width:0}
+.frfq-set legend,.frfq-proc summary{font-weight:700;color:var(--ink);font-size:1rem;margin-bottom:12px;padding:0}
+.frfq-proc summary{cursor:pointer;list-style:none}.frfq-proc summary::-webkit-details-marker{display:none}
+.frfq-proc summary::before{content:"+ ";color:var(--blue)}.frfq-proc[open] summary::before{content:"– "}
+.frfq-proc summary span{font-weight:400;color:var(--muted);font-size:.9rem}
+.frfq-chips{display:flex;flex-wrap:wrap;gap:8px}
+.frfq-chip input,.frfq-check input{position:absolute;opacity:0;pointer-events:none}
+.frfq-chip span{display:inline-block;padding:10px 16px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.93rem}
+.frfq-chip input:checked+span{border-color:var(--blue);background:var(--blue-tint);color:var(--blue);font-weight:600}
+.frfq-chip input:focus-visible+span,.frfq-check input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.frfq-hint{margin:10px 0 0;color:var(--muted);font-size:.92rem}
+.frfq-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.frfq-check span{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:.93rem}
+.frfq-check span::before{content:"";width:16px;height:16px;border:1.5px solid var(--silver);flex:none}
+.frfq-check input:checked+span{border-color:var(--blue)}
+.frfq-check input:checked+span::before{background:var(--blue);border-color:var(--blue);box-shadow:inset 0 0 0 3px #fff}
+.frfq-note{margin:0;color:var(--muted);font-size:.9rem}
+.frfq .form-actions{display:flex;flex-wrap:wrap;gap:12px}
+.fgq-req{color:#d33;margin-left:2px}
+.fgq-brand{margin:0;padding:13px 16px;font-size:.92rem;line-height:1.6;background:var(--blue-tint);color:var(--ink)}
+.fgq-brand b{display:block;font-size:1rem;margin-bottom:2px}.fgq-brand span{color:var(--muted)}
+.fgq-ctx{margin:0;padding:11px 14px;font-size:.92rem;border:1px dashed var(--line)}.fgq-ctx span{color:var(--muted)}
+.fgq-msg{padding:12px 14px;font-size:.94rem;line-height:1.55;display:none}.fgq-msg.on{display:block}
+.fgq-msg.ok{background:#e9f7ef;color:#14663a;border:1px solid #bce3cd}.fgq-msg.err{background:#fdeceb;color:#8c1f1f;border:1px solid #f3c4c2}
+.fgq-msg a{font-weight:700;text-decoration:underline;color:inherit}
+.fgq-bad{border-color:#d9534f!important;background:#fffafa!important}
+.fgq-trap{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.fgq-busy{opacity:.6;cursor:progress}
+.contact-card .meta-line{margin:6px 0 0;font-size:.88rem;color:var(--muted);font-weight:400}
+@media (max-width:640px){.frfq-checks{grid-template-columns:1fr}.form-panel.frfq{padding:22px 18px}}
+/* hero anh canh (may tinh): anh phu 60% ben phai, mo dan vao nen trang -> khong co mep cat, chu luon doc ro */
+@media (min-width:981px){
+  .hero-scene.scene-photo{position:relative;overflow:hidden;background:#fff!important}
+  .hero-scene.scene-photo::before{content:"";position:absolute;top:0;right:0;bottom:0;width:60%;
+    background:var(--hero-image) center/cover no-repeat;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,transparent 10%,rgba(0,0,0,.6) 30%,#000 46%);
+            mask-image:linear-gradient(90deg,transparent 0,transparent 10%,rgba(0,0,0,.6) 30%,#000 46%)}
+  .hero-scene.scene-photo > .container{position:relative;z-index:1}
+  .page-hero.hero-scene.scene-photo .page-hero-inner > *{max-width:min(600px,52%)}
+}
+/* anh canh: the blog co anh dai dien 16:9, anh minh hoa giua bai, khoi lien ket Emerson khac */
+.post-card{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.post-media{display:block;aspect-ratio:16/9;overflow:hidden;background:var(--surface)}
+.post-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.post-card:hover .post-media img{transform:scale(1.035)}
+.post-body{padding:20px 24px 24px;display:flex;flex-direction:column;flex:1}
+.post-body h3{margin:6px 0 10px;font-size:1.06rem;line-height:1.4}
+.post-body p{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.post-body .meta-line{margin-top:auto;margin-bottom:0}
+.post-tag{font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.article-figure{margin:28px 0;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.article-figure img{display:block;width:100%;height:auto}
+.article-figure figcaption{padding:10px 16px;font-size:.9rem;color:var(--muted);background:var(--surface)}
+.xlink-rosemount .related-link span{color:var(--blue)}
+.xlink-rosemount .related-link p{font-weight:400;color:var(--ink-soft)}
+.xlink-rosemount .related-link p strong{font-weight:600;color:var(--ink)}
+
+/* ===== TESCOM bo sung ===== */
+.brand-logo.tescom-mark{height:30px;width:30px}
+.footer-logo-img.tescom-mark{height:34px;width:34px;padding:0;background:none}
+@media (max-width:980px){.site-header .brand-logo.tescom-mark{height:26px;width:26px}}
+.tc-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.5fr);gap:44px;align-items:start}
+.tc-intro .article-body{max-width:none}
+@media (max-width:980px){.tc-intro{grid-template-columns:1fr;gap:28px}}
+.tc-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.tc-chip{font:inherit;font-size:.92rem;padding:9px 15px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}
+.tc-chip:hover{border-color:var(--blue);color:var(--blue)}
+.tc-chip.is-on{border-color:var(--blue);background:var(--blue);color:#fff;font-weight:600}
+.tc-chip:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.product-card[hidden],.tc-table tr[hidden]{display:none!important}
+.product-meta{overflow-wrap:anywhere}
+.product-body h3{overflow-wrap:anywhere}
+.tc-src{margin:22px 0;padding:14px 18px;border-left:3px solid var(--silver);background:var(--surface);color:var(--ink-soft)}
+.tc-src p{margin:0 0 6px;font-style:italic}
+.tc-src cite{font-size:.82rem;color:var(--muted);font-style:normal}
+.tc-note{margin:16px 0;padding:14px 16px;background:var(--blue-tint);border-left:3px solid var(--blue);font-size:.95rem}
+.tc-search{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 18px}
+.tc-search label{font-weight:600;width:100%}
+.tc-search input{flex:1 1 280px;max-width:520px;padding:12px 14px;border:1px solid var(--line);font:inherit;font-size:1rem;background:#fff}
+.tc-search input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+#tc-count{color:var(--muted);font-size:.92rem}
+.tc-table td:first-child{white-space:normal;min-width:220px}
+.article-body code{font-size:.92em;background:var(--surface);padding:1px 5px}
+.md-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.md-table td{overflow-wrap:anywhere}
+
+/* anh san pham trong hero: tren may tinh dat trong khung ben phai, khong de len chu */
+@media (min-width:981px){
+  .page-hero.hero-scene.tescom-hero{background:#fff!important;position:relative}
+  .tescom-hero .page-hero-inner{position:relative}
+  .tescom-hero .tescom-hero-img{display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);
+    width:36%;max-width:440px;height:82%;max-height:340px;object-fit:contain;margin:0}
+}

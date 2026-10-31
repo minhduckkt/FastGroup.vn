@@ -205,6 +205,23 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'TESCOM': {
+      maker:  'Emerson Electric Co. (thương hiệu TESCOM)',
+      origin: 'Hoa Kỳ',
+      scope:  'Bộ điều áp giảm áp và điều áp ngược áp cao, điều áp khí tinh khiết, bộ điều khiển áp suất ER5000, van áp cao và manifold TESCOM Anderson Greenwood',
+      role:   'Nhà phân phối hàng TESCOM chính hãng tại Việt Nam',
+      proof:  'Hàng chính hãng, đủ CO/CQ; bảo hành chính hãng 12 tháng kể từ ngày giao hàng',
+      tpl: 'Vui lòng báo giá TESCOM {model}.\n' +
+           'Part number / nameplate (nếu thay thế): \n' +
+           'Môi chất: \n' +
+           'Áp suất vào / áp suất ra cần đặt: \n' +
+           'Lưu lượng hoặc Cv: \n' +
+           'Kiểu tải (lò xo / dome / khí nén / ER5000): \n' +
+           'Kết nối, vật liệu thân / seat / O-ring: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'Site mẹ': {
       maker:  'Fast Group Engineering',
       origin: 'Việt Nam',
