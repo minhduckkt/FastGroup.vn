@@ -103,3 +103,14 @@
   .tescom-hero .tescom-hero-img{display:block;position:absolute;right:0;top:50%;transform:translateY(-50%);
     width:36%;max-width:440px;height:82%;max-height:340px;object-fit:contain;margin:0}
 }
+/* Khoi nguon hang chinh hang trong bai blog */
+.supply-box{margin:40px 0 8px;padding:26px 28px;background:#f3f7fb;border:1px solid #cfdceb;border-left:4px solid var(--blue)}
+.supply-box .kicker{display:block;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.supply-box h2{margin:0 0 12px;font-size:1.3rem}
+.supply-list{margin:0 0 16px;padding-left:20px}
+.supply-list li{margin:6px 0}
+.supply-cta{margin:0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.supply-cta span{color:var(--muted);font-size:.9rem}
+@media (max-width:640px){.supply-box{padding:20px 18px}.supply-cta .button{flex:1 1 100%;text-align:center}}
+.supply-box a.button{text-decoration:none}
+.supply-box a.button-primary,.supply-box a.button-primary:hover{color:#fff !important}

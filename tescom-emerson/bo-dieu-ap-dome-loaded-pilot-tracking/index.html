@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?</title>
+<meta name="description" content="So sánh kiểu tải lò xo, dome, khí nén và điện tử; regulator pilot-operated CP3200, BE; tracking 44-4000, 26-2900, SJS – ứng dụng và cách chọn TESCOM." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#004b8d" />
+<link rel="canonical" href="https://fastgroup.vn/tescom-emerson/bo-dieu-ap-dome-loaded-pilot-tracking/" />
+<meta property="og:title" content="Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?" />
+<meta property="og:description" content="So sánh kiểu tải lò xo, dome, khí nén và điện tử; regulator pilot-operated CP3200, BE; tracking 44-4000, 26-2900, SJS – ứng dụng và cách chọn TESCOM." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fastgroup.vn/tescom-emerson/bo-dieu-ap-dome-loaded-pilot-tracking/" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:image" content="https://fastgroup.vn/tescom-emerson/assets/scene/dome-loaded-tracking-tescom-og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?" />
+<meta name="twitter:description" content="So sánh kiểu tải lò xo, dome, khí nén và điện tử; regulator pilot-operated CP3200, BE; tracking 44-4000, 26-2900, SJS – ứng dụng và cách chọn TESCOM." />
+<meta name="twitter:image" content="https://fastgroup.vn/tescom-emerson/assets/scene/dome-loaded-tracking-tescom-og.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="/tescom-emerson/assets/scene/dome-loaded-tracking-tescom.webp" media="(min-width: 981px)" fetchpriority="high" />
+<link rel="preload" as="image" href="/tescom-emerson/assets/scene/dome-loaded-tracking-tescom-sm.webp" media="(max-width: 980px)" fetchpriority="high" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" /></noscript>
+<link rel="icon" href="https://fastgroup.vn/img/favicon.ico" />
+<link rel="stylesheet" href="/tescom-emerson/assets/site.css?v=1" />
+<link rel="stylesheet" href="/tescom-emerson/assets/tescom.css?v=1" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TESCOM Việt Nam","item":"https://fastgroup.vn/tescom-emerson/"},{"@type":"ListItem","position":2,"name":"Blog kỹ thuật","item":"https://fastgroup.vn/tescom-emerson/blog/"},{"@type":"ListItem","position":3,"name":"Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?","item":"https://fastgroup.vn/tescom-emerson/bo-dieu-ap-dome-loaded-pilot-tracking/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?","description":"So sánh kiểu tải lò xo, dome, khí nén và điện tử; regulator pilot-operated CP3200, BE; tracking 44-4000, 26-2900, SJS – ứng dụng và cách chọn TESCOM.","inLanguage":"vi","mainEntityOfPage":"https://fastgroup.vn/tescom-emerson/bo-dieu-ap-dome-loaded-pilot-tracking/","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://fastgroup.vn/tescom-emerson/assets/scene/dome-loaded-tracking-tescom-og.jpg","author":{"@type":"Organization","name":"Fast Group Engineering","url":"https://fastgroup.vn/"},"publisher":{"@type":"Organization","name":"Fast Group Engineering","logo":{"@type":"ImageObject","url":"https://fastgroup.vn/img/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Dome-loaded có cần khí riêng để nạp dome không?","acceptedAnswer":{"@type":"Answer","text":"Có. Dome được nạp bằng khí từ pilot regulator, đường khí điều khiển hoặc ER5000; khí phải sạch và khô."}},{"@type":"Question","name":"Tracking regulator khác gì regulator thường?","acceptedAnswer":{"@type":"Answer","text":"Regulator thường giữ áp ra cố định; tracking regulator giữ áp ra bằng một áp tham chiếu cộng hoặc trừ một chênh áp đặt trước."}},{"@type":"Question","name":"SJS dùng cho loại bơm nào?","acceptedAnswer":{"@type":"Answer","text":"Bơm có phốt cơ khí kép cần hệ barrier/buffer áp; SJS giữ áp barrier cao hơn áp buồng phốt một lượng bias đặt trước."}}]}</script>
+</head><body>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="../" aria-label="TESCOM Việt Nam"><img class="brand-logo" src="/tescom-emerson/assets/brand-tescom.png" alt="TESCOM Việt Nam – Fast Group Engineering" height="30" /><span><span class="brand-name">TESCOM Việt Nam</span><span class="brand-sub">Fast Group Engineering</span></span></a>
+<nav class="nav" aria-label="Điều hướng chính">
+<a href="../">Trang chủ</a>
+<details class="nav-dropdown"><summary>Sản phẩm</summary><div class="nav-dropdown-panel">
+<a href="../bo-dieu-ap-giam-ap/">Điều áp giảm áp áp cao</a>
+<a href="../bo-dieu-ap-nguoc/">Điều áp ngược (back pressure)</a>
+<a href="../bo-dieu-ap-thuy-luc/">Điều áp thủy lực &amp; HPU</a>
+<a href="../dieu-ap-khi-tinh-khiet/">Khí tinh khiết, UHP &amp; phòng lab</a>
+<a href="../he-thong-cap-khi/">Hệ thống cấp khí &amp; changeover</a>
+<a href="../dieu-khien-ap-suat-dien-tu/">Điều khiển điện tử ER5000</a>
+<a href="../van-ap-cao-phu-kien/">Van áp cao &amp; phụ kiện</a>
+<a href="../van-khi-cu-manifold/">Van khí cụ &amp; manifold (AGI)</a>
+<a href="../san-pham/">Tra cứu tất cả mã</a>
+</div></details>
+<a href="../mua-tescom-chinh-hang-o-dau/">Mua ở đâu</a>
+<a href="../blog/">Blog kỹ thuật</a>
+<a href="../ve-chung-toi/">Về chúng tôi</a>
+<a href="../lien-he/">Liên hệ</a>
+<a class="nav-cta" href="../lien-he/">Gửi RFQ</a>
+</nav></div></header>
+<nav class="breadcrumb-bar"><div class="container"><a href="../">Trang chủ</a> › <a href="../blog/">Blog kỹ thuật</a> › <span>Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?</span></div></nav>
+<main>
+<section class="page-hero hero-scene scene-photo t-pressure" style="--hero-image:url('/tescom-emerson/assets/scene/dome-loaded-tracking-tescom.webp');--hero-image-sm:url('/tescom-emerson/assets/scene/dome-loaded-tracking-tescom-sm.webp')"><div class="container page-hero-inner">
+<div class="eyebrow">Blog kỹ thuật TESCOM</div><h1>Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?</h1><p class="lead">Khi lò xo không còn đáp ứng – áp quá cao, cần đặt áp từ xa, cần áp ra bám theo một áp khác – kỹ sư chuyển sang dome-loaded, pilot hoặc tracking regulator. Mỗi kiểu giải quyết một vấn đề khác nhau.</p>
+</div></section>
+<section class="section"><div class="container"><article class="article-body">
+
+<h2>Bốn cách “đặt” áp cho bộ điều áp</h2>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Kiểu tải</th><th>Cách đặt áp</th><th>Ưu điểm</th><th>Hạn chế</th></tr></thead><tbody>
+<tr><td>Lò xo (spring)</td><td>Vặn núm nén lò xo</td><td>Đơn giản, độc lập</td><td>Droop tăng khi lò xo nén nhiều; đặt tại chỗ</td></tr>
+<tr><td>Dome</td><td>Áp khí trong dome trên cảm biến</td><td>Droop nhỏ, áp cao, đặt từ xa</td><td>Cần nguồn khí đặt áp ổn định</td></tr>
+<tr><td>Khí nén (air load)</td><td>Áp khí cấp thiết bị qua tỉ số diện tích</td><td>Dùng khí điều khiển áp thấp để đặt áp cao</td><td>Phụ thuộc chất lượng khí cấp</td></tr>
+<tr><td>Điện tử</td><td>Bộ điều khiển PID cấp áp dome</td><td>Chính xác, lập trình, nối PLC</td><td>Cần nguồn điện, cảm biến phản hồi</td></tr>
+</tbody></table></div>
+
+<h2>Dome-loaded: áp cao, lưu lượng lớn</h2>
+<p><a href="../tescom-26-1100/">26-1100</a> và <a href="../tescom-26-1200/">26-1200</a> là bộ điều áp dome-loaded lưu lượng cao. 26-1200 được nạp dome từ bên ngoài, áp vào 3.600 hoặc 6.000 psig, Cv 3,3 với cổng 3/4 hoặc 1". 26-1100 có thân inox, nhôm hoặc brass; áp vào 10.000 psig với orifice 0,25. Ở áp cao, dome cho đặc tính ổn định hơn nhiều so với một lò xo khổng lồ.</p>
+<p>Áp dome có thể đến từ một regulator nhỏ (pilot) – như <a href="../tescom-be/">BE Series</a>, có thể làm việc độc lập, làm nguồn pilot hoặc biến regulator áp thấp thành dome-loaded – hoặc từ bộ điều khiển điện tử <a href="../tescom-er5000/">ER5000</a>.</p>
+
+<h2>Pilot-operated tự chứa</h2>
+<p><a href="../tescom-cp32/">CP3200</a> là bộ điều áp dome-loaded, điều khiển bằng pilot tích hợp, lưu lượng cao cho khí: áp vào 3.000 psig, dải ra 0–500 psig. Pilot tích hợp giúp người dùng chỉnh áp như regulator lò xo nhưng nhận được đặc tính droop thấp của dome-loaded.</p>
+
+<h2>Tracking: áp ra bám theo một áp tham chiếu</h2>
+<ul>
+<li><a href="../tescom-44-4000/">44-4000</a>: dome-loaded, có lò xo bias, giữ <strong>chênh áp không đổi</strong> so với áp tham chiếu; áp vào 6.000 psig, dải 50–1.500 psig.</li>
+<li><a href="../tescom-26-2900/">26-2900</a>: điều áp ngược tracking, bias âm (0 đến 0–45 psig), van chính cân bằng, áp điều khiển tới 1.000 psig, Cv 2,0.</li>
+<li><a href="../tescom-sjs/">SJS</a>: dùng cho hệ phốt cơ khí kép của bơm – giữ áp barrier cao hơn áp buồng phốt một lượng bias 0–100 psig, giúp kiểm soát phát thải và kéo dài tuổi thọ phốt. Thường đi kèm bộ cách ly <a href="../tescom-42mw/">42MW</a> (tới 2.500 psig, nhiệt độ tới 315°C).</li>
+</ul>
+
+<h2>Điện tử: ER5000 và ER5100</h2>
+<p>Khi cần thay đổi điểm đặt theo chương trình (ramp, profile thử áp) hoặc điều khiển từ PLC, dùng <a href="../tescom-er5000/">ER5000</a> cấp áp dome cho regulator chính. <a href="../tescom-er5100/">ER5100</a> là hệ đã tích hợp sẵn ER5000 với 44-4000. Xem thêm bài <a href="../tescom-er5000-dieu-khien-ap-suat-dien-tu/">ER5000</a>.</p>
+
+<h2>Cách chọn nhanh</h2>
+<ul class="check-list"><li>Áp ra &lt; vài trăm psig, đặt tại chỗ, lưu lượng vừa → lò xo.</li><li>Áp cao, lưu lượng lớn, cần droop nhỏ → dome-loaded + pilot.</li><li>Áp ra phải bám theo một áp khác → tracking.</li><li>Cần điều khiển từ xa, profile, ghi dữ liệu → ER5000.</li></ul>
+
+<h2>Fast Group Engineering</h2>
+<p>Fast Group tư vấn cấu hình regulator chính + pilot hoặc + ER5000 theo yêu cầu vận hành, cung cấp hàng chính hãng TESCOM kèm CO/CQ Emerson theo lô và bảo hành 12 tháng.</p>
+
+<h2>Ví dụ ứng dụng tracking: phốt bơm kép</h2>
+<p>Hệ phốt cơ khí kép có buồng barrier giữa hai phốt. Áp barrier phải luôn cao hơn áp buồng phốt phía quá trình để chất lỏng công nghệ không rò ra ngoài. Nếu đặt barrier ở một giá trị cố định, khi áp quá trình thay đổi, chênh áp có thể quá lớn (mòn phốt) hoặc âm (rò ra ngoài). SJS giữ áp barrier bằng áp tham chiếu cộng bias 0–100 psig, nên chênh áp ổn định dù áp quá trình dao động. Bộ cách ly 42MW tách môi chất quá trình nóng khỏi regulator.</p>
+<h2>Ví dụ ứng dụng dome-loaded: cấp khí áp cao lưu lượng lớn</h2>
+<p>Khi cần cấp khí ở vài nghìn psig với lưu lượng lớn (nạp bình, thử áp), một regulator lò xo cỡ lớn sẽ có droop đáng kể. Cấu hình phổ biến là regulator chính dome-loaded (26-1200, 26-1100) nhận áp dome từ một pilot nhỏ hoặc ER5000; áp ra bám sát áp dome với droop nhỏ hơn.</p>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li>Dome không có đường xả – không hạ được áp ra khi cần.</li>
+<li>Khí nạp dome bẩn, ẩm – điều khiển chập chờn, ER5000 báo lỗi.</li>
+<li>Dùng tracking regulator mà không xác định đúng điểm lấy áp tham chiếu.</li>
+</ul>
+
+<aside class="supply-box" aria-label="Nguồn hàng TESCOM chính hãng">
+<div class="supply-head"><span class="kicker">Fast Group Engineering</span><h2>Nhà phân phối hàng TESCOM Emerson chính hãng tại Việt Nam</h2></div>
+<ul class="supply-list">
+<li><strong>Hàng chính hãng TESCOM Emerson</strong> – nguồn gốc rõ ràng, đúng part number theo đơn đặt hàng.</li>
+<li><strong>Đủ CO/CQ Emerson theo từng lô</strong> – kèm invoice, packing list, vận đơn và tờ khai hải quan nhập khẩu.</li>
+<li><strong>Chứng chỉ kỹ thuật theo yêu cầu</strong> – MTC EN 10204 3.1, test report, xác nhận NACE MR0175 / ISO 15156, làm sạch cho oxy: xác nhận theo từng mã trước khi chốt đơn.</li>
+<li><strong>Bảo hành chính hãng 12 tháng kể từ ngày giao hàng</strong>.</li>
+<li><strong>Hỗ trợ hồ sơ thầu</strong> – datasheet, bảng đáp ứng kỹ thuật, danh sách sai khác cho nhà thầu EPC và chủ đầu tư.</li>
+</ul>
+<p class="supply-cta"><a class="button button-primary" href="../lien-he/">Gửi RFQ</a> <a class="button button-secondary" href="tel:+84938888958">(+84) 938 888 958</a> <span>· <a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a> · TP.HCM &amp; Vũng Tàu</span></p>
+</aside>
+<h2>Câu hỏi thường gặp</h2><div class="faq-list"><details class="faq-item"><summary>Dome-loaded có cần khí riêng để nạp dome không?</summary><p>Có. Dome được nạp bằng khí từ pilot regulator, đường khí điều khiển hoặc ER5000; khí phải sạch và khô.</p></details><details class="faq-item"><summary>Tracking regulator khác gì regulator thường?</summary><p>Regulator thường giữ áp ra cố định; tracking regulator giữ áp ra bằng một áp tham chiếu cộng hoặc trừ một chênh áp đặt trước.</p></details><details class="faq-item"><summary>SJS dùng cho loại bơm nào?</summary><p>Bơm có phốt cơ khí kép cần hệ barrier/buffer áp; SJS giữ áp barrier cao hơn áp buồng phốt một lượng bias đặt trước.</p></details></div>
+<div class="related-articles related-siblings"><h3>Sản phẩm nhắc tới trong bài</h3><a class="related-link" href="../tescom-26-1200/"><span>26-1200</span><p>TESCOM 26-1200 Series</p></a><a class="related-link" href="../tescom-cp32/"><span>CP3200</span><p>TESCOM CP3200 Series</p></a><a class="related-link" href="../tescom-44-4000/"><span>44-4000</span><p>TESCOM 44-4000 Series</p></a><a class="related-link" href="../tescom-26-2900/"><span>26-2900</span><p>TESCOM 26-2900 Series</p></a><a class="related-link" href="../tescom-sjs/"><span>SJS</span><p>TESCOM SJS Series</p></a></div>
+<div class="related-articles"><h3>Đọc tiếp trong cụm bài TESCOM</h3><a class="related-link" href="../doc-datasheet-bo-dieu-ap-droop-lockup-creep/"><span>Blog kỹ thuật</span><p>Đọc datasheet bộ điều áp: droop, lockup, SPE, creep, Cv</p></a><a class="related-link" href="../bang-thu-ap-thuy-tinh-burst-test-tescom/"><span>Blog kỹ thuật</span><p>Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM</p></a><a class="related-link" href="../cv-luu-luong-chon-co-bo-dieu-ap/"><span>Blog kỹ thuật</span><p>Cv và lưu lượng: cách chọn cỡ bộ điều áp TESCOM đúng</p></a><a class="related-link" href="../tescom-er5000-dieu-khien-ap-suat-dien-tu/"><span>Blog kỹ thuật</span><p>TESCOM ER5000: điều khiển áp suất điện tử PID cho bộ điều áp</p></a></div>
+<h2>Cần tư vấn chọn thiết bị TESCOM?</h2><p>Gửi part number, nameplate hoặc thông số qua <a href="../lien-he/">form RFQ</a>, Zalo <a href="tel:+84938888958">(+84) 938 888 958</a> hoặc email <a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a>.</p>
+</article></div></section>
+<section class="buy-strip"><div class="container buy-inner">
+<div class="buy-copy"><div class="kicker">Mua ở đâu</div>
+<h2>Mua thiết bị TESCOM tại TP.HCM và Vũng Tàu</h2>
+<p>Văn phòng TP. Hồ Chí Minh và trụ sở Vũng Tàu đều tiếp nhận RFQ, tư vấn cấu hình theo part number và bàn giao bộ chứng từ CO/CQ; bảo hành chính hãng 12 tháng kể từ ngày giao hàng. Yêu cầu gửi trong giờ làm việc được phản hồi trong ngày; giao hàng toàn quốc.</p>
+<div class="hero-actions"><a class="button button-primary" href="../mua-tescom-chinh-hang-o-dau/">Xem cách đặt hàng</a><a class="button button-secondary" href="tel:+84938888958">Gọi 0938 888 958</a></div></div>
+<div class="buy-places">
+<div class="buy-place"><span>TP. Hồ Chí Minh</span><p>150/41 Nguyễn Cư Trinh, P. Cầu Ông Lãnh</p></div>
+<div class="buy-place"><span>Vũng Tàu</span><p>51 Lê Văn Lộc, P. Vũng Tàu</p></div>
+<div class="buy-place"><span>Zalo / Điện thoại</span><p><a href="tel:+84938888958">(+84) 938 888 958</a></p></div>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<div class="footer-kicker">Fast Group Engineering · Nhà phân phối hàng TESCOM Emerson chính hãng tại Việt Nam · Bảo hành chính hãng 12 tháng kể từ ngày giao hàng</div>
+<div class="footer-main">
+<div class="footer-brand footer-column"><a class="footer-logo" href="../" aria-label="TESCOM Việt Nam"><img class="footer-logo-img" src="/tescom-emerson/assets/brand-tescom.png" alt="TESCOM Việt Nam" height="30" /><span><span class="footer-logo-title">TESCOM Việt Nam</span><span class="footer-logo-sub">Fast Group Engineering</span></span></a>
+<p>Portal TESCOM do Fast Group Engineering vận hành: tư vấn kỹ thuật, cấu hình và báo giá bộ điều áp, van áp cao, manifold khí cụ và bộ điều khiển áp suất TESCOM cho nhà máy, EPC, phòng thí nghiệm và đơn vị dầu khí. TESCOM™, Anderson Greenwood™ là thương hiệu của Emerson Electric Co.</p>
+<div class="footer-company"><strong>Công ty TNHH Fast Group</strong><span>MST: 0315555189</span><span>fastgroup.vn/tescom-emerson/</span></div></div>
+<div class="footer-column"><h3>Nhóm sản phẩm</h3><div class="footer-links"><a href="../bo-dieu-ap-giam-ap/">Điều áp giảm áp áp cao</a><a href="../bo-dieu-ap-nguoc/">Điều áp ngược (back pressure)</a><a href="../bo-dieu-ap-thuy-luc/">Điều áp thủy lực &amp; HPU</a><a href="../dieu-ap-khi-tinh-khiet/">Khí tinh khiết, UHP &amp; phòng lab</a><a href="../he-thong-cap-khi/">Hệ thống cấp khí &amp; changeover</a><a href="../dieu-khien-ap-suat-dien-tu/">Điều khiển điện tử ER5000</a><a href="../van-ap-cao-phu-kien/">Van áp cao &amp; phụ kiện</a><a href="../van-khi-cu-manifold/">Van khí cụ &amp; manifold (AGI)</a></div></div>
+<div class="footer-column"><h3>Hỗ trợ RFQ</h3><div class="footer-links">
+<a href="../lien-he/">Gửi RFQ / BOM</a><a href="../san-pham/">Tra cứu mã TESCOM</a><a href="../mua-tescom-chinh-hang-o-dau/">Mua ở đâu: TP.HCM &amp; Vũng Tàu</a><a href="../blog/">Blog kỹ thuật TESCOM</a><a href="../ve-chung-toi/">Về Fast Group</a><a href="https://fastgroup.vn/fisher-emerson/">Fisher Việt Nam</a><a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Rosemount Việt Nam</a></div></div>
+<div class="footer-column"><h3>Thông tin liên hệ</h3><div class="footer-contact">
+<div><span>Trụ sở chính</span><p>51 Le Van Loc Street, Vung Tau Ward, Ho Chi Minh City, Vietnam</p></div>
+<div><span>Văn phòng TP.HCM</span><p>150/41 Nguyen Cu Trinh Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vietnam</p></div>
+<div><span>Điện thoại / Zalo</span><a href="tel:+84938888958">(+84) 938 888 958</a></div>
+<div><span>Email</span><a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a></div></div></div>
+</div>
+<div class="footer-cta"><div><strong>Cần báo giá thiết bị TESCOM?</strong><span>Gửi part number, ảnh nameplate hoặc thông số để nhận tư vấn cấu hình và báo giá.</span></div><a class="button button-primary" href="../lien-he/">Gửi RFQ TESCOM</a></div>
+<div class="footer-bottom"><div>© 2026 <a href="https://fastgroup.vn/" target="_blank" rel="noopener">Fast Group Engineering</a>. All rights reserved.</div></div>
+</div></footer>
+<script>window.FG_RFQ_SOURCE="TESCOM";window.FG_RFQ_ENDPOINT="https://script.google.com/macros/s/AKfycbynrnlwZwm-aFl3Lzb9S7luNm0eqSIfFkpP3IKZrFjf_RUV1xszBoMdgdB2XXp2HRAj/exec";</script>
+<script src="/assets/fg-rfq.js" defer></script>
+<script src="/tescom-emerson/assets/tescom.js?v=1" defer></script>
+<script src="/assets/zalo-chat.js?v=20260930" defer></script>
+</body></html>

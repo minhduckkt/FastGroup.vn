@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="vi"><head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM</title>
+<meta name="description" content="Cấu hình băng thử áp: nguồn áp, regulator 50-4000, van áp cao 30 Series/VN, van khí nén VA/VG, ER5000, transducer, lọc 98 Series – an toàn và chọn thiết bị." />
+<meta name="robots" content="index,follow" />
+<meta name="theme-color" content="#004b8d" />
+<link rel="canonical" href="https://fastgroup.vn/tescom-emerson/bang-thu-ap-thuy-tinh-burst-test-tescom/" />
+<meta property="og:title" content="Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM" />
+<meta property="og:description" content="Cấu hình băng thử áp: nguồn áp, regulator 50-4000, van áp cao 30 Series/VN, van khí nén VA/VG, ER5000, transducer, lọc 98 Series – an toàn và chọn thiết bị." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fastgroup.vn/tescom-emerson/bang-thu-ap-thuy-tinh-burst-test-tescom/" />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:image" content="https://fastgroup.vn/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test-og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM" />
+<meta name="twitter:description" content="Cấu hình băng thử áp: nguồn áp, regulator 50-4000, van áp cao 30 Series/VN, van khí nén VA/VG, ER5000, transducer, lọc 98 Series – an toàn và chọn thiết bị." />
+<meta name="twitter:image" content="https://fastgroup.vn/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test-og.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test.webp" media="(min-width: 981px)" fetchpriority="high" />
+<link rel="preload" as="image" href="/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test-sm.webp" media="(max-width: 980px)" fetchpriority="high" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" /></noscript>
+<link rel="icon" href="https://fastgroup.vn/img/favicon.ico" />
+<link rel="stylesheet" href="/tescom-emerson/assets/site.css?v=1" />
+<link rel="stylesheet" href="/tescom-emerson/assets/tescom.css?v=1" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"TESCOM Việt Nam","item":"https://fastgroup.vn/tescom-emerson/"},{"@type":"ListItem","position":2,"name":"Blog kỹ thuật","item":"https://fastgroup.vn/tescom-emerson/blog/"},{"@type":"ListItem","position":3,"name":"Thiết kế băng thử áp thủy tĩnh & burst test với thiết bị TESCOM","item":"https://fastgroup.vn/tescom-emerson/bang-thu-ap-thuy-tinh-burst-test-tescom/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Thiết kế băng thử áp thủy tĩnh & burst test với thiết bị TESCOM","description":"Cấu hình băng thử áp: nguồn áp, regulator 50-4000, van áp cao 30 Series/VN, van khí nén VA/VG, ER5000, transducer, lọc 98 Series – an toàn và chọn thiết bị.","inLanguage":"vi","mainEntityOfPage":"https://fastgroup.vn/tescom-emerson/bang-thu-ap-thuy-tinh-burst-test-tescom/","datePublished":"2026-10-31","dateModified":"2026-10-31","image":"https://fastgroup.vn/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test-og.jpg","author":{"@type":"Organization","name":"Fast Group Engineering","url":"https://fastgroup.vn/"},"publisher":{"@type":"Organization","name":"Fast Group Engineering","logo":{"@type":"ImageObject","url":"https://fastgroup.vn/img/logo.png"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Thử áp bằng khí có nguy hiểm hơn chất lỏng?","acceptedAnswer":{"@type":"Answer","text":"Có. Khí nén tích trữ năng lượng lớn hơn rất nhiều so với chất lỏng ở cùng áp và thể tích; vì vậy thử thủy tĩnh được ưu tiên, thử khí cần biện pháp che chắn và quy trình chặt chẽ."}},{"@type":"Question","name":"ER5000 có điều khiển trực tiếp áp 10.000 psig không?","acceptedAnswer":{"@type":"Answer","text":"ER5000 điều khiển áp dome của regulator chính; áp cao do regulator chính (ví dụ dòng 26-, 50-, 54-) chịu, còn ER5000 làm việc với khí cấp áp thấp."}},{"@type":"Question","name":"Fitting Medium Pressure dùng khi nào?","acceptedAnswer":{"@type":"Answer","text":"Thường dùng cho áp trên mức của NPT thông thường, ví dụ hệ 15.000–20.000 psig; cần đồng bộ với van và regulator có cổng tương ứng."}}]}</script>
+</head><body>
+<header class="site-header"><div class="header-inner">
+<a class="brand" href="../" aria-label="TESCOM Việt Nam"><img class="brand-logo" src="/tescom-emerson/assets/brand-tescom.png" alt="TESCOM Việt Nam – Fast Group Engineering" height="30" /><span><span class="brand-name">TESCOM Việt Nam</span><span class="brand-sub">Fast Group Engineering</span></span></a>
+<nav class="nav" aria-label="Điều hướng chính">
+<a href="../">Trang chủ</a>
+<details class="nav-dropdown"><summary>Sản phẩm</summary><div class="nav-dropdown-panel">
+<a href="../bo-dieu-ap-giam-ap/">Điều áp giảm áp áp cao</a>
+<a href="../bo-dieu-ap-nguoc/">Điều áp ngược (back pressure)</a>
+<a href="../bo-dieu-ap-thuy-luc/">Điều áp thủy lực &amp; HPU</a>
+<a href="../dieu-ap-khi-tinh-khiet/">Khí tinh khiết, UHP &amp; phòng lab</a>
+<a href="../he-thong-cap-khi/">Hệ thống cấp khí &amp; changeover</a>
+<a href="../dieu-khien-ap-suat-dien-tu/">Điều khiển điện tử ER5000</a>
+<a href="../van-ap-cao-phu-kien/">Van áp cao &amp; phụ kiện</a>
+<a href="../van-khi-cu-manifold/">Van khí cụ &amp; manifold (AGI)</a>
+<a href="../san-pham/">Tra cứu tất cả mã</a>
+</div></details>
+<a href="../mua-tescom-chinh-hang-o-dau/">Mua ở đâu</a>
+<a href="../blog/">Blog kỹ thuật</a>
+<a href="../ve-chung-toi/">Về chúng tôi</a>
+<a href="../lien-he/">Liên hệ</a>
+<a class="nav-cta" href="../lien-he/">Gửi RFQ</a>
+</nav></div></header>
+<nav class="breadcrumb-bar"><div class="container"><a href="../">Trang chủ</a> › <a href="../blog/">Blog kỹ thuật</a> › <span>Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM</span></div></nav>
+<main>
+<section class="page-hero hero-scene scene-photo t-pressure" style="--hero-image:url('/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test.webp');--hero-image-sm:url('/tescom-emerson/assets/scene/bang-thu-ap-tescom-burst-test-sm.webp')"><div class="container page-hero-inner">
+<div class="eyebrow">Blog kỹ thuật TESCOM</div><h1>Thiết kế băng thử áp thủy tĩnh &amp; burst test với thiết bị TESCOM</h1><p class="lead">Băng thử áp thủy tĩnh, proof test và burst test làm việc ở áp tới hàng chục nghìn psi. Chọn sai một van hay một fitting có thể biến bài thử thành sự cố. Bài viết đi qua từng khối của một băng thử điển hình.</p>
+</div></section>
+<section class="section"><div class="container"><article class="article-body">
+
+<h2>Sơ đồ khối một băng thử áp</h2>
+<ol>
+<li><strong>Nguồn áp</strong>: bơm khí nén tăng áp (air-driven pump/booster) hoặc bơm thủy lực.</li>
+<li><strong>Lọc</strong> trước van và regulator.</li>
+<li><strong>Điều áp</strong> để đặt mức áp thử.</li>
+<li><strong>Van cô lập, van xả, van tiết lưu</strong> – vận hành tay hoặc khí nén.</li>
+<li><strong>Đo lường</strong>: đồng hồ áp, transducer, ghi dữ liệu.</li>
+<li><strong>Buồng/khiên bảo vệ</strong> quanh mẫu thử.</li>
+</ol>
+
+<h2>Thiết bị TESCOM cho từng khối</h2>
+<div class="md-table-wrap"><table class="md-table"><thead><tr><th>Khối</th><th>Thiết bị</th><th>Thông số tham chiếu</th></tr></thead><tbody>
+<tr><td>Điều áp áp cực cao</td><td><a href="../tescom-50-4000/">50-4000/4100/4200</a></td><td>Áp vào tới 20.000 psig / 1.379 bar; có van bypass tích hợp</td></tr>
+<tr><td>Điều áp khí áp cao</td><td><a href="../tescom-26-1000/">26-1000</a>, <a href="../tescom-26-1700/">26-1700</a></td><td>Áp vào 10.000 psig (thân SS); dải ra tới 200–10.000 psig</td></tr>
+<tr><td>Van chặn tay</td><td><a href="../tescom-30-series/">30 Series</a>, <a href="../tescom-vj/">VJ</a></td><td>30 Series: 6.000 / 10.000 psig; VJ: 10.000 psig (SS)</td></tr>
+<tr><td>Van tay lưu lượng lớn</td><td><a href="../tescom-vn/">VN</a></td><td>10.000 psig, Cv 20, hub Grayloc 1-1/2"</td></tr>
+<tr><td>Van khí nén</td><td><a href="../tescom-vavg/">VA/VG</a>, <a href="../tescom-vt/">VT</a> (3 ngã), <a href="../tescom-vm/">VM</a></td><td>VA/VG: 3.500 / 6.000 / 10.000 psig, NO/NC, có tùy chọn solenoid tích hợp</td></tr>
+<tr><td>Van tiết lưu</td><td><a href="../tescom-cc-valve-shutoff-control/">CC</a></td><td>Tới 10.000 psig, trục không xoay</td></tr>
+<tr><td>Block &amp; bleed</td><td><a href="../tescom-vk/">VK</a></td><td>10.000 psig (SS), 6.000 psig (brass)</td></tr>
+<tr><td>Lọc</td><td><a href="../tescom-98-series/">98 Series</a></td><td>Tới 10.000 psig, lõi 10 micron</td></tr>
+<tr><td>Điều khiển</td><td><a href="../tescom-er5000/">ER5000</a>, <a href="../tescom-er5k-kits/">ER5000 kits</a></td><td>PID, nối máy tính/PLC</td></tr>
+<tr><td>Đo lường</td><td><a href="../tescom-100-625/">Pressure transducer</a>, <a href="../tescom-dong-ho-ap-suat/">đồng hồ áp</a></td><td>Transducer: sai số ±0,25% FS (100/200 Series); đồng hồ: tới 10.000 psig</td></tr>
+</tbody></table></div>
+
+<h2>Tự động hóa với ER5000</h2>
+<p>ER5000 cho phép chạy profile thử: tăng áp theo bước, giữ áp (hold), xả theo tốc độ – và ghi lại dữ liệu. Bộ <a href="../tescom-er5k-kits/">ER5000 kit</a> theo mô tả của hãng gồm ER5000, regulator (hoặc back pressure regulator 54-2100/26-1700 tải khí), transducer phản hồi 4–20 mA, regulator cấp có van xả và toàn bộ fitting – lắp trên tấm hoặc trong tủ. Với hệ thống hoàn chỉnh theo yêu cầu (burst &amp; proof testing, leak test, PLC/HMI), TESCOM có mảng <a href="../tescom-pressure-control-systems/">Pressure Control Systems</a>.</p>
+
+<h2>Nguyên tắc an toàn không được bỏ qua</h2>
+<ul class="check-list"><li>Mọi chi tiết trong mạch có áp danh định ≥ áp thử lớn nhất, kể cả fitting và tubing.</li><li>Có van xả và đường xả an toàn; có thiết bị bảo vệ quá áp độc lập.</li><li>Ưu tiên thử bằng chất lỏng; thử bằng khí áp cao chỉ khi bắt buộc và có che chắn phù hợp.</li><li>Xả khí hoàn toàn khỏi mạch thủy lực trước khi tăng áp.</li><li>Không đứng trong vùng nguy hiểm khi tăng áp; điều khiển từ xa nếu có thể.</li><li>Kiểm định đồng hồ và transducer định kỳ.</li></ul>
+
+<h2>Fast Group Engineering</h2>
+<p>Fast Group cung cấp trọn bộ van, regulator, lọc, ER5000 và transducer TESCOM chính hãng cho băng thử áp, kèm CO/CQ Emerson theo lô. Gửi sơ đồ P&amp;ID hoặc mô tả mức áp thử, môi chất, cỡ mẫu – chúng tôi lập BOM đồng bộ áp danh định và kết nối.</p>
+
+<h2>Ví dụ: cấu hình băng thử 15.000 psig thủy lực (minh họa)</h2>
+<ol>
+<li>Bơm tăng áp dẫn động khí nén → lọc 98 Series.</li>
+<li>Regulator áp cao (50-2200 hoặc 50-4000 theo dải cần) đặt mức áp thử.</li>
+<li>Van khí nén VA/VG để cấp/ngắt từ xa; van tay 30 Series làm van cô lập.</li>
+<li>Back pressure regulator (ví dụ 54-2100) hoặc van xả CC để xả có kiểm soát.</li>
+<li>Transducer 4–20 mA + đồng hồ áp; ER5000 điều khiển và ghi profile.</li>
+</ol>
+<p>Mọi chi tiết, kể cả fitting và tubing, phải có áp danh định ≥ áp thử lớn nhất cộng biên an toàn theo tiêu chuẩn áp dụng.</p>
+<h2>Burst test và proof test khác nhau thế nào?</h2>
+<ul>
+<li><strong>Proof test</strong>: tăng tới áp thử (cao hơn áp làm việc), giữ áp, kiểm tra rò và biến dạng – mẫu thử phải còn nguyên.</li>
+<li><strong>Burst test</strong>: tăng áp đến khi mẫu phá hủy, ghi áp phá hủy – năng lượng giải phóng lớn, cần buồng bảo vệ.</li>
+<li><strong>Leak test</strong>: kiểm tra độ kín, thường dùng khí (N2, He) ở áp thấp hơn.</li>
+</ul>
+<h2>Sai lầm thường gặp</h2>
+<ul>
+<li>Dùng fitting NPT ở áp vượt định mức của chúng.</li>
+<li>Không có van xả độc lập – khi regulator lỗi, áp tăng quá mức thử.</li>
+<li>Đồng hồ áp không có kính an toàn / mặt chắn sau.</li>
+</ul>
+
+<aside class="supply-box" aria-label="Nguồn hàng TESCOM chính hãng">
+<div class="supply-head"><span class="kicker">Fast Group Engineering</span><h2>Nhà phân phối hàng TESCOM Emerson chính hãng tại Việt Nam</h2></div>
+<ul class="supply-list">
+<li><strong>Hàng chính hãng TESCOM Emerson</strong> – nguồn gốc rõ ràng, đúng part number theo đơn đặt hàng.</li>
+<li><strong>Đủ CO/CQ Emerson theo từng lô</strong> – kèm invoice, packing list, vận đơn và tờ khai hải quan nhập khẩu.</li>
+<li><strong>Chứng chỉ kỹ thuật theo yêu cầu</strong> – MTC EN 10204 3.1, test report, xác nhận NACE MR0175 / ISO 15156, làm sạch cho oxy: xác nhận theo từng mã trước khi chốt đơn.</li>
+<li><strong>Bảo hành chính hãng 12 tháng kể từ ngày giao hàng</strong>.</li>
+<li><strong>Hỗ trợ hồ sơ thầu</strong> – datasheet, bảng đáp ứng kỹ thuật, danh sách sai khác cho nhà thầu EPC và chủ đầu tư.</li>
+</ul>
+<p class="supply-cta"><a class="button button-primary" href="../lien-he/">Gửi RFQ</a> <a class="button button-secondary" href="tel:+84938888958">(+84) 938 888 958</a> <span>· <a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a> · TP.HCM &amp; Vũng Tàu</span></p>
+</aside>
+<h2>Câu hỏi thường gặp</h2><div class="faq-list"><details class="faq-item"><summary>Thử áp bằng khí có nguy hiểm hơn chất lỏng?</summary><p>Có. Khí nén tích trữ năng lượng lớn hơn rất nhiều so với chất lỏng ở cùng áp và thể tích; vì vậy thử thủy tĩnh được ưu tiên, thử khí cần biện pháp che chắn và quy trình chặt chẽ.</p></details><details class="faq-item"><summary>ER5000 có điều khiển trực tiếp áp 10.000 psig không?</summary><p>ER5000 điều khiển áp dome của regulator chính; áp cao do regulator chính (ví dụ dòng 26-, 50-, 54-) chịu, còn ER5000 làm việc với khí cấp áp thấp.</p></details><details class="faq-item"><summary>Fitting Medium Pressure dùng khi nào?</summary><p>Thường dùng cho áp trên mức của NPT thông thường, ví dụ hệ 15.000–20.000 psig; cần đồng bộ với van và regulator có cổng tương ứng.</p></details></div>
+<div class="related-articles related-siblings"><h3>Sản phẩm nhắc tới trong bài</h3><a class="related-link" href="../tescom-50-4000/"><span>50-4000</span><p>TESCOM 50-4000 Series</p></a><a class="related-link" href="../tescom-30-series/"><span>30</span><p>TESCOM 30 Series</p></a><a class="related-link" href="../tescom-vavg/"><span>VA / VG</span><p>TESCOM VA / VG Series</p></a><a class="related-link" href="../tescom-er5k-kits/"><span>ER5K Kits</span><p>TESCOM ER5K Kits</p></a><a class="related-link" href="../tescom-100-625/"><span>100-625</span><p>TESCOM 100-625 Series</p></a></div>
+<div class="related-articles"><h3>Đọc tiếp trong cụm bài TESCOM</h3><a class="related-link" href="../chon-van-ap-cao-tescom-van-tay-van-khi-nen/"><span>Blog kỹ thuật</span><p>Chọn van áp cao TESCOM: van tay, van khí nén, van 3 ngã</p></a><a class="related-link" href="../bo-dieu-ap-dome-loaded-pilot-tracking/"><span>Blog kỹ thuật</span><p>Bộ điều áp dome-loaded, pilot và tracking: khi nào nên dùng?</p></a><a class="related-link" href="../tescom-er5000-dieu-khien-ap-suat-dien-tu/"><span>Blog kỹ thuật</span><p>TESCOM ER5000: điều khiển áp suất điện tử PID cho bộ điều áp</p></a><a class="related-link" href="../bo-dieu-ap-thuy-luc-hpu-wellhead-control-panel/"><span>Blog kỹ thuật</span><p>Chọn bộ điều áp thủy lực TESCOM cho HPU &amp; wellhead control panel</p></a></div>
+<h2>Cần tư vấn chọn thiết bị TESCOM?</h2><p>Gửi part number, nameplate hoặc thông số qua <a href="../lien-he/">form RFQ</a>, Zalo <a href="tel:+84938888958">(+84) 938 888 958</a> hoặc email <a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a>.</p>
+</article></div></section>
+<section class="buy-strip"><div class="container buy-inner">
+<div class="buy-copy"><div class="kicker">Mua ở đâu</div>
+<h2>Mua thiết bị TESCOM tại TP.HCM và Vũng Tàu</h2>
+<p>Văn phòng TP. Hồ Chí Minh và trụ sở Vũng Tàu đều tiếp nhận RFQ, tư vấn cấu hình theo part number và bàn giao bộ chứng từ CO/CQ; bảo hành chính hãng 12 tháng kể từ ngày giao hàng. Yêu cầu gửi trong giờ làm việc được phản hồi trong ngày; giao hàng toàn quốc.</p>
+<div class="hero-actions"><a class="button button-primary" href="../mua-tescom-chinh-hang-o-dau/">Xem cách đặt hàng</a><a class="button button-secondary" href="tel:+84938888958">Gọi 0938 888 958</a></div></div>
+<div class="buy-places">
+<div class="buy-place"><span>TP. Hồ Chí Minh</span><p>150/41 Nguyễn Cư Trinh, P. Cầu Ông Lãnh</p></div>
+<div class="buy-place"><span>Vũng Tàu</span><p>51 Lê Văn Lộc, P. Vũng Tàu</p></div>
+<div class="buy-place"><span>Zalo / Điện thoại</span><p><a href="tel:+84938888958">(+84) 938 888 958</a></p></div>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="footer-inner">
+<div class="footer-kicker">Fast Group Engineering · Nhà phân phối hàng TESCOM Emerson chính hãng tại Việt Nam · Bảo hành chính hãng 12 tháng kể từ ngày giao hàng</div>
+<div class="footer-main">
+<div class="footer-brand footer-column"><a class="footer-logo" href="../" aria-label="TESCOM Việt Nam"><img class="footer-logo-img" src="/tescom-emerson/assets/brand-tescom.png" alt="TESCOM Việt Nam" height="30" /><span><span class="footer-logo-title">TESCOM Việt Nam</span><span class="footer-logo-sub">Fast Group Engineering</span></span></a>
+<p>Portal TESCOM do Fast Group Engineering vận hành: tư vấn kỹ thuật, cấu hình và báo giá bộ điều áp, van áp cao, manifold khí cụ và bộ điều khiển áp suất TESCOM cho nhà máy, EPC, phòng thí nghiệm và đơn vị dầu khí. TESCOM™, Anderson Greenwood™ là thương hiệu của Emerson Electric Co.</p>
+<div class="footer-company"><strong>Công ty TNHH Fast Group</strong><span>MST: 0315555189</span><span>fastgroup.vn/tescom-emerson/</span></div></div>
+<div class="footer-column"><h3>Nhóm sản phẩm</h3><div class="footer-links"><a href="../bo-dieu-ap-giam-ap/">Điều áp giảm áp áp cao</a><a href="../bo-dieu-ap-nguoc/">Điều áp ngược (back pressure)</a><a href="../bo-dieu-ap-thuy-luc/">Điều áp thủy lực &amp; HPU</a><a href="../dieu-ap-khi-tinh-khiet/">Khí tinh khiết, UHP &amp; phòng lab</a><a href="../he-thong-cap-khi/">Hệ thống cấp khí &amp; changeover</a><a href="../dieu-khien-ap-suat-dien-tu/">Điều khiển điện tử ER5000</a><a href="../van-ap-cao-phu-kien/">Van áp cao &amp; phụ kiện</a><a href="../van-khi-cu-manifold/">Van khí cụ &amp; manifold (AGI)</a></div></div>
+<div class="footer-column"><h3>Hỗ trợ RFQ</h3><div class="footer-links">
+<a href="../lien-he/">Gửi RFQ / BOM</a><a href="../san-pham/">Tra cứu mã TESCOM</a><a href="../mua-tescom-chinh-hang-o-dau/">Mua ở đâu: TP.HCM &amp; Vũng Tàu</a><a href="../blog/">Blog kỹ thuật TESCOM</a><a href="../ve-chung-toi/">Về Fast Group</a><a href="https://fastgroup.vn/fisher-emerson/">Fisher Việt Nam</a><a href="https://fastgroup.vn/rosemount-emerson-viet-nam/">Rosemount Việt Nam</a></div></div>
+<div class="footer-column"><h3>Thông tin liên hệ</h3><div class="footer-contact">
+<div><span>Trụ sở chính</span><p>51 Le Van Loc Street, Vung Tau Ward, Ho Chi Minh City, Vietnam</p></div>
+<div><span>Văn phòng TP.HCM</span><p>150/41 Nguyen Cu Trinh Street, Cau Ong Lanh Ward, Ho Chi Minh City, Vietnam</p></div>
+<div><span>Điện thoại / Zalo</span><a href="tel:+84938888958">(+84) 938 888 958</a></div>
+<div><span>Email</span><a href="mailto:minhduc@fastgroup.vn">minhduc@fastgroup.vn</a></div></div></div>
+</div>
+<div class="footer-cta"><div><strong>Cần báo giá thiết bị TESCOM?</strong><span>Gửi part number, ảnh nameplate hoặc thông số để nhận tư vấn cấu hình và báo giá.</span></div><a class="button button-primary" href="../lien-he/">Gửi RFQ TESCOM</a></div>
+<div class="footer-bottom"><div>© 2026 <a href="https://fastgroup.vn/" target="_blank" rel="noopener">Fast Group Engineering</a>. All rights reserved.</div></div>
+</div></footer>
+<script>window.FG_RFQ_SOURCE="TESCOM";window.FG_RFQ_ENDPOINT="https://script.google.com/macros/s/AKfycbynrnlwZwm-aFl3Lzb9S7luNm0eqSIfFkpP3IKZrFjf_RUV1xszBoMdgdB2XXp2HRAj/exec";</script>
+<script src="/assets/fg-rfq.js" defer></script>
+<script src="/tescom-emerson/assets/tescom.js?v=1" defer></script>
+<script src="/assets/zalo-chat.js?v=20260930" defer></script>
+</body></html>
