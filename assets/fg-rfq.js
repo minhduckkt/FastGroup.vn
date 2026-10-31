@@ -86,6 +86,20 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'SpotSee': {
+      maker:  'SpotSee (Hoa Kỳ)',
+      origin: 'Hoa Kỳ',
+      scope:  'Chỉ thị va đập ShockWatch, chỉ thị nghiêng TiltWatch, thiết bị ghi va đập ShockLog, nhãn nhiệt độ Thermax, chỉ thị chuỗi lạnh WarmMark, ColdMark, FreezeSafe, HemoTemp và data logger',
+      role:   'Nhà phân phối chính thức SpotSee tại Việt Nam',
+      proof:  '',
+      tpl: 'Vui lòng báo giá SpotSee {model}.\n' +
+           'Số lượng: \n' +
+           'Hàng hóa / ứng dụng cần theo dõi: \n' +
+           'Ngưỡng nhiệt độ hoặc mức G (nếu cần tư vấn): \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'WIKA': {
       maker:  'WIKA Alexander Wiegand SE & Co. KG',
       origin: 'Đức',

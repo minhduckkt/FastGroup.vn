@@ -397,6 +397,26 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://fastgroup.vn/spotsee-viet-nam/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/spotsee-viet-nam/ung-dung/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/spotsee-viet-nam/san-pham/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://fastgroup.vn/spotsee-viet-nam/tra-cuu-ma-hang/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://fastgroup.vn/airtac-viet-nam/</loc>
     <lastmod>2026-09-19</lastmod>
     <priority>0.90</priority>

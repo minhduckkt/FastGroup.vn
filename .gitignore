@@ -4,6 +4,7 @@
 
 # Bo sinh, du lieu scrape va tai lieu ban giao cua portal Qlight
 _tools/qlight/
+_tools/spotsee/
 
 # Thu muc lam viec tam
 Claude outputs/

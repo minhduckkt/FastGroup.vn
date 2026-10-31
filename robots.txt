@@ -6,6 +6,7 @@ Sitemap: https://fastgroup.vn/wika-viet-nam/sitemap_index.xml
 Sitemap: https://fastgroup.vn/diffu-therm-viet-nam/sitemap_index.xml
 Sitemap: https://fastgroup.vn/endress-hauser-viet-nam/sitemap_index.xml
 Sitemap: https://fastgroup.vn/qlight-viet-nam/sitemap_index.xml
+Sitemap: https://fastgroup.vn/spotsee-viet-nam/sitemap_index.xml
 Sitemap: https://fastgroup.vn/airtac-viet-nam/sitemap_index.xml
 Sitemap: https://fastgroup.vn/rosemount-emerson-viet-nam/sitemap.xml
 Sitemap: https://fastgroup.vn/siemens-viet-nam/sitemap.xml
