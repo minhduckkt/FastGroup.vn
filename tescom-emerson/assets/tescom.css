@@ -114,3 +114,5 @@
 @media (max-width:640px){.supply-box{padding:20px 18px}.supply-cta .button{flex:1 1 100%;text-align:center}}
 .supply-box a.button{text-decoration:none}
 .supply-box a.button-primary,.supply-box a.button-primary:hover{color:#fff !important}
+/* v7: tai lieu tren R2 */
+.tc-dl{white-space:nowrap;font-weight:600}.tc-req{white-space:nowrap;color:var(--blue)}.tc-doc-note{margin:-6px 0 12px;font-size:.85rem;color:#556270}
