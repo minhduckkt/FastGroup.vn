@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES=assets\zalo-chat.js fisher-emerson\assets\scene fisher-emerson\assets\fisher-rfq.js rosemount-emerson-viet-nam\assets\rosemount-rfq.js rosemount-emerson-viet-nam\assets\rfq.css"
+set "NEWFILES="
 
-set "MSG_TIEUDE=Them nut Zalo Chat noi (giong kacon.vn) vao moi trang"
+set "MSG_TIEUDE=Them lien ket sang website hang: Hansford, Crouzet, Rotork, GESTRA"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -27,7 +27,8 @@ for /f "delims=" %%G in ('where git 2^>nul') do if not defined GIT set "GIT=%%G"
 if not defined GIT if exist "%ProgramFiles%\Git\cmd\git.exe" set "GIT=%ProgramFiles%\Git\cmd\git.exe"
 if not defined GIT if exist "%ProgramFiles(x86)%\Git\cmd\git.exe" set "GIT=%ProgramFiles(x86)%\Git\cmd\git.exe"
 if not defined GIT if exist "%LOCALAPPDATA%\Programs\Git\cmd\git.exe" set "GIT=%LOCALAPPDATA%\Programs\Git\cmd\git.exe"
-if not defined GIT if exist "%LOCALAPPDATA%\GitHubDesktop\app-3.5.2\resources\app\git\cmd\git.exe" set "GIT=%LOCALAPPDATA%\GitHubDesktop\app-3.5.2\resources\app\git\cmd\git.exe"
+REM  GitHub Desktop tu cap nhat va doi ten thu muc app-x.y.z, nen tim moi phien ban
+if not defined GIT for /d %%D in ("%LOCALAPPDATA%\GitHubDesktop\app-*") do if exist "%%D\resources\app\git\cmd\git.exe" set "GIT=%%D\resources\app\git\cmd\git.exe"
 
 if not defined GIT (
   echo [LOI] Khong tim thay git tren may nay.>> "%LOG%"
@@ -108,7 +109,7 @@ echo Bam phim bat ky de COMMIT va PUSH, hoac dong cua so nay de huy.
 pause >nul
 
 REM ---------- 3. Commit ----------
-"%GIT%" commit -m "%MSG_TIEUDE%" -m "brands/fisher.html va en/brands/fisher.html thanh trang chuyen huong (meta refresh 0 + canonical) theo mau Qlight/WIKA; link trong brands.html, index.html, en/brands.html tro thang portal; sitemap bo 2 URL brand, them /fisher-emerson/; emerson.html them loi dan sang Fisher" -m "Chuyen muc 4 loi dat hang tu trang brand vao bai cach-doc-nameplate-model-code-fisher" -m "" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01VcazTtPwCTAKKaECrmnxPu" >> "%LOG%" 2>&1
+"%GIT%" commit -m "%MSG_TIEUDE%" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_016sQdeFkhV6G4Q1CsKVWa1T" >> "%LOG%" 2>&1
 set "RC=%ERRORLEVEL%"
 echo commit exit code = %RC% >> "%LOG%"
 if not "%RC%"=="0" (
@@ -143,7 +144,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/brands/fisher.html (phai tu chuyen sang /fisher-emerson/)
+echo   Kiem tra: https://fastgroup.vn/brands/hansford_sensor.html
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.
