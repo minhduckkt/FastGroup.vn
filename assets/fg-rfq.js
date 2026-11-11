@@ -222,6 +222,20 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'ABB': {
+      maker:  'ABB Ltd.',
+      origin: 'Thụy Sĩ (tập đoàn); nơi sản xuất theo từng mã',
+      scope:  'Thiết bị điều khiển và bảo vệ hạ thế: contactor, CB bảo vệ động cơ, rơ le nhiệt, rơ le trung gian, rơ le thời gian, rơ le giám sát, bộ nguồn, khởi động mềm',
+      role:   'Nhà cung cấp sản phẩm ABB chính hãng tại Việt Nam',
+      proof:  '',
+      tpl: 'Vui lòng báo giá ABB {model}.\n' +
+           'Mã đặt hàng (nếu đã chọn): \n' +
+           'Điện áp cuộn hút / điện áp cấp: \n' +
+           'Số lượng: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'Site mẹ': {
       maker:  'Fast Group Engineering',
       origin: 'Việt Nam',

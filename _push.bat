@@ -17,9 +17,9 @@ REM  File MOI TINH (git status hien dau "??") phai liet ke o day,
 REM  neu khong commit se bao "nothing added to commit" va push that bai.
 REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
-set "NEWFILES="
+set "NEWFILES=abb-chinh-hang"
 
-set "MSG_TIEUDE=Them lien ket sang website hang: Hansford, Crouzet, Rotork, GESTRA"
+set "MSG_TIEUDE=Portal ABB chinh hang: 14 hub, 2662 trang san pham, 4609 ma dat hang; link tu trang hang ABB"
 
 REM ---------- 1. Tim git ----------
 set "GIT="
@@ -144,7 +144,7 @@ echo ==== XONG %DATE% %TIME% ==== >> "%LOG%"
 echo.
 echo ============================================================
 echo   PUSH THANH CONG. GitHub Pages mat 1-3 phut de build lai.
-echo   Kiem tra: https://fastgroup.vn/brands/hansford_sensor.html
+echo   Kiem tra: https://fastgroup.vn/abb-chinh-hang/
 echo   Chi tiet trong _push-log.txt
 echo ============================================================
 echo.

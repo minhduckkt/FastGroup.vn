@@ -12,3 +12,4 @@ Sitemap: https://fastgroup.vn/rosemount-emerson-viet-nam/sitemap.xml
 Sitemap: https://fastgroup.vn/siemens-viet-nam/sitemap.xml
 Sitemap: https://fastgroup.vn/fisher-emerson/sitemap.xml
 Sitemap: https://fastgroup.vn/tescom-emerson/sitemap.xml
+Sitemap: https://fastgroup.vn/abb-chinh-hang/sitemap.xml
