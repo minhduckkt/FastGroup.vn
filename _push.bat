@@ -19,7 +19,7 @@ REM  Moi dot day noi dung moi thi SUA LAI danh sach nay.
 REM  Ghi ca thu muc thi git add se them TOAN BO file ben trong (de quy).
 set "NEWFILES=abb-chinh-hang"
 
-set "MSG_TIEUDE=Portal ABB chinh hang: 14 hub, 2662 trang san pham, 4609 ma dat hang; link tu trang hang ABB"
+set "MSG_TIEUDE=Portal ABB chinh hang: logo ABB, phong cach datasheet trang-do, FAQ, ma dat hang (sao chep, bao gia tung ma, tra ma chi tiet), anh hero trang chu va 14 hub"
 
 REM ---------- 1. Tim git ----------
 set "GIT="

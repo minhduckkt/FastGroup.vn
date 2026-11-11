@@ -588,6 +588,13 @@
 
   /* ========================= KHỞI ĐỘNG =============================== */
 
+  /* Cho trang goi lai: doi ma dang hoi gia va dung lai form (vd nut "Bao gia ma nay" tren portal ABB). */
+  window.FG_RFQ_SET_MODEL = function (box, model) {
+    if (!box) return;
+    box.setAttribute('data-fg-model', model || '');
+    if (box.getAttribute('data-fg-done')) build(box);
+  };
+
   function init() {
     autoMount();
     var boxes = document.querySelectorAll('[data-fg-rfq]');
