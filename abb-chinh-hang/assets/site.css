@@ -725,3 +725,81 @@ details.more{border-color:var(--line)}
     background:var(--hero-image-sm) center bottom/100% auto no-repeat,#fff!important}
   .hero.hero-scene .hero-inner,.page-hero.hero-scene .page-hero-inner{padding-bottom:calc(69vw + 16px)}
 }
+
+/* ==========================================================================
+   THONG DIEP XUYEN SUOT + TRANG PHU (mua o dau, khu vuc, ve chung toi, lien he)
+   ========================================================================== */
+.trust-bar{background:#fff;border-bottom:1px solid var(--line);font-size:13px}
+.trust-bar .container{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:8px 0}
+.tb-key{display:inline-flex;align-items:center;gap:7px;font-weight:600;color:#000}
+.tb-key:before,.assure li:before{content:"";width:14px;height:14px;flex:0 0 14px;background:var(--red);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6.2 11.6 2.6 8l1.1-1.1 2.5 2.5 6.1-6.1L13.4 4.4z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6.2 11.6 2.6 8l1.1-1.1 2.5 2.5 6.1-6.1L13.4 4.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+.tb-call{margin-left:auto;color:var(--red)!important;font-weight:700;text-decoration:none!important}
+@media (max-width:640px){.trust-bar .container{gap:4px 14px;font-size:12px}.tb-call{margin-left:0}}
+.assure{list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px;margin:16px 0 0;padding:0;font-size:14px;font-weight:600;color:#000}
+.assure li{display:inline-flex;align-items:center;gap:7px}
+.buy-regions{margin-top:16px!important;font-size:14px;color:var(--ink-soft)}
+.buy-regions a{color:var(--ink);text-decoration:underline;text-decoration-color:#bbb}
+.buy-regions a:hover{color:var(--red)}
+.region-note{margin-top:20px;padding:10px 14px;border-left:3px solid var(--red);background:var(--surface-2);font-size:14px}
+.places .card,.pillars .card,.grid-3 .card{padding:22px}
+.places h3,.pillars h3,.grid-3 .card h3{margin:4px 0 8px;font-size:18px}
+.places a{color:var(--red)}
+.grid{gap:12px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:s}
+.step{border:1px solid var(--line);border-top:3px solid #000;padding:18px;background:#fff}
+.step-n{display:inline-grid;place-items:center;width:28px;height:28px;background:var(--red);color:#fff;font-weight:700;font-size:14px}
+.step h3{margin:10px 0 6px;font-size:16px}
+.step p{margin:0;font-size:14px;color:var(--ink-soft)}
+.region-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+a.region-card{display:flex;flex-direction:column;gap:6px;padding:18px;border:1px solid var(--line);text-decoration:none!important;color:var(--ink);background:#fff}
+a.region-card:hover{border-color:var(--red)}
+a.region-card b{font-size:16px}
+a.region-card small{color:var(--muted);font-size:13px}
+.zone-list{columns:2;column-gap:32px;padding-left:20px}
+.zone-list li{margin-bottom:6px;break-inside:avoid}
+.grid-3 .chips a{font-size:13px}
+@media (max-width:980px){.steps,.region-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.steps,.region-grid{grid-template-columns:1fr}.zone-list{columns:1}}
+
+/* ==========================================================================
+   RFQ: form trang ro rang + khoi nang luc Fast Group nen den (khong dung nen hong nhat)
+   ========================================================================== */
+.rfq-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);gap:24px;align-items:stretch}
+@media (max-width:900px){.rfq-grid{grid-template-columns:1fr}}
+.rfq-block .form-panel{height:100%;margin:0;padding:28px;background:#fff;border:1px solid var(--line);border-top:4px solid #000}
+.rfq-block .form-panel .section-heading{margin-bottom:18px}
+.rfq-block .form-panel h2{border-top:0;padding-top:0;margin:4px 0 6px;font-weight:700;font-size:clamp(22px,2.4vw,28px)}
+.rfq-block .form-panel .section-heading p{margin:0;color:var(--ink-soft);font-size:15px}
+.rfq-block .fgq-brand{display:none}
+.rfq-block .fgq-ctx{margin:0 0 18px;padding:12px 16px;border:0;border-left:4px solid var(--red);border-radius:0;background:#f5f5f5;font-size:14px}
+.rfq-block .fgq-ctx b{color:#000;font-size:15px}
+.rfq-block .field label{color:#000;font-size:12px;font-weight:700;letter-spacing:.03em}
+.rfq-block .field input,.rfq-block .field textarea,.rfq-block .field select{border:1px solid #9a9a9a;border-radius:0;background:#fff;font-size:15px}
+.rfq-block .field input{height:46px}
+.rfq-block .field input:focus,.rfq-block .field textarea:focus{outline:2px solid #000;outline-offset:-1px;border-color:#000}
+.rfq-block .fgq-req{color:var(--red)}
+.rfq-block .form-actions .button-primary{min-width:220px}
+.rfq-block .form-actions .button-secondary{border-color:#000;color:#000}
+
+.rfq-side{display:flex;flex-direction:column;gap:18px;padding:28px;background:#111;color:#fff;border-top:4px solid var(--red)}
+.rs-kicker{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#bdbdbd}
+.rs-kicker:before{content:"";display:block;width:24px;height:4px;background:var(--red);margin-bottom:12px}
+.rs-title{margin:0;color:#fff;font-size:21px;line-height:1.3;font-weight:700;border:0;padding:0}
+.rs-caps{list-style:none;counter-reset:c;margin:0;padding:0;display:grid;gap:14px}
+.rs-caps li{counter-increment:c;display:grid;grid-template-columns:30px 1fr;column-gap:12px;row-gap:2px}
+.rs-caps li:before{content:counter(c);grid-row:span 2;display:grid;place-items:center;width:30px;height:30px;background:var(--red);color:#fff;font-weight:700;font-size:14px}
+.rs-caps b{color:#fff;font-size:15px}
+.rs-caps span{color:#cfcfcf;font-size:13.5px;line-height:1.5}
+.rs-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #333;border-bottom:1px solid #333}
+.rs-stats div{padding:12px 8px 12px 0}
+.rs-stats div+div{padding-left:12px;border-left:1px solid #333}
+.rs-stats b{display:block;color:#fff;font-size:17px}
+.rs-stats span{display:block;color:#a9a9a9;font-size:12px;line-height:1.35}
+.rs-zalo{display:block;padding:14px;text-align:center;background:var(--red);color:#fff!important;font-weight:700;text-decoration:none!important;letter-spacing:.02em}
+.rs-zalo:hover{background:var(--red-dark)}
+.rs-contact{display:flex;flex-wrap:wrap;gap:8px 18px}
+.rs-contact a{color:#fff!important;font-weight:600;text-decoration:underline!important;text-decoration-color:#666!important}
+.rs-addr{margin:0;color:#a9a9a9;font-size:13px;line-height:1.6}
+@media (max-width:420px){.rs-stats{grid-template-columns:1fr}.rs-stats div+div{padding-left:0;border-left:0;border-top:1px solid #333}}
