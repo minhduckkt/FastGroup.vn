@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["120A"]={"p":["ma-khac/25"],"r":[["WPSDUXG120A080.24/DC.22349",0,"120A080 · 24 V DC"]]};

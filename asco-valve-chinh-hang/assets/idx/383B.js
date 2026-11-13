@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["383B"]={"p":["series-383/bang-ma"],"r":[["SCG383B006.230/50",0,"383B006 · 230 V AC 50 Hz"]]};

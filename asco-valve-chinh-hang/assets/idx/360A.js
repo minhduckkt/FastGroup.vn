@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["360A"]={"p":["series-360/360a420","series-360/360a404"],"r":[["SCE360A420.12/DC",0,"360A420 · 12 V DC"],["SCE360A404.24/DC",1,"360A404 · 24 V DC"]]};

@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["8211"]={"p":["ma-khac/17"],"r":[["HC8211A107.125/DC",0,"8211A107 · 125 V DC"]]};

@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["317A"]={"p":["series-317/317a007"],"r":[["SCB317A007.230/50",0,"317A007 · 230 V AC 50 Hz"],["SCB317A007.115/50",0,"317A007 · 115 V AC 50 Hz"]]};

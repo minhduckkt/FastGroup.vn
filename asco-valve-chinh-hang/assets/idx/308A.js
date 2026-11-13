@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["308A"]={"p":["series-308/bang-ma"],"r":[["WPTISB308A441F.24/DC",0,"308A441 · 24 V DC"],["WPTISB308A440.24/DC",0,"308A440 · 24 V DC"]]};

@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["345G"]={"p":["series-345/345g001"],"r":[["EFB345G001.24/DC",0,"345G001 · 24 V DC"],["EFB345G001.220/50",0,"345G001 · 220 V AC 50 Hz"]]};

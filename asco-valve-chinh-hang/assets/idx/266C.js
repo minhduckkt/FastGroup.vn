@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["266C"]={"p":["series-266-s/266c243","series-266-s/266c239","series-266-s/266c203"],"r":[["SCB266C243V.230/50",0,"266C243 · 230 V AC 50 Hz"],["SCB266C239V.230/50",1,"266C239 · 230 V AC 50 Hz"],["SCB266C203V.230/50",2,"266C203 · 230 V AC 50 Hz"]]};

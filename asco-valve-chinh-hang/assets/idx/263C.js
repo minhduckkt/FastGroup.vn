@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["263C"]={"p":["series-262-263/263c054"],"r":[["SCXE263C054.24/DC.15623",0,"263C054 · 24 V DC"]]};

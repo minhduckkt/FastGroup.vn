@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["256B"]={"p":["series-256/256b862"],"r":[["SCG256B862V.24/DC",0,"256B862 · 24 V DC"]]};

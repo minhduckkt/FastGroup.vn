@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["220K"]={"p":["series-220/220k406"],"r":[["E220K406S1T00H6",0,"220K406 · "]]};

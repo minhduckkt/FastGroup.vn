@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["327C"]={"p":["series-327/327c302"],"r":[["G327C302FT9YTH1",0,"327C302 · "]]};

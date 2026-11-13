@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["8385"]={"p":["series-385/bang-ma"],"r":[["L8385A001E.24/DC",0,"8385A001 · 24 V DC"]]};

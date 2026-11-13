@@ -236,6 +236,22 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'ASCO': {
+      maker:  'Emerson Electric Co. (thương hiệu ASCO)',
+      origin: 'Theo nơi sản xuất của từng mã',
+      scope:  'Van điện từ 2/2, 3/2, 4/2, van ống trượt NAMUR, van xung lọc bụi, van khí đốt và dầu, van tỷ lệ, bộ điều khiển solenoid ASCO',
+      role:   'Nhà cung cấp van ASCO chính hãng tại Việt Nam',
+      proof:  '',
+      tpl: 'Vui lòng báo giá van ASCO {model}.\n' +
+           'Mã đặt hàng đầy đủ / ảnh nhãn van: \n' +
+           'Điện áp và tần số coil (vd 220 V AC 50 Hz, 24 V DC): \n' +
+           'Môi chất, áp suất làm việc: \n' +
+           'Yêu cầu phòng nổ (nếu có): \n' +
+           'Số lượng: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'Site mẹ': {
       maker:  'Fast Group Engineering',
       origin: 'Việt Nam',

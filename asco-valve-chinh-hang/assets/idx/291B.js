@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["291B"]={"p":["series-291/291b410","series-291/291b420"],"r":[["G291B410MV100F8",0,"291B410 · "],["G291B420MV100F8",1,"291B420 · "]]};

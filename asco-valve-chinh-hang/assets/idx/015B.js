@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["015B"]={"p":["series-015/bang-ma"],"r":[["NFETB015B224.24/DC",0,"015B224 · 24 V DC"]]};

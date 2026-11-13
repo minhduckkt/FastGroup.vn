@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["202G"]={"p":["series-202-posi/202g012"],"r":[["JBEFXB202G012E.24/DC.22214",0,"202G012 · 24 V DC"]]};

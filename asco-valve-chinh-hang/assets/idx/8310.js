@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["8310"]={"p":["series-310/bang-ma"],"r":[["8310B040-011",0,"8310B040 · "],["EF8310B040.24/DC",0,"8310B040 · 24 V DC"]]};

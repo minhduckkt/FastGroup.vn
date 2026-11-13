@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["267C"]={"p":["ma-khac/24"],"r":[["SCB267C019.230/50",0,"267C019 · 230 V AC 50 Hz"]]};

@@ -1,0 +1,1 @@
+window.ASCO_IDX=window.ASCO_IDX||{};window.ASCO_IDX["531G"]={"p":["series-531/bang-ma"],"r":[["VCEFCMG531G401MODC24/DCD",0,"531G401 · 24 V DC"]]};
