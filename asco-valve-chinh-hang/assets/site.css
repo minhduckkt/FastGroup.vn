@@ -847,6 +847,7 @@ tr:target td,tr.on td{background:var(--gold-soft)}
 .hero-product img{max-width:100%;max-height:340px;object-fit:contain}
 .home-hero .hero-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:center}
 @media(max-width:900px){.home-hero .hero-inner{grid-template-columns:1fr}.hero-product{display:none}}
+.home-hero.hero-scene .hero-inner{grid-template-columns:1fr}
 .series-tbl td:first-child a{font-weight:700}
 .src-note{font-size:12px;color:var(--muted)}
 .cat-src{font-size:12px;color:var(--muted);white-space:nowrap}
