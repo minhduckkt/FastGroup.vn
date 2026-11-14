@@ -855,3 +855,12 @@ tr:target td,tr.on td{background:var(--gold-soft)}
 .card.off small{margin-top:6px}
 .code-cloud{font-size:13px;line-height:1.9;color:var(--muted)}
 .code-cloud code{color:var(--ink);background:var(--soft2);padding:1px 4px;margin-right:4px}
+
+/* anh trong bai viet */
+.product-figure img{width:100%;height:auto;max-height:340px;box-sizing:border-box;padding:18px;object-fit:contain;background:#fff}
+.figure-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:30px 0}
+.figure-row .content-figure{margin:0;display:flex;flex-direction:column;justify-content:space-between}
+.figure-row .product-figure img{max-height:260px}
+.post-card{display:flex;flex-direction:column}
+.post-thumb{display:block;width:calc(100% + 2px);aspect-ratio:3/2;height:auto;object-fit:cover;margin:-1px -1px 14px;background:#fff;border-bottom:1px solid var(--line)}
+.post-thumb.prod{object-fit:contain;padding:16px}
