@@ -9,6 +9,11 @@ _tools/tescom/
 _tools/crosslink/
 _tools/abb-chinh-hang/
 _tools/asco-valve-chinh-hang/
+_tools/siemens-chinh-hang/
+
+# Portal Siemens chinh hang (~300 MB) phuc vu bang Cloudflare Worker rieng, KHONG day len GitHub Pages
+# (repo da ~920 MB, gioi han GitHub Pages 1 GB). Day bang _tools/siemens-chinh-hang/deploy/DAY-SIEMENS-LEN-CLOUDFLARE.bat
+siemens-chinh-hang/
 
 # Thu muc lam viec tam
 Claude outputs/

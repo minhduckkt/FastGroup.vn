@@ -236,6 +236,20 @@
            'Nơi giao hàng: \n' +
            'Thời điểm cần hàng: '
     },
+    'Siemens SIRIUS': {
+      maker:  'Siemens AG',
+      origin: 'Theo nơi sản xuất của từng mã',
+      scope:  'Thiết bị điều khiển và bảo vệ hạ thế: contactor SIRIUS, CB bảo vệ động cơ, rơ le, SIMOCODE, LOGO!, bộ nguồn SITOP, khởi động mềm, thiết bị an toàn, nút nhấn, AS-Interface',
+      role:   'Nhà cung cấp sản phẩm Siemens chính hãng tại Việt Nam',
+      proof:  '',
+      tpl: 'Vui lòng báo giá Siemens {model}.\n' +
+           'Mã đặt hàng (MLFB, nếu đã chọn): \n' +
+           'Điện áp cuộn hút / điện áp cấp: \n' +
+           'Số lượng: \n' +
+           'Yêu cầu chứng từ: CO, CQ\n' +
+           'Nơi giao hàng: \n' +
+           'Thời điểm cần hàng: '
+    },
     'ASCO': {
       maker:  'Emerson Electric Co. (thương hiệu ASCO)',
       origin: 'Theo nơi sản xuất của từng mã',
