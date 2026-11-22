@@ -1,4 +1,4 @@
-/* Nut Zalo "Chat" noi (giong kacon.vn) — Fast Group. Tu chen CSS + nut + popup QR (may tinh). Chi can nap file nay 1 lan. */
+/* Nut Zalo "Chat" noi (giong kacon.vn) — Fast Group. Web co .floating-contact (Norgren): giu nut cu, doi link Zalo -> OA. Tu chen CSS + nut + popup QR (may tinh). Chi can nap file nay 1 lan. */
 (function () {
   if (window.__fgZaloChat) return; window.__fgZaloChat = 1;
   var OA = 'https://zalo.me/3907049822973532881';
@@ -14,7 +14,7 @@
     + '.fgz-btn{display:inline-block;padding:10px 18px;border-radius:999px;background:#0068FF;color:#fff!important;font-weight:700;text-decoration:none!important}.fgz-btn:hover{background:#0052CC}'
     + '.fgz-tel{margin-top:12px!important}.fgz-tel a{color:#0068FF;font-weight:700;text-decoration:none}'
     + '.fgz-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;border-radius:50%;background:transparent;font-size:24px;line-height:1;color:#5b6475;cursor:pointer}.fgz-x:hover{background:#eef3fb}'
-    + '.floating-contact{display:none!important}.back-to-top{bottom:84px!important}@media(max-width:520px){.back-to-top{bottom:74px!important;right:14px!important}}'
+    + '.back-to-top{bottom:84px!important}@media(max-width:520px){.back-to-top{bottom:74px!important;right:14px!important}}'
     + '@media print{.fgz-fab,.fgz-pop{display:none!important}}';
   var desktop = function () { return window.matchMedia && matchMedia('(hover:hover) and (pointer:fine) and (min-width:900px)').matches; };
   var pop;
@@ -34,14 +34,47 @@
   function close() { if (pop) pop.hidden = true; }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   function init() {
+    oaLinks();
+    // Web da co khoi lien he noi rieng (norgren.com.vn, norgren.vn): GIU NGUYEN nut cu, chi doi link Zalo sang Zalo OA
+    var fc = document.querySelectorAll('.floating-contact');
+    if (fc.length) {
+      for (var k = 0; k < fc.length; k++) {
+        // .floating-contact co the CHINH LA the <a> (crouzet.vn, rheintacho.com.vn) hoac chua cac <a> ben trong (norgren)
+        var zs = fc[k].matches('a[href*="zalo.me"]') ? [fc[k]] : fc[k].querySelectorAll('a[href*="zalo.me"]');
+        for (var m = 0; m < zs.length; m++) { zs[m].href = OA; zs[m].target = '_blank'; zs[m].rel = 'noopener'; }
+      }
+      return;
+    }
     if (document.querySelector('.fgz-fab')) return;
     var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
-    // .floating-contact cu (norgren) bi an bang CSS o tren — chi giu nut Zalo; .back-to-top (fastgroup) day len tren nut
+    // .back-to-top (fastgroup) day len tren nut
     var a = document.createElement('a');
     a.className = 'fgz-fab'; a.href = OA; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', 'Chat Zalo với Fast Group');
     a.innerHTML = '<img src="' + ICON + '" alt="" width="26" height="26"><span>Chat</span>';
     a.addEventListener('click', function (e) { if (desktop()) { e.preventDefault(); openPop(); } });
     document.body.appendChild(a);
+    // Web co thanh/nut co dinh o day man hinh (vd .float-cta tempil.vn): day nut Chat len tren de khong de len nhau
+    function lift() {
+      a.style.bottom = '';
+      var fr = a.getBoundingClientRect(), need = 0, els = document.body.getElementsByTagName('*');
+      for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        if (el === a || a.contains(el) || (pop && pop.contains(el)) || el === pop) continue;
+        var cs = getComputedStyle(el);
+        if (cs.position !== 'fixed' || cs.display === 'none' || cs.visibility === 'hidden') continue;
+        var r = el.getBoundingClientRect();
+        if (!r.width || !r.height || r.top < window.innerHeight / 2) continue;
+        if (r.left < fr.right && r.right > fr.left && r.top < fr.bottom && r.bottom > fr.top) need = Math.max(need, window.innerHeight - r.top + 12);
+      }
+      if (need) a.style.bottom = need + 'px';
+    }
+    lift(); setTimeout(lift, 1500);
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(lift, 250); });
+  }
+  // Doi moi link Zalo ca nhan (0938888958) tren trang sang Zalo OA
+  function oaLinks() {
+    var ls = document.querySelectorAll('a[href*="zalo.me/0938888958"],a[href*="zalo.me/84938888958"],a[href*="zalo.me/+84938888958"]');
+    for (var i = 0; i < ls.length; i++) { ls[i].href = OA; ls[i].target = '_blank'; ls[i].rel = 'noopener'; }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
